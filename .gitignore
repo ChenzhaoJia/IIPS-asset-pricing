@@ -18,3 +18,12 @@ env/
 *.egg-info/
 build/
 dist/
+
+
+Models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.h5
+*.pkl
