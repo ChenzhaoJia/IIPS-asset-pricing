@@ -27,6 +27,8 @@ The project strictly separates reusable quantitative engineering logic (`src/`) 
 │   └── utils/               # Academic table formatters
 ├── requirements.txt         # Dependency specifications
 └── README.md
+```
+
 
 **Data Preparation:**
    Please ensure your raw data is placed in `data/raw/`. The data structure expects standard CSMAR formats (Trading Data, Financials, Governance) alongside pre-calculated NLP platform data (`QnA_Slim_Panel.parquet`).
