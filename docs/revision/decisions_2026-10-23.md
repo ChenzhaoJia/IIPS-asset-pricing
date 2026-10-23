@@ -1,3 +1,10 @@
+# Superseding editorial decision
+
+The latest user correction replaces the verified-only manuscript approach recorded below: preserve the full Annual Review PDF's printed results, tables and conclusion, and add explanations plus completed topic results/examples. The earlier decisions remain a historical record, not authority to delete original tables. See ANNUAL_REVIEW_RESTORATION_2026-10-23.md.
+
+
+## Earlier decisions (superseded for manuscript editing)
+
 # Authorized integration decisions — 2026-10-23
 - Use the Annual Review historical O2C construction as the main replication baseline.
 - Replace printed numbers with verified original-program recomputations; do not tune to recover printed values.

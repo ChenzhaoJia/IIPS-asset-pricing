@@ -1,9 +1,14 @@
-"""Generate active manuscript tables from stored, identified aggregate results."""
+"""Generate the superseded recomputation tables for research comparison only.
+
+The active manuscript retains Annual Review printed tables. This generator must
+never replace those tables or write into drafts/manuscript.
+"""
 from pathlib import Path
 import json
 import pandas as pd
 R=Path(__file__).resolve().parents[1]
-D=R/'data/results'; T=R/'drafts/manuscript/tables'
+D=R/'data/results'; T=R/'build/recomputation_tables'
+T.mkdir(parents=True,exist_ok=True)
 
 def table(name,caption,label,header,rows,note,align=None):
     n=len(header);align=align or ('l'+'r'*(n-1))

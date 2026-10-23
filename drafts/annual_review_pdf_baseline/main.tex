@@ -1,0 +1,1512 @@
+\documentclass[12pt]{article} 
+
+
+\usepackage[
+    paper=letterpaper,      
+    top=1in,                
+    bottom=1in,            
+    left=1in,              
+    right=1in,             
+    footskip=0.5in          
+]{geometry}
+
+\usepackage{multirow}
+\usepackage{setspace}
+\onehalfspacing             
+         
+\setlength{\parindent}{2em} 
+
+
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{rotating}
+\usepackage[round,sort]{natbib}  
+\usepackage{amsmath}
+\usepackage{booktabs}       
+\usepackage{threeparttable}
+\usepackage{xcolor}
+\usepackage{xltabular} 
+\usepackage{ragged2e}
+
+\usepackage[scheme=plain]{ctex} 
+\usepackage[
+    colorlinks=true,  
+    linkcolor=blue,  
+    citecolor=blue,   
+    urlcolor=blue     
+]{hyperref}
+\usepackage{float}
+\usepackage[hang, flushmargin]{footmisc} 
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,textfont=normalfont,justification=justified,singlelinecheck=false}
+
+\newenvironment{tablenoteblock}
+{%
+  \vspace{0.12cm}
+  \begin{tablenotes}[flushleft]
+  \footnotesize
+  \setlength{\itemsep}{0pt}
+  \setlength{\parsep}{0pt}
+  \item[]\justifying
+  \textnormal{Note:}\ 
+}
+{%
+  \end{tablenotes}
+}
+
+\newenvironment{fullwidthnoteblock}
+{%
+  \begin{minipage}{\textwidth}
+  \smallskip
+  \footnotesize
+  \setlength{\parindent}{0pt}
+  \justifying
+  \textnormal{Note:}\ 
+}
+{%
+  \end{minipage}
+}
+
+\date{August, 2026} 
+\title{Communication matters: investor-manager interactions and asset pricing}
+\author{
+Chenzhao Jia\\[0.3em]
+\small Supervision team: Tianlun Fei, Ying Jiang, Xiaoquan Liu}
+
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This paper investigates the asset pricing implication of investor-manager interactions on digital platforms. We develop the Effective Sentiment Index to combine investor and managerial sentiment within an interactive dialogue. This index extracts a pricing signal by evaluating substantive management optimism conditional on the initial investor state and capturing market concerns exposed by concentrated attention and negative inquiries. Using Q\&A dialogues from Chinese interactive platforms, we find that the value-weighted portfolio strategy that longs high ESI stocks and shorts low ESI stocks earns an annualized risk-adjusted return of about 13.4\% (q5 alpha). Economic mechanism tests show that ESI predicts subsequent earnings surprises and is followed by stronger net buying in large trades than in small trades. Our study sheds light on the pricing effect of the substantive content in the interactions between investors and managers.
+\end{abstract}
+
+
+\section{Introduction}\label{sec:introduction}
+
+A central question in empirical asset pricing is how investors process corporate information and incorporate it into stock prices \citep{blankespoor2020}. Recent studies use textual analysis to evaluate the information content of investor opinions and managerial disclosures \citep{bartov2018,chen2014,cookson2024,jiang2019}. On the investor side, \citet{chen2014} show that opinions expressed on social media aggregate individual assessments of firm prospects and predict subsequent stock returns and earnings outcomes. On the corporate side, although managers possess private information about expected firm performance \citep{beyer2010financial,healy2001information}, \citet{jiang2019} document that aggregate managerial optimism from corporate filings and conference calls predicts lower future stock returns and negative earnings surprises. They attribute this evidence to extrapolative managerial beliefs and corporate overinvestment. While prior studies establish that investor and managerial text each contains information relevant to stock prices, the interaction between these two market participants remains underexplored.
+
+
+
+In this study, we examine the asset pricing implication of interactions between investors and managers in the Chinese stock market. We argue that the interaction context provides a useful setting for extracting a pricing signal beyond isolated investor and managerial statements. First, interaction connects managerial responses to explicit investor concerns. In traditional disclosures, managers decide the content to disclose based on their expectations of investor demand. In an interactive setting, investor questions identify what the market wants management to explain and can prompt managers to provide clarifications and specific details beyond prepared statements \citep{hollander2010,matsumoto2011}. The information supplied in response can change investors' assessment of firm value \citep{matsumoto2011}. Second, the interaction reveals whether managers address or evade the concern raised. Investors may interpret managerial reluctance or boilerplate replies as negative signals that affect stock prices and market liquidity \citep{hollander2010,xie2023}. Evasive responses can also limit subsequent information production by the media \citep{boustanifar2025}. The matched dialogue therefore reveals both the information supplied in response to a stated concern and management's response choice. These features can produce pricing information beyond either side of the dialogue considered separately.
+
+
+
+The Chinese stock market provides an appropriate setting for our study for two main reasons. First, the institutional environment offers a public record of investor-manager interactions. The Shenzhen and Shanghai stock exchanges operate Investor-Manager Interactive Platforms (IIPs) that publicly record matched investor inquiries and corporate replies.\footnote{The Shenzhen Stock Exchange operates Hudongyi (\url{https://irm.cninfo.com.cn/}), and the Shanghai Stock Exchange operates SSE E-Interaction (\url{https://sns.sseinfo.com/}). The exchanges monitor participation and authenticate registered investor accounts. Platform rules prohibit firms from releasing material new information through a reply or editing a question after responding.} These platforms cover almost the entire Chinese stock market, and firms respond to most submitted inquiries.\footnote{\citet{lee2022shall} report that over 99 percent of listed firms had adopted these platforms and that firms respond to over 85 percent of submitted questions.} This comprehensive coverage allows us to observe public interactions across a broad cross section of firms. Second, the market microstructure in China facilitates the examination of sentiment effects. Retail investors account for a large share of daily trading volume.\footnote{Retail investors account for over 80 percent of daily trading volume in the Chinese equity market \citep{liao2022}.} In addition, strict short-sale constraints prevent arbitrageurs from fully offsetting retail trading pressure \citep{jiang2022}. Retail trading can therefore aggregate into observable stock price movements \citep{bian2026,liao2022}. Despite this substantial retail participation, \citet{carpenter2021} show that Chinese stock prices remain informative about future firm fundamentals. This combination of comprehensive interaction data and specific market frictions allows us to examine whether the textual sentiment extracted from these interactions reflects underlying firm value or temporary price pressure.
+
+
+
+To capture the pricing signal from the interactions between investors and managers, we develop the Effective Sentiment Index (ESI). On the investor side, we measure the textual sentiment of investor inquiries to capture retail investors' concerns about firm prospects. On the corporate side, we measure managerial response tone to capture management's view on future fundamentals \citep{jiang2019,li2010}. ESI incorporates three additional features of the interaction. First, prior literature establishes that interaction volume provides independent pricing signals and enhances the predictive power of aggregated opinions \citep{chen2014,cookson2024}. In this case, we weight investor tone by question volume to amplify the pricing signal when attention is highly concentrated. Second, we use reply substantiveness to identify whether managerial tone is accompanied by specific information. \citet{hutton2003} show that positive management forecasts are informative only when accompanied by verifiable statements about future performance. Therefore, we assign less weight to managerial tone for vague replies in the construction of ESI. Third, ESI accounts for the initial investor state. Because affective states influence risk judgments and reliance on advice \citep{gino2012,loewenstein2001risk}, investors process corporate replies differently depending on their preceding sentiment. To capture this dynamic, this index maximizes the weight of managerial tone when investors exhibit a moderately negative state and reduces the weight as sentiment diverges from this point. A high ESI reflects positive investor inquiry paired with an optimistic and substantive managerial reply. We hypothesize that this specific interactive state provides a signal of positive future performance and predicts positive stock returns.
+
+
+Using IIP records covering 2,489,503 investor questions for 3,600 Chinese A-share firms from 2010 to 2024, our empirical analysis proceeds in two steps. First, we compute sentiment measures from the IIP dialogues. In our sample, investor inquiry tone is mainly neutral but is negatively skewed, with 25.6\% classified as negative and 7.4\% as positive. In contrast, managerial replies are largely neutral (82.7\%) or positive (15.8\%), and only 1.4\% are negative. We also evaluate reply substantiveness and find that 64.4\% of the replies contain substantive information and 35.6\% are classified as boilerplate. Second, we conduct portfolio sorts to evaluate the asset pricing implication of the dialogues. We find that both investor tone and managerial tone predict positive future stock returns. A value-weighted strategy using investor tone earns an annualized return of 10.3\%, and the manager tone strategy earns 6.7\%. We then use conditional double sorts to verify whether these variables interact in the directions implied by our economic motivation. Investor tone predicts returns more effectively when question volume is high. Managerial tone predicts returns mainly when replies are substantive and investor sentiment is moderately negative. Based on our theoretical motivation, ESI combines investor sentiment scaled by attention with managerial tone weighted by reply substantiveness and conditioned on the initial investor sentiment state. A value-weighted portfolio strategy using ESI earns an annualized return of 13.0\% and a Sharpe ratio of 0.93. Its annualized q5 alpha is about 13.4\%. ESI produces a larger value-weighted return than portfolios using either tone alone. Finally, panel estimates remain significant through 40 trading days, while the Fama-MacBeth coefficients remain positive and significant across the reported horizons.
+
+We next examine the potential economic channels driving this return predictability. First, we find that ESI measured before earnings announcements positively predicts subsequent standardized unexpected earnings. This result suggests that the interactive signal contains forward-looking fundamental information about future profitability. Second, we examine order flow by trade size to proxy for institutional and retail trading. The index predicts stronger net buying in large trades but shows no significant association with small trades. This divergence indicates that institutional investors incorporate this textual signal more efficiently than retail investors. Finally, we investigate the signal around agency conflicts and downside risk to rule out opportunistic managerial behavior. We document that the predictive power of the index remains robust prior to reported insider sales. This persistence confirms that opportunistic promotional disclosures do not drive the observed pricing effect. In addition, higher ESI is associated with lower subsequent stock crash risk. These combined results indicate that substantive public dialogues facilitate the credible release of corporate information rather than serving as tools for strategic manipulation.
+
+
+Overall, this study makes three contributions. First, we construct an interactive sentiment measure from investor inquiries and managerial replies. Prior studies use textual analysis to extract tone from standalone texts such as social media \citep{bartov2018,chen2014,cookson2024}, financial news \citep{ke2021predicting,lopez2023chatgpt}, or corporate disclosures \citep{jiang2019}. ESI extends this literature by considering investor and managerial sentiment jointly. Its construction also accounts for investor attention, the initial investor sentiment state, and reply substantiveness. The resulting measure provides persistent information about subsequent stock returns.
+
+Second, we contribute to asset pricing research by evaluating the pricing value of dialogues between investors and managers. Previous research on interactive platforms focuses on how aggregate participation affects the information environment and corporate decisions \citep{lee2022shall,xu2024}. Our study shifts the focus to stock return prediction and shows that interactive text predicts returns beyond the comparison variables included in our baseline regressions. 
+
+Third, we use the interaction context to refine the interpretation of managerial sentiment. \citet{jiang2019} argue that aggregate sentiment from corporate disclosures reflects managerial overconfidence and extrapolative beliefs. We extend research on managerial sentiment by evaluating managerial tone when listed firms respond to explicit public inquiries. We show that managerial reply tone predicts subsequent returns and that this predictability varies with the preceding investor sentiment state and the substantiveness of the response content.
+
+
+The remainder of this paper is organized as follows. Section \ref{sec:literature_review} reviews the literature. Section \ref{sec:data} describes the data characteristics and variable construction. Section \ref{sec:baseline_return_predictability} presents the baseline return predictability. Section \ref{sec:mechanisms} examines potential economic channels. Section \ref{sec:robustness_checks} presents robustness checks. Finally, Section \ref{sec:conclusion} concludes.
+
+
+
+
+
+\section{Literature review}\label{sec:literature_review}
+
+\subsection{Investor sentiment}
+
+
+Empirical asset pricing studies debate whether investor sentiment introduces transient noise or predicts fundamentals. \citet{delong1990noise} develop a theoretical model to demonstrate that unpredictable changes in noise trader beliefs could move prices away from fundamental values. To study how investor sentiment affects the cross section of stock returns, \citet{baker2006} construct a composite index from market proxies \footnote{The index includes discounts on closed end funds, NYSE turnover, the number of IPOs, returns on the first trading day, the equity share in new issues, and the dividend premium.} and show that high sentiment predicts lower returns, specifically for stocks that are difficult to value and arbitrage. Subsequent research extends these indirect measures to international markets \citep{baker2012global,schmeling2009} \footnote{\citet{baker2012global} construct composite sentiment indices for six international markets and show that global and local sentiment components predict future stock returns. \citet{schmeling2009} uses consumer confidence across 18 countries to measure investor sentiment and predict future returns.} and other asset classes including government bonds, commodities, and index options \citep{baker2012bonds,gao2015,han2008}.\footnote{\citet{baker2012bonds} find that stock market sentiment predicts the excess returns of government bonds. \citet{gao2015} construct a composite index from market proxies using the partial least squares method to explain the returns and comovements of commodity futures. \citet{han2008} show that market pessimism steepens the volatility smile and increases negative skewness for index options.} These indirect measures often capture unrelated market noise, making their predictive power dependent on the choice and aggregation of proxies \citep{huang2015}.
+
+Textual analysis avoids this issue by measuring sentiment directly from expressed opinions rather than market outcomes. Early textual analysis research on investor sentiment aligns with the transient noise perspective. \citet{tetlock2007giving} analyzes a daily market column from the Wall Street Journal and shows that media pessimism predicts price declines followed by reversals, which indicates temporary price pressure instead of fundamental information.
+
+
+By measuring investor sentiment from text on social media, subsequent studies challenge the transient noise view. \citet{chen2014} analyze Seeking Alpha articles and comments to show that these opinions predict future stock returns and earnings surprises. This evidence suggests that social media platforms can aggregate dispersed information about firm value rather than merely generating random chatter. \citet{bartov2018} find similar results using Twitter data, showing that individual tweets posted before earnings announcements predict forthcoming earnings and returns. Recent research evaluates the economic magnitude of textual signals through portfolio construction. \citet{ke2021predicting} and \citet{lopez2023chatgpt} extract sentiment from financial news to form portfolios and document return predictability. \citet{ke2021predicting} show that the incorporation delay is longer for small stocks. \citet{lopez2023chatgpt} interpret subsequent drift through information processing constraints and limits to arbitrage.
+
+One possible source of these conflicting findings is that sentiment and attention capture distinct dimensions of investor behavior. Traditional market proxies often conflate these two dimensions as they are based on the same aggregate trading outcomes. For example, \citet{baker2006} use market turnover to construct a sentiment index, whereas \citet{barber2008} and \citet{da2011} interpret abnormal trading volume and extreme returns as indirect proxies for investor attention. This overlap implies that trading metrics cannot distinguish the direction of investor sentiment from the intensity of attention or other liquidity factors. Textual data separate these dimensions by using linguistic tone to measure opinions and message volume to measure attention \citep{antweiler2004}. \citet{cookson2024} address this issue by analyzing messages from StockTwits, Twitter, and Seeking Alpha. By separating textual sentiment from message volume, they demonstrate that sentiment contains information relevant to stock prices, whereas attention reflects retail buying pressure and price overreaction.
+
+\subsection{Managerial sentiment}
+
+Managers possess private information about firm prospects, and investors use managerial disclosures to assess firm fundamentals \citep{beyer2010financial,healy2001information}. However, managerial tone can reflect both information and managers' subjective beliefs about firm prospects. On the one hand, tone reflects cognitive biases. Using an aggregate manager sentiment index, \citet{jiang2019} show that optimism predicts lower future aggregate returns and earnings surprises. They also document links between manager sentiment, extrapolation of recent performance, and overinvestment. \citet{chen2018morning} observe that the tone of earnings conference calls becomes more negative later in the day and that investors temporarily overreact to this variation. On the other hand, managerial tone can convey information about future economic conditions. At the macroeconomic level, \citet{demers2024aggregate} demonstrate that positive changes in earnings announcement tone predict economic growth in the following quarter. This evidence suggests that corporate tone also contains information relevant to firm value and future stock returns.
+
+Specific details help investors evaluate whether fundamental information supports managerial tone.  \citet{crawford1982} develop a model to show that conflicts of interest between a sender and a receiver make vague communication unreliable. Since managers have incentives to exaggerate firm prospects, their optimism lacks credibility. In this case, investors tend to place more weight on managerial tone when specific and verifiable information supports the response. Using management earnings forecasts, \citet{hutton2003} report that positive forecasts provide information only when managers include verifiable statements about future performance. \citet{baginski2016verification} analyze management press releases and reveal that quantitative forecast news strengthens the market response to linguistic tone, whereas imprecision weakens the response. 
+
+Managerial communication may also affect how investors perceive firm risk. \citet{gennaioli2015} develop a model of delegated asset management in which trust in fund managers reduces perceived risk and increases investor willingness to hold risky assets. \citet{germann2025trust} test this mechanism in an experimental setting and conclude that greater trust in a fund manager increases confidence and allocations to risky assets. These findings motivate testing whether the return association of managerial replies varies with the sentiment expressed in the preceding inquiry. \citet{loewenstein2001risk} argue that emotional states affect risk judgments. Specifically, anxiety shifts attention toward threats and increases an individual's tendency to seek and rely on external advice \citep{eysenck2007anxiety,gino2012}. These findings suggest that investors evaluate the same managerial reply differently depending on their initial sentiment state.
+
+\subsection{Investor-manager interaction}
+
+Interactive settings may provide corporate information beyond standard disclosures. First, interactive environments reveal additional fundamental details as they allow investors to publicly request specific information \citep{hollander2010}. In traditional disclosures, managers determine the content based on their internal expectations of investor demand. \citet{matsumoto2011} examine over 10,000 earnings calls from 2003 to 2005 to separate prepared presentations from discussion sessions. Using intraday absolute returns, they demonstrate that discussions contain more information than prepared presentations as external questions prompt managers to reveal new details.
+
+Second, the way managers respond to explicit questions provides an additional pricing signal to the market. Response behavior affects prices through direct market reactions and subsequent information production. Investors may directly interpret a refusal to answer as a lack of transparency. \citet{hollander2010} examine individual requests during earnings calls and document that managerial refusal to answer questions is associated with negative intraday stock reactions. Rather than directly refusing to answer, managers often use evasive language to withhold sensitive information \citep{gow2021}. \citet{lee2016} evaluates how managers rely on scripted responses during discussions, reporting that this behavior predicts negative stock returns and lower future operating performance. Similarly, \citet{xie2023} show that boilerplate replies on Chinese platforms occur more frequently during weak firm performance and correlate with reduced market liquidity. Evasive responses can also restrict information production by external intermediaries. \citet{boustanifar2025} report that evasive replies precede less original reporting from professional media. With less substantive content to analyze, reduced media coverage restricts investor engagement and is associated with weaker abnormal returns.
+
+
+Recent studies examine interactive platforms to understand their market implication. \citet{lee2022shall} analyze approximately 2.5 million investor questions and corporate replies on Chinese IIPs from 2010 to 2017. Using manual annotations and language algorithms, they evaluate the nature of investor questions and measure the level of interaction through platform activity. They find that most questions reflect the difficulties investors face when integrating existing public information. Their results show that greater platform activity is associated with higher market liquidity, narrower trading spreads, and greater price informativeness, suggesting that interactions lower information processing costs. Related research extends these platform activity metrics to corporate outcomes, showing a positive relationship with corporate investment efficiency \citep{xu2024}. 
+
+We construct the Effective Sentiment Index (ESI) from matched investor inquiries and managerial replies on IIPs. The index accounts for the investor's preceding sentiment and whether the managerial response provides substantive information. We then test whether this interaction measure predicts stock returns beyond investor tone and managerial tone considered separately.
+
+
+
+\section{Data and descriptive characteristics}\label{sec:data}
+
+\subsection{Data and sample construction}
+
+Our primary textual data consist of public Q\&A interactions from the ``Easy Interaction'' platform of the Shenzhen Stock Exchange and the ``E-Interaction'' platform of the Shanghai Stock Exchange. We obtain these records from the Chinese Research Data Services Platform (CNRDS). The robustness analysis uses separate text data from the CNRDS Chinese Listed Company Stock Message Board Comments Database, which contains posts from GUBA.
+
+We obtain stock returns, prices, trading variables, financial statements, and listing dates from the China Stock Market and Accounting Research (CSMAR) database. We also obtain the daily China factor series for the Fama-French three-factor model (FF3), the Liu-Stambaugh-Yuan four-factor model (CH4), and the augmented q-factor model (q5) from CSMAR \citep{fama1993common,hou2021,liu2019}. We merge these data with the Q\&A records by firm and trading date. Each observation corresponds to one firm on one trading day. The baseline descriptive sample requires a valid daily stock return and excludes observations from the first six months after listing. Return regressions additionally require nonmissing textual signals, return outcomes, and the controls included in the specification. The mechanism tests require the corresponding earnings, order flow, holdings, or crash risk outcome.
+
+The resulting sample contains 5,812,275 observations at the firm-day level and covers 3,854 firms from 2010 through 2024. Active Q\&A interactions occur in 1,317,473 observations, accounting for 22.67\% of the sample. These active observations contain 2,489,503 investor questions for 3,600 firms. Investor tone, manager tone, reply substantiveness, and ESI are defined only when an interaction occurs. We do not assign zero values to these variables on days without an interaction since the absence of a dialogue is not a neutral textual signal. Figure \ref{fig:iip_adoption} reports the annual number of active firms and investor questions.
+
+
+
+
+
+\subsection{Construction of ESI}\label{sec:esi_construction}
+
+We use separate BERT classifiers for investor inquiries and managerial replies \citep{liu2020finbert}. Each classifier assigns probabilities to negative, neutral, and positive sentiment. We define the continuous tone score as the probability of positive sentiment minus the probability of negative sentiment. The score therefore ranges from minus one to one. When a firm has multiple inquiries or replies on the same day, we use the mean score for that text source. This approach preserves the direction and confidence of the classification, which is useful as words can have different meanings in financial text \citep{loughran2011}.
+
+We measure reply substantiveness with a Random Forest classifier. The classifier is trained on 2,000 interactions with manual labels. Its inputs include question and reply lengths, textual similarity between the question and reply, indicators for numbers, dates, and percentages, and phrases associated with generic disclosure language. The continuous score equals one minus the estimated probability that a reply is evasive. Higher values therefore indicate replies with more specific content. Appendix \ref{app:cases} presents examples with low and high substantiveness scores.
+
+The platforms supply matched inquiries and replies, which we aggregate to the firm and trading day. ESI measures the signed interaction signal on that day. A simple sum of the two tone scores would assign the same importance to a reply regardless of the attention to the inquiry, the content of the reply, or the investor's initial sentiment. ESI allows these features to affect the contribution of each side of the interaction.
+
+Let $I_{i,t}$ denote investor tone and $M_{i,t}$ denote managerial tone. As described above, each tone equals the predicted probability of positive sentiment minus the predicted probability of negative sentiment. Investor text can contain information about future returns and earnings \citep{bartov2018,chen2014,cookson2024}. We therefore use $I_{i,t}$ as the signed investor component.
+
+We use question volume as a proxy for investor attention towards a firm. Prior research highlights the importance of attention in shaping the subset of stocks investors evaluate, noting that spikes in retail attention predict buying pressure and short-run price dynamics \citep{barber2008,da2011}. Building on this insight, we assume that heightened attention amplifies the market impact of investor sentiment. 
+
+To capture this amplifying effect, we define normalized attention as:
+
+\begin{equation}
+A_{i,t}=\frac{\log(1+N_{i,t})}{\max_{j,s}\log(1+N_{j,s})},
+\end{equation}
+\noindent where $N_{i,t}$ is the number of investor questions for firm $i$ on day $t$. 
+
+We then incorporate this metric into the overall investor component as $I_{i,t}(1+\lambda A_{i,t})$. This specification ensures that question volume scales the magnitude of the investor signal without altering the directional sign of the underlying tone.
+
+Managerial tone can reflect information about firm prospects and managerial beliefs \citep{jiang2019}. Its contribution is less clear when a reply contains generic language. Prior research shows that the market response to managerial language depends on whether it is supported by verifiable details and whether the reply is evasive or generic \citep{boustanifar2025,hutton2003,xie2023}. We standardize managerial tone as $Z^M_{i,t}=(M_{i,t}-\overline{M})/\sigma_M$ and multiply it by the substantiveness probability $Sub_{i,t}$. This step gives less weight to managerial tone when the reply contains little specific content.
+
+Prior research shows that affective states influence risk judgments and reliance on advice \citep{gino2012,loewenstein2001risk}. We therefore allow the contribution of a managerial reply to vary with the sentiment expressed in the preceding inquiry. We use investor tone itself as the state variable, so $State_{i,t}=I_{i,t}$. Rather than impose a discrete cutoff, we translate the distance between investor tone and a moderately negative anchor into a continuous state weight. Asset pricing studies use kernels to give more weight to observations close to the point at which a conditional quantity is evaluated \citep{aitsahalia1998,ang2012testing}. Dynamic asset pricing models also implement Gaussian kernels when estimating time-varying exposures \citep{adrian2015regression}. We apply the same distance weighting principle to investor tone. The Gaussian kernel is nonnegative and symmetric \citep{silverman1986density}. Its weight declines smoothly with the squared standardized distance from the anchor. The symmetric form treats deviations on either side of the anchor comparably because the existing evidence does not identify different rates of decline. The weight remains positive for all finite investor tone values, which avoids assigning zero weight solely because investor tone crosses an arbitrary cutoff. The kernel determines only the relative weight on managerial tone and does not assume that investor tone follows a normal distribution. The state weight is
+\begin{equation}
+K(I_{i,t})=\exp\left[-\frac{(I_{i,t}-\theta)^2}{2(b\sigma_I)^2}\right].
+\end{equation}
+\noindent The state weight $K(I_{i,t})$ equals one when investor tone is at $\theta$ and declines continuously as investor tone moves away from that value. The density normalizing constant is omitted because $K(I_{i,t})$ is a relative weight rather than an estimated probability density. Let $q$ denote the anchor quantile and let $\theta=Q_I(q)$ denote the corresponding investor tone value. In the baseline specification, $q=0.30$ represents the moderately negative investor state, $\sigma_I$ is the standard deviation of investor tone, and $b=0.8$ controls the rate at which the weight declines. Appendix Table \ref{tab:grid_search_summary} varies $q$ and $b$ and replaces the Gaussian kernel with Epanechnikov and uniform kernels \citep{epanechnikov1969}.
+
+Combining these inputs, we define
+\begin{equation}
+G_{i,t}=Z^M_{i,t}\times Sub_{i,t}\times K(I_{i,t})
+\end{equation}
+\noindent where $G_{i,t}$ is the managerial component. It combines standardized managerial tone with reply substantiveness and the state weight.
+\noindent The final index is
+\begin{equation}
+\label{eq:esi}
+ESI_{i,t}=I_{i,t}(1+\lambda A_{i,t})+\gamma G_{i,t}.
+\end{equation}
+\noindent We set $\lambda=0.5$ and $\gamma=5$ in the baseline specification. A higher ESI indicates a more positive interaction signal after accounting for attention, reply substantiveness, and the investor sentiment state.
+
+\subsection{Variables and descriptive statistics}
+
+Our primary dependent variable is the next-day open-to-close (O2C) excess return. We calculate the stock return as the closing price divided by the opening price minus one, and then subtract the daily risk-free rate. This timing excludes the overnight interval between the interaction date and the next market open. It also reduces exposure to overnight price movements that investors could not trade after observing the interaction \citep{aboody2018,lopez2023chatgpt}.
+
+We control for the public information environment. Following \citet{chen2014}, we compute a news coverage indicator ($Newsdummy_{t-30,t-3}$) and average news sentiment ($Newstone_{t-30,t-3}$) over a trailing window that ends three trading days before the interaction.
+
+We update accounting controls using the most recent financial report available before day $t$. These variables include firm size ($Size$), the book-to-market ratio ($BM$), leverage ($Lev$), profitability ($ROA$), and log firm age ($\ln(\textit{FirmAge})$). We winsorize continuous characteristics at the 1st and 99th percentiles.
+
+The trading variables include the Amihud illiquidity measure ($Illiqd$) \citep{amihud2002illiquidity}, turnover ($Dturn$), and prior return measures. We use large-trade order imbalance ($OIB^{inst}$) as a proxy for institutional trading and small-trade order imbalance ($OIB^{ind}$) as a proxy for retail trading, based on transaction direction and trade size cutoffs \citep{lee1992,lee1991inferring,tong2013}. We define $OIB^{diff}$ as $OIB^{inst}-OIB^{ind}$ for the paired coefficient comparison in Section \ref{sec:microstructure_oib}. The earnings tests use standardized unexpected earnings ($SUE$) \citep{bernard1989post}. Appendix Table \ref{tab:operating_income_sue} also reports adjusted earnings per share and unexpected operating income. The remaining diagnostic outcomes are mutual fund ownership change, subsequent insider selling, NCSKEW, and DUVOL. Appendix \ref{app:variable_definitions} reports the definitions, calculations, and data sources for these variables. The factor series described above are used to estimate factor-adjusted returns and portfolio alphas.
+
+Table \ref{tab:summary_stats} reports summary statistics for the main variables. The baseline sample contains 5.81 million observations at the firm-day level. The continuous substantiveness score has a mean of 0.582 and a median of 0.638. ESI has a mean of 0.486 and a median of $-0.077$ among observations with active interactions.
+
+Table \ref{tab:textual_coverage} reports sample coverage and categorical textual outcomes. Negative sentiment accounts for 25.6\% of investor inquiries, while positive sentiment accounts for 7.4\%. Managerial replies are mainly neutral at 82.7\% or positive at 15.8\%. For this descriptive table, replies with a substantiveness probability of at least 0.5 are classified as substantive. This convention classifies 64.4\% of replies as substantive. The empirical tests use the continuous probability.
+
+Figure \ref{fig:tone_kde} plots the continuous tone distributions. Investor tone is more negative and more dispersed, while managerial tone is concentrated near neutral and positive values. The difference shows why the interaction cannot be represented by either tone alone. Investor inquiries reveal concerns about firm prospects, while managerial replies provide a distinct assessment of those concerns.
+
+Figure \ref{fig:sentiment_evolution} plots the monthly averages of investor and managerial tone. Investor tone declines during the 2015 to 2016 market crash, the 2018 trade dispute, and the 2022 market downturn. Managerial tone remains more stable and less negative during these periods. The two series therefore capture different sides of the communication process over time.
+
+Table \ref{tab:correlation_matrix} reports Pearson and Spearman correlations among the main textual, market, and firm variables. Investor tone and managerial tone have low correlations with most firm characteristics and with public media sentiment ($Newstone_{t-30,t-3}$). The correlation between managerial tone and reply substantiveness is larger, which is consistent with more specific replies using different language than generic replies. The return tests below assess whether ESI contains predictive information after controlling for these variables.
+\section{Baseline return predictability}\label{sec:baseline_return_predictability}
+ 
+
+\subsection{Portfolio sorts}
+
+To evaluate the return predictability of interactive communication, we form daily portfolios sorted based on each textual signal. To eliminate noise from neutral signals, we require long candidates to exhibit positive tone and short candidates to exhibit negative tone for directional measures. In this case, we first restrict the long and short candidate pools to the upper and lower 30 percent of the daily signal distribution. Following the portfolio design in \citet{ke2021predicting}, we select up to 50 firms with the most extreme values in each leg. The fixed number keeps portfolio breadth comparable across days with different levels of platform activity. Firm-days without an available interaction are excluded from the ranking. We also exclude stocks that reach a price limit on the execution day. The primary return is the O2C excess return on day $t+1$. We report equal weight (EW) and value weight (VW) long minus short returns, annualized performance, and alphas from the CH4 and q5 models.
+
+
+Table \ref{tab:horse_race} reports the performance of portfolios sorted on ESI and the alternative textual signals. Under equal weighting, the ESI portfolio earns 5.32 bps per day, equivalent to an annualized return of 12.9\%, and attains a Sharpe ratio of 1.54. Its q5 alpha is 5.43 bps ($t\text{-stat} = 6.08$). Under value weighting, the ESI portfolio earns 5.35 bps per day, or 13.0\% annually, with a q5 alpha of 5.50 bps ($t\text{-stat} = 3.74$) and a Sharpe ratio of 0.93. For comparison, investor tone produces q5 alphas of 4.56 bps under equal weighting and 4.41 bps under value weighting. The corresponding managerial tone alphas are 2.46 and 2.69 bps. Aggregate Tone, defined as the simple average of investor and managerial tone, produces a q5 alpha of 2.87 bps under equal weighting and an insignificant 1.24 bps under value weighting. ESI therefore produces the largest q5 alpha among the textual signals under both weighting methods. This comparison motivates the conditional sorts that follow, which examine the interaction characteristics incorporated into ESI.
+
+Table \ref{tab:conditional_double_sorts} examines the conditional associations that enter ESI. The dependent double sorts test whether the return spread associated with one tone changes across levels of another interaction characteristic. Panel A conditions on reply substantiveness and then sorts on managerial tone. The q5 alpha is negative in Q1 and Q2, but positive in Q4 and Q5. The difference between Q5 and Q1 is 6.58 bps ($t\text{-stat} = 2.47$). This result associates the return signal in managerial tone with the substantive content of the reply.
+
+Panel B conditions on investor tone and then sorts on managerial tone. Managerial tone produces positive alphas in Q2 and Q3, whereas the estimates in Q1, Q4, and Q5 are indistinguishable from zero. These results reveal that the pricing effect of managerial tone concentrates in situations where initial investor sentiment is moderately negative. While optimistic investors require no reassurance and extreme panic clouds rational judgment, investors in a moderately negative state retain both the demand for information and the capacity to evaluate corporate replies logically. This dynamic aligns with the theoretical framework in \citet{gennaioli2015}. In their model, anxious investors seek financial experts to reduce perceived risk and increase their willingness to hold risky assets. A parallel mechanism operates in our interactive setting. Moderately concerned investors seek clarification from corporate managers. Optimistic managerial responses function as expert advice that reduces perceived risk and restores investor confidence. Consequently, the initial investor state determines the effectiveness of the managerial signal.
+
+Panel C conditions on question volume and then sorts on investor tone. The investor tone alpha reaches 6.14 bps in the highest volume quintile. The Q5 minus Q1 difference is 8.10 bps ($t\text{-stat} = 3.18$), consistent with evidence that attention affects the pricing of investor sentiment \citep{barber2022attention,da2011}. These conditional associations correspond to the substantiveness weight, investor state weight, and attention term in Equation (\ref{eq:esi}).
+
+\subsection{Return predictive regressions}
+
+Portfolio sorts do not simultaneously condition on several firm characteristics. We therefore estimate the following panel OLS model:
+
+\begin{equation}
+\label{eq:rpr}
+\begin{aligned}
+ R_{i, t+1 \to t+h} = \alpha + \beta_1 ESI_{i,t} + \boldsymbol{\delta}'\mathbf{X}_{i,t} + \mu_i + \tau_t + \varepsilon_{i, t+1 \to t+h}
+\end{aligned}
+\end{equation}
+
+\noindent where $R_{i,t+1 \to t+h}$ is the cumulative q5-adjusted excess return for firm $i$ from trading day $t+1$ through horizon $h$, with $h \in \{1, 5, 10, 20, 40, 60\}$. The control variables $\mathbf{X}_{i,t}$ include firm size ($Size_{i,t}$), the book-to-market ratio ($BM_{i,t}$), return on assets ($ROA_{i,t}$), leverage ($Lev_{i,t}$), Amihud illiquidity ($Illiqd_{i,t}$), daily turnover ($Dturn_{i,t}$), the preceding stock return ($Ret_{i,t-1}$), return volatility ($Vol_{i,[t-30,t-1]}$), prior cumulative return ($Ret_{i,[t-30,t-2]}$), historical media tone ($Newstone_{i,[t-30,t-3]}$), and a news coverage indicator ($Newsdummy_{i,[t-30,t-3]}$). The coefficient vector on these controls is $\boldsymbol{\delta}$. Firm and date fixed effects are denoted by $\mu_i$ and $\tau_t$.
+
+Panel A of Table \ref{tab:panel_horse_race} reports the panel OLS estimates. A one standard deviation increase in ESI predicts 1.77 bps over one day ($t\text{-stat} = 5.48$). The coefficient rises to 6.07 bps over ten days ($t\text{-stat} = 5.38$) and remains significant over twenty days. It is marginally significant over forty days at 5.54 bps ($t\text{-stat} = 1.95$). The estimate falls to 3.97 bps ($t\text{-stat} = 1.06$) over sixty days, when statistical significance disappears. Investor tone becomes insignificant at twenty days. Managerial tone becomes insignificant at forty days. The panel estimates therefore show a longer predictive horizon for ESI than for either tone considered separately.
+
+Panel B reports Fama and MacBeth regressions \citep{fama1973risk}. We estimate a cross-sectional regression on each trading day and average the resulting coefficients across days. The ESI coefficient is positive at every horizon and significant at the 10 percent level or better. It rises from 2.00 bps over one day ($t\text{-stat} = 1.86$) to 13.48 bps over forty days ($t\text{-stat} = 3.03$), then declines to 10.93 bps over sixty days ($t\text{-stat} = 2.21$). Investor tone is significant only at the one-day horizon. Managerial tone predicts returns between five and forty days, but lacks predictive power over horizons of one and sixty days. The Fama and MacBeth estimates provide a cross-sectional check on the panel results.
+
+Table \ref{tab:horse_race} also reports CH4 and q5 alphas from time-series regressions of the ESI portfolio return on standard factor returns. Appendix Table \ref{tab:ols_robustness_matrix} compares raw excess returns with FF3, CH4, and q5 adjustments across holding horizons. These specifications examine whether standard factor models absorb the ESI return pattern.
+
+Taken together, the panel OLS and Fama and MacBeth estimates show that ESI positively predicts future excess returns and remains significant over longer horizons than investor tone or managerial tone considered separately. These estimates establish the baseline return association, while leaving open whether ESI reflects future fundamental news or subsequent trading.
+
+\section{Microstructure frictions and economic mechanisms}\label{sec:mechanisms}
+
+While Section \ref{sec:baseline_return_predictability} establishes return predictability, it does not reveal whether ESI is associated with future fundamentals or which transaction size groups respond to the signal. We therefore examine subsequent earnings surprises and compare the order imbalance of large and small trades. These analyses assess whether the pricing effect connects to future profitability and trading by different order size groups. To evaluate the vulnerability of the signal to strategic manipulation and its relation to tail risk, the final two subsections explore an observable agency conflict window and subsequent stock crash risk.
+
+\subsection{The fundamental information channel}\label{sec:fundamental_channel}
+
+We first investigate whether ESI captures fundamental information rather than temporary price pressure from retail investors. Since an informative signal should anticipate future profitability, we follow \citet{chen2014} and regress subsequent Standardized Unexpected Earnings (SUE) on ESI measured before the earnings announcement.
+
+Analyst coverage in the Chinese market is not uniformly distributed, particularly among smaller firms. We therefore use a seasonal random walk model to measure earnings surprises rather than relying on analyst consensus forecasts \citep{bernard1989post}. Due to mandatory interim reporting requirements in China, we conduct our analysis at a biannual frequency. We construct the Standardized Unexpected Earnings ($SUE$) metric as follows.
+
+\begin{equation}
+    SUE_{i,h} = \frac{EPS_{i,h} - EPS_{i,h-2}}{\sigma_{i,h}}
+\end{equation}
+
+\noindent where $EPS_{i,h}$ represents the reported earnings per share for firm $i$ in period $h$. The numerator captures the unexpected EPS based on a seasonal random walk model. We calculate the difference between current earnings ($EPS_{i,h}$) and earnings from the corresponding period in the previous year ($EPS_{i,h-2}$). This subtraction removes strong seasonal variations inherent in corporate operational cycles. The resulting difference represents the fundamental surprise. We adjust this value for changes in total share capital, such as stock splits, to maintain consistency per share. The denominator $\sigma_{i,h}$ represents the historical standard deviation of this unexpected EPS calculated over the preceding five periods.
+
+To test whether platform interactions predict these future fundamental surprises, we estimate the following regression.
+
+\begin{equation}
+    SUE_{i, h} = \alpha + \beta_1 ESI_{i,[t_{h-30}, t_{h-3}]} + \boldsymbol{\delta}'\mathbf{X}_{i,h-1} + \mu_i + \tau_h + \varepsilon_{i,h}
+\end{equation}
+
+\noindent where $SUE_{i,h}$ is the earnings surprise for firm $i$ in period $h$, and $t_h$ is its announcement date. $ESI_{i,[t_{h-30},t_{h-3}]}$ is the average ESI over 28 trading-day observations ending three trading days before the announcement. This window excludes the final two trading days to reduce overlap with information released immediately before the announcement. $\mathbf{X}_{i,h-1}$ includes lagged SUE, the cumulative return over the same window, and firm controls. The coefficient vector on these controls is $\boldsymbol{\delta}$. Firm and reporting period fixed effects are denoted by $\mu_i$ and $\tau_h$.
+
+Table \ref{tab:fundamental_sue} reports the results. The coefficient on aggregated ESI is 0.065 ($t\text{-stat}=2.49$). We also estimate the same model separately for investor tone and managerial tone on the ESI sample. Investor tone has a coefficient of 0.209 ($t\text{-stat}=6.82$), while managerial tone has a coefficient of 0.027 ($t\text{-stat}=1.14$). The earnings association is therefore concentrated in the investor component. These separate regressions do not establish that ESI contains incremental earnings information beyond investor tone.
+
+Appendix Table \ref{tab:operating_income_sue} reports two alternative earnings outcomes. The ESI coefficient is 0.012 ($t\text{-stat}=1.28$) for adjusted EPS after controls. It is 0.001 ($t\text{-stat}=0.34$) for unexpected operating income scaled by lagged assets. Neither estimate is statistically significant. We therefore treat these tests as limits on the fundamental interpretation rather than as supporting evidence.
+
+\subsection{The microstructure order flow channel}
+\label{sec:microstructure_oib}
+
+Return predictability must eventually be reflected in trading. We therefore examine which transaction size groups exhibit net buying after the interaction signal. Following \citet{lee1992} and \citet{tong2013}, we use trade size as an imperfect proxy for investor type. Large and extra-large orders form the institutional proxy. Small and medium orders form the retail proxy.\footnote{The classifications follow the CSMAR transaction data. Small orders are below RMB 50,000. Medium orders are at least RMB 50,000 and below RMB 200,000. Large orders are at least RMB 200,000 and below RMB 1,000,000. Extra-large orders are at least RMB 1,000,000.} For each proxy, daily order imbalance is buy volume minus sell volume divided by total trading volume. Accordingly, we estimate the panel regression for each order type and horizon as follows:
+
+\begin{equation}
+    OIB^{Type}_{i, t+k} = \alpha + \beta_1 ESI_{i,t} + \boldsymbol{\delta}'\mathbf{X}_{i,t} + \mu_i + \tau_t + \varepsilon_{i, t+k}
+\end{equation}
+
+\noindent where $OIB^{Type}_{i,t+k}$ is the order imbalance for firm $i$ on day $t+1$ or the average over days $t+1$ through $t+5$. $Type \in \{inst,ind\}$ denotes the large order and small order proxies. $\mathbf{X}_{i,t}$ includes the contemporaneous return, rolling volatility, turnover, and firm characteristics. The coefficient vector on these controls is $\boldsymbol{\delta}$. Firm and trading day fixed effects are denoted by $\mu_i$ and $\tau_t$.
+
+To compare the two order groups, we estimate the same specification using the difference in order imbalances ($OIB^{diff}_{i,t+k} = OIB^{inst}_{i,t+k} - OIB^{ind}_{i,t+k}$) as the dependent variable.\footnote{The signal coefficient from this difference regression equals $\beta^{inst} - \beta^{ind}$. The standard error clustered by firm and date retains the covariance between the paired order imbalance outcomes. Following the multiple equation testing framework in \citet{zellner1962} and the coefficient comparison method in \citet{lou2019}, we apply a Wald test to evaluate the null hypothesis $H_0: \beta^{inst} = \beta^{ind}$.} Panel A of Table \ref{tab:microstructure_oib} reports the order flow results. The index predicts positive large order imbalance on day $t+1$ with a coefficient of 0.095 ($t\text{-stat}=8.67$). The estimate equals 0.066 ($t\text{-stat}=10.49$) over days $t+1$ through $t+5$. The corresponding coefficients for small orders are indistinguishable from zero. The coefficient difference for the index is 0.100 ($t\text{-stat}=8.63$) on day $t+1$ and 0.066 ($t\text{-stat}=9.68$) over the subsequent five days. The corresponding differences equal 0.138 ($t\text{-stat}=11.36$) and 0.053 ($t\text{-stat}=7.64$) for investor tone, and 0.072 ($t\text{-stat}=6.21$) and 0.054 ($t\text{-stat}=7.56$) for managerial tone. These positive differences show that large trades exhibit a greater response to textual signals than small trades. Given the trade size proxy, this pattern is consistent with institutional investors responding more strongly to textual signals \citep{boehmere2021}. The test does not identify investor type at the account level.
+ 
+Panel B uses mutual fund ownership as an alternative measure of institutional holdings. The dependent variable is the quarterly change in shares held by mutual funds relative to shares outstanding. Its coefficient on lagged quarterly ESI is 0.076 ($t\text{-stat}=3.99$). This association is consistent with mutual funds increasing ownership after high ESI periods. 
+
+
+
+
+\subsection{Agency conflicts: The stress test}
+
+As ESI incorporates managerial replies, this positive signal might reflect strategic optimism rather than information about future fundamentals. This credibility concern becomes more salient before insider sales. Managers then have an incentive to inflate the stock price. We therefore test whether the predictive power of the index declines prior to reported insider transactions. Following the communication framework in \citet{crawford1982}, we use this setting to evaluate communication under a known conflict of interest without identifying the underlying motive for each specific reply.
+
+The insider transaction data come from the CSMAR insider shareholding change records. We define $Sell^{Next30d}_{i,t}$ as one when the data report any negative insider share change during the next 21 trading days (30 calendar days). We estimate the following interaction model:
+
+\begin{equation}
+    Ret_{i, t+1} = \alpha + \beta_1 ESI_{i,t} + \beta_2 Sell^{Next30d}_{i,t} + \beta_3 (ESI_{i,t} \times Sell^{Next30d}_{i,t}) + \boldsymbol{\delta}'\mathbf{X}_{i,t} + \mu_i + \tau_t + \varepsilon_{i, t+1}
+\end{equation}
+
+\noindent where $Ret_{i,t+1}$ is the next-day O2C excess return in basis points. $\beta_1$ is the ESI coefficient outside the insider sale window. $\beta_3$ measures the difference in ESI predictability when an insider sale is reported during the next 21 trading days. $\mathbf{X}_{i,t}$ contains the baseline controls. Firm and date fixed effects are denoted by $\mu_i$ and $\tau_t$.
+
+Panel A of Table \ref{tab:diagnostic_tests} reports the results by specification. Column (1) estimates the baseline relation between ESI and next-day O2C excess returns in this sample. The ESI coefficient is 1.78 bps ($t\text{-stat}=5.60$). Column (2) adds the insider sale indicator. The ESI coefficient remains 1.78 bps ($t\text{-stat}=5.60$), while the coefficient on the sale indicator is 1.29 bps ($t\text{-stat}=1.01$) and is not statistically significant. Column (3) allows ESI predictability to differ inside the sale window. The ESI coefficient of 1.86 bps ($t\text{-stat}=5.67$) measures the association outside the sale window. The interaction coefficient of $-1.08$ bps ($t\text{-stat}=-0.93$) measures the change inside the sale window. Their sum is 0.78 bps ($t\text{-stat}=0.67$), which is the total ESI coefficient when a subsequent insider sale is observed. Neither the interaction coefficient nor the total coefficient is statistically significant. This test therefore provides no evidence that ESI predictability is significantly weaker before reported insider sales.
+
+\subsection{Subsequent crash risk}
+
+The baseline tests concern average returns. We next ask whether the interaction signal is also associated with the left tail of the return distribution. This extension is motivated by the bad news hoarding explanation of stock price crashes. When managers withhold adverse information, accumulated news can enter prices abruptly and produce negative return skewness \citep{hutton2009,kim2011}.
+
+We aggregate ESI to the firm-quarter and examine two crash risk measures in the next quarter. NCSKEW is the negative coefficient of skewness, and DUVOL is the down-to-up volatility ratio. Both measures are constructed from weekly stock returns within a quarter. We regress each measure in quarter $q+1$ on the average ESI in quarter $q$, firm controls, firm fixed effects, and time fixed effects.
+
+Panel B of Table \ref{tab:diagnostic_tests} reports a coefficient of $-0.021$ ($t\text{-stat}=-4.42$) for NCSKEW and $-0.022$ ($t\text{-stat}=-4.48$) for DUVOL. Higher quarterly ESI is therefore associated with lower measured crash risk in the following quarter. These results show that the interaction signal contains information related to subsequent downside outcomes.
+
+
+\section{Robustness checks} \label{sec:robustness_checks}
+
+This section examines whether ESI predictability depends on portfolio concentration, index parameters, return measurement, sample period, or broader retail discussion. Each test addresses a specific design choice in the baseline analysis. The corresponding results appear in the appendix.
+
+Portfolios weighted by market capitalization would assign disproportionate allocations to the largest firms. To prevent the idiosyncratic price movements of a few large companies from dictating portfolio performance, we cap the allocation for any single stock at 10 percent of its portfolio leg. Appendix Table \ref{tab:vw_capped_horse_race} reports that the return difference persists at 6.02 basis points under this cap, accompanied by a q5 alpha of 6.19 basis points. The result reduces concern that a few large firms account for the baseline return spread.
+
+We next span the parameters and measures applied to ESI. Appendix Table \ref{tab:grid_search_summary} changes one parameter at a time. It evaluates $\gamma \in \{1,2,3,5,7,10\}$, $\lambda \in \{0,0.2,0.5,0.8,1\}$, $b \in \{0.4,0.6,0.8,1,1.2\}$, and $q \in \{0.10,0.20,0.30,0.40,0.50\}$. The baseline values are $\gamma=5$, $\lambda=0.5$, $b=0.8$, and $q=0.30$. Appendix Table \ref{tab:kernel_robustness} replaces the Gaussian kernel with Epanechnikov and uniform kernels \citep{epanechnikov1969}. It also replaces the tone and substantiveness inputs with word count measures. The ESI estimates remain positive across these alternatives, although their magnitude varies. These tests show that the baseline estimate is not produced by one isolated parameter value or kernel choice.
+
+Appendix Table \ref{tab:horizon_robustness} examines return timing and portfolio design. The baseline O2C return is measured from the open to the close on day $t+1$. O2O is measured from the open on day $t+1$ to the open on day $t+2$. C2C is the daily close-to-close return reported for day $t+1$. The table also varies the number of stocks in each portfolio leg across 30, 50, 70, and 100. The ESI long-minus-short estimates remain positive under these choices. Appendix Table \ref{tab:ols_robustness_matrix} reports cumulative return regressions through 20 trading days using raw, CH4, q5, and FF3-adjusted returns \citep{fama1993common,hou2020replicating,liu2019}.
+
+GUBA provides a separate measure of retail discussion outside the matched investor and manager dialogues. We add daily GUBA net tone and posting activity to test whether ESI only captures broader retail discussion.\footnote{The GUBA data come from the Chinese Listed Company Stock Message Board Comments Database of Chinese Research Data Services (CNRDS). GUBA (\url{http://guba.eastmoney.com/}) is an online message board operated by East Money. Retail investors use this website to discuss specific stocks and post market opinions.} In the full control O2C regression, the ESI coefficient declines from 1.67 to 1.40 bps and remains statistically significant (Appendix Table \ref{tab:guba_robustness}, Panel A). Panel B compares market-adjusted GUBA tone and posting activity over days $+1$ through $+3$ with their averages over days $-3$ through $-1$ around a management reply. Both measures decline after the reply. Reply timing is endogenous and event windows overlap, so we treat these changes as descriptive rather than causal.
+
+We split the sample at 2020 to assess whether the coefficient is concentrated in the earlier platform period or the period following the onset of the COVID-19 pandemic. The ESI coefficients are 1.36 bps for 2010 through 2019 and 1.37 bps for 2020 through 2024. This comparison is descriptive and does not impose a formal structural break.
+
+Finally, we apply a mechanical cost of 2 bps per unit of portfolio turnover. The net one-day return is 2.42 bps and remains statistically positive. The corresponding three-day and five-day estimates are $-2.52$ and $-3.61$ bps. The longer holding strategies therefore do not survive this cost assumption. This calculation is not a complete implementation model, but it identifies turnover as an important limit on the economic value of the strategy.
+
+
+
+
+
+\section{Conclusion}\label{sec:conclusion}
+
+This study examines whether direct dialogues between corporate managers and retail investors provide incremental information about subsequent stock returns. Using Q\&A records from Chinese IIPs from 2010 to 2024, we construct ESI. This index integrates investor tone, managerial tone, attention, reply substantiveness, and the initial investor sentiment state.
+
+Our empirical analysis documents the return predictability of the Effective Sentiment Index (ESI). First, we show that portfolio strategies weighted by market capitalization based on ESI earn significant annualized returns. ESI significantly outperforms unconditioned aggregate tone metrics by accounting for initial investor states and reply substantiveness. Panel regressions further confirm that this interactive signal persists over extended horizons. These tests illustrate that evaluating managerial optimism conditional on investor expectations could extract pricing information from public dialogues.
+
+Second, we provide evidence on the economic mechanisms driving this predictability. We find that ESI is positively associated with subsequent earnings surprises, indicating that the interaction signal captures fundamental information prior to formal accounting releases. Furthermore, high ESI signals are followed by significant net buying from institutional investors and subsequent increases in mutual fund holdings. In contrast, retail transaction proxies exhibit no such positive net buying. This asymmetric order flow confirms that sophisticated institutional capital actively incorporates these textual signals into stock prices.
+
+Third, we stress test the signal against agency conflicts and downside risk. We find no evidence that the predictive power of the ESI degrades or reverses around subsequent insider selling, confirming that opportunistic promotional disclosures do not drive our results. Moreover, higher ESI accompanied by greater reply substantiveness is associated with less severe left-tail outcomes at both daily and quarterly frequencies. This finding suggests that substantive interactions effectively mitigate extreme crash risk by facilitating the gradual release of corporate information.
+
+These findings contribute to the literature on textual analysis, managerial sentiment, and corporate disclosure \citep{chen2014,jiang2019}. We advance the literature by evaluating paired, interactive text rather than isolated investor or manager tone. We demonstrate that managerial optimism predicts stock returns most effectively when replies contain substantive details and are evaluated in the context of the initial investor sentiment state. Overall, our study shows that direct interactive communication provides information related to subsequent price formation in financial markets.
+
+
+
+\clearpage
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/Figure 2.png} 
+  \caption{Annual Activity on Chinese Investor-Manager Interactive Platforms}
+  \label{fig:iip_adoption}
+  \vspace{0.2cm}
+
+  \begin{minipage}{\textwidth}
+    \smallskip 
+    \small
+    \setlength{\parindent}{0pt} 
+    \justifying
+    This figure plots annual activity on the Shenzhen and Shanghai interactive platforms from 2010 to 2024. The blue and red bars show the numbers of active firms on the Shenzhen and Shanghai platforms, respectively. The blue and red lines show annual question volume. The left axis reports active firms, and the right axis reports questions. The dashed vertical lines mark the launch of Hudongyi in 2010 and SSE E-Interaction in July 2013.
+  \end{minipage}
+\end{figure}
+\clearpage
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/Figure 4.png} 
+  \caption{Kernel Density Estimation (KDE) of Tone Distributions}
+  \label{fig:tone_kde}
+  \vspace{0.2cm}
+
+  \begin{minipage}{\textwidth}
+    \smallskip 
+    \small
+    \setlength{\parindent}{0pt} 
+    \justifying
+    This figure plots the empirical densities of $Investor\_Tone$ and $Manager\_Tone$. Investor tone is more negative and dispersed, while managerial tone is concentrated near neutral and positive values.
+  \end{minipage}
+\end{figure}
+\clearpage
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/Figure 5.png} 
+  \caption{The Dynamic Evolution of Textual Sentiment}
+  \label{fig:sentiment_evolution}
+  \vspace{0.2cm}
+
+  \begin{minipage}{\textwidth}
+    \smallskip 
+    \small
+    \setlength{\parindent}{0pt} 
+    \justifying
+    This figure plots the monthly evolution of \textit{Investor\_Tone} (blue line) and \textit{Manager\_Tone} (orange line) from August 2010 to November 2024. The shaded vertical bars highlight major macroeconomic drawdowns. 
+  \end{minipage}
+\end{figure}
+\clearpage
+
+\begin{table}[H]
+  \centering
+  \caption{Descriptive Statistics of Main Variables}
+  \label{tab:summary_stats}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{1.05}
+  \setlength{\tabcolsep}{5pt}
+  \footnotesize
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r c c c c c@{}}
+    \toprule
+    \textbf{Variable} & \textbf{N} & \textbf{Mean} & \textbf{S.D.} & \textbf{P25} & \textbf{Median} & \textbf{P75} \\ 
+    \midrule
+    
+    \multicolumn{7}{@{}l}{\textbf{Panel A: Daily Market Performance \& Microstructure}} \\ 
+    \midrule
+    Stock Return & 5,812,275 & 0.001 & 0.033 & -0.015 & 0.000 & 0.014 \\
+    Market Capitalization & 5,812,275 & 1.16e7 & 3.77e7 & 2.82e6 & 4.67e6 & 9.16e6 \\
+    Dturn & 5,812,275 & 0.642 & 0.709 & 0.216 & 0.410 & 0.792 \\
+    Illiqd & 5,812,275 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+    $OIB^{inst}$ & 5,756,233 & -0.013 & 0.102 & -0.077 & -0.013 & 0.047 \\
+    $OIB^{ind}$ & 5,756,233 & -0.009 & 0.056 & -0.029 & -0.004 & 0.013 \\
+    $Newstone_{t-30, t-3}$ & 5,812,275 & 0.052 & 0.115 & 0.000 & 0.033 & 0.100 \\
+    $Newsdummy_{t-30, t-3}$ & 5,812,275 & 0.877 & 0.329 & 1.000 & 1.000 & 1.000 \\
+    \midrule
+    
+    \multicolumn{7}{@{}l}{\textbf{Panel B: Platform Interactions \& Textual Features}} \\ 
+    \midrule
+    Num\_Questions & 5,812,275 & 0.428 & 1.183 & 0.000 & 0.000 & 0.000 \\
+    Reply\_Rate & 1,317,473 & 0.930 & 0.245 & 1.000 & 1.000 & 1.000 \\
+    Mean Reply Length & 1,239,648 & 84.28 & 78.98 & 37.00 & 60.67 & 105.00 \\
+    Mean Response Lag & 898,847 & 7.23 & 28.28 & 0.93 & 2.41 & 6.02 \\
+    Investor\_Tone & 1,317,473 & -0.140 & 0.365 & -0.285 & -0.006 & -0.001 \\
+    Manager\_Tone & 1,317,473 & 0.187 & 0.280 & 0.010 & 0.116 & 0.342 \\
+    Substantiveness & 1,317,473 & 0.582 & 0.254 & 0.417 & 0.638 & 0.791 \\
+    ESI & 1,317,473 & 0.486 & 2.811 & -1.024 & -0.077 & 1.039 \\
+    \midrule
+    
+    \multicolumn{7}{@{}l}{\textbf{Panel C: Firm Fundamentals \& Financials}} \\ 
+    \midrule
+    Size & 5,812,275 & 21.844 & 1.461 & 21.029 & 21.642 & 22.376 \\
+    Lev & 5,812,275 & 0.354 & 0.210 & 0.191 & 0.328 & 0.485 \\
+    ROA & 5,812,275 & 0.026 & 0.059 & 0.007 & 0.022 & 0.046 \\
+    BM & 4,306,806 & 0.609 & 0.225 & 0.441 & 0.616 & 0.775 \\
+    SUE & 3,983,224 & -0.065 & 1.575 & -0.805 & -0.026 & 0.615 \\
+    Adjusted EPS & 3,983,224 & 0.204 & 0.648 & 0.031 & 0.134 & 0.308 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{fullwidthnoteblock}
+    This table presents summary statistics for the primary variables. Panel A reports daily market and trading variables. Panel B reports platform activity and textual measures. Panel C reports firm fundamentals. Continuous variables are winsorized at the 1st and 99th percentiles. The baseline sample spans 2010 to 2024 and contains 5.81 million observations at the firm-day level. Textual variables and ESI are reported for observations with active interactions.
+  \end{fullwidthnoteblock}
+\end{table}
+\clearpage
+
+\begin{table}[H]
+  \centering
+  \caption{Sample Coverage and Categorical Tone Distributions}
+  \label{tab:textual_coverage}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{1.08}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r r r@{}}
+    \toprule
+    \multicolumn{4}{@{}l}{\textbf{Panel A: Firm-day coverage}} \\
+    \midrule
+    \multicolumn{2}{@{}l}{\textbf{Observation class}} & \textbf{N} & \textbf{Share} \\
+    \multicolumn{2}{@{}l}{All tradable firm-days} & 5,812,275 & 100.00\% \\
+    \multicolumn{2}{@{}l}{Firm-days with active Q\&A} & 1,317,473 & 22.67\% \\
+    \multicolumn{2}{@{}l}{Firm-days without observed Q\&A} & 4,494,802 & 77.33\% \\
+    \midrule
+    \multicolumn{4}{@{}l}{\textbf{Panel B: Categorical tone on active Q\&A firm-days}} \\
+    \midrule
+    \textbf{Text source} & \textbf{Negative} & \textbf{Neutral} & \textbf{Positive} \\
+    Investor inquiries & 25.6\% & 67.0\% & 7.4\% \\
+    Managerial replies & 1.4\% & 82.7\% & 15.8\% \\
+    \midrule
+    \multicolumn{4}{@{}l}{\textbf{Panel C: Reply substantiveness on active Q\&A firm-days}} \\
+    \midrule
+    \multicolumn{3}{@{}l}{\textbf{Reply class}} & \textbf{Share} \\
+    \multicolumn{3}{@{}l}{Substantive} & 64.4\% \\
+    \multicolumn{3}{@{}l}{Boilerplate} & 35.6\% \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.2cm}
+
+  \begin{tablenoteblock}
+    Panel A distinguishes the full tradable sample from observations with active interactions. An observation without a Q\&A is not assigned zero tone or zero substantiveness. Panel B reports tone categories assigned by the classifiers for observations with active Q\&A interactions. Panel C uses 0.5 as the descriptive cutoff for the continuous substantiveness probability. The empirical tests use the underlying continuous tone and substantiveness scores rather than the categorical measures.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+\begin{sidewaystable}[p]
+  \centering
+  \caption{Correlation Matrix of Key Variables}
+  \label{tab:correlation_matrix}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{1.08}
+  \setlength{\tabcolsep}{4pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textheight}{@{\extracolsep{\fill}}l*{9}{c}@{}}
+    \toprule
+    \textbf{Variables} & \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} & \textbf{(5)} & \textbf{(6)} & \textbf{(7)} & \textbf{(8)} & \textbf{(9)} \\
+    \midrule
+    (1) Investor Tone & 1.000 & 0.060*** & 0.002* & -0.015*** & -0.013*** & 0.016*** & 0.083*** & 0.031*** & 0.104*** \\
+    (2) Manager Tone & 0.068*** & 1.000 & 0.463*** & 0.046*** & 0.014*** & 0.005*** & -0.029*** & 0.038*** & 0.015*** \\
+    (3) Substantiveness & 0.032*** & 0.500*** & 1.000 & -0.030*** & 0.041*** & 0.009*** & -0.026*** & 0.001 & 0.011*** \\
+    (4) Size & -0.022*** & 0.053*** & -0.018*** & 1.000 & 0.359*** & 0.001 & -0.259*** & 0.142*** & -0.005*** \\
+    (5) BM & -0.002** & 0.009*** & 0.046*** & 0.321*** & 1.000 & -0.176*** & 0.017*** & -0.098*** & 0.016*** \\
+    (6) ROA & -0.005*** & 0.012*** & 0.015*** & -0.040*** & -0.196*** & 1.000 & -0.062*** & 0.080*** & -0.003*** \\
+    (7) Turnover & 0.105*** & -0.028*** & -0.032*** & -0.342*** & 0.002** & -0.072*** & 1.000 & 0.036*** & 0.060*** \\
+    (8) Media Tone & 0.027*** & 0.041*** & 0.001 & 0.119*** & -0.101*** & 0.088*** & 0.033*** & 1.000 & -0.004*** \\
+    (9) Stock Return & 0.111*** & 0.009*** & 0.017*** & -0.011*** & 0.018*** & -0.000 & 0.034*** & -0.007*** & 1.000 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports Pearson correlations above the diagonal and Spearman rank correlations below the diagonal. Media Tone is $Newstone_{t-30,t-3}$, and Stock Return is $Dretwd$. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{sidewaystable}
+\clearpage
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Portfolio Performance Sorted by Textual Signals}
+  \label{tab:horse_race}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{1.1}
+  \setlength{\tabcolsep}{2.5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular}{@{}l c c c c c c c@{}}
+    \toprule
+    \textbf{Signal} & \shortstack{\textbf{Long}\\\textbf{(bps)}} & \shortstack{\textbf{Short}\\\textbf{(bps)}} & \shortstack{\textbf{Ann. Ret}\\\textbf{(\%)}} & \shortstack{\textbf{Excess L-S}\\\textbf{(bps)}} & \textbf{CH4 $\alpha$} & \textbf{q5 $\alpha$} & \textbf{Sharpe} \\
+    \midrule
+    \multicolumn{8}{@{}l}{\textbf{Panel A: Equal Weight (EW)}} \\
+    \midrule
+    Num Questions & 13.79 & 12.24 & 3.7\% & 1.54 (1.48) & 1.28 (1.24) & 1.49 (1.43) & 0.38 \\
+    Investor Tone & 15.56 & 11.16 & 10.6\% & 4.40*** (4.19) & 4.69*** (4.51) & 4.56*** (4.31) & 1.10 \\
+    Manager Tone & 14.49 & 12.01 & 6.0\% & 2.48*** (2.83) & 2.36*** (2.65) & 2.46*** (2.80) & 0.71 \\
+    Aggregate Tone & 14.47 & 11.77 & 6.5\% & 2.70*** (2.71) & 2.95*** (2.99) & 2.87*** (2.85) & 0.71 \\
+    Substantiveness & 11.86 & 11.83 & 0.1\% & 0.04 (0.04) & -0.08 (-0.09) & 0.08 (0.09) & 0.01 \\
+    ESI & 15.38 & 10.06 & 12.9\% & 5.32*** (5.97) & 5.18*** (5.75) & 5.43*** (6.08) & 1.54 \\
+    \midrule
+    \multicolumn{8}{@{}l}{\textbf{Panel B: Value Weight (VW)}} \\
+    \midrule
+    Num Questions & 8.71 & 11.39 & -6.5\% & -2.67 (-1.62) & -2.70 (-1.62) & -2.64 (-1.59) & -0.42 \\
+    Investor Tone & 12.83 & 8.55 & 10.3\% & 4.28*** (2.64) & 4.61*** (2.81) & 4.41*** (2.73) & 0.67 \\
+    Manager Tone & 11.47 & 8.72 & 6.7\% & 2.75* (1.79) & 2.73* (1.77) & 2.69* (1.75) & 0.45 \\
+    Aggregate Tone & 11.33 & 10.17 & 2.8\% & 1.16 (0.75) & 1.63 (1.04) & 1.24 (0.80) & 0.19 \\
+    Substantiveness & 8.18 & 9.38 & -2.9\% & -1.20 (-0.74) & -0.99 (-0.61) & -1.29 (-0.79) & -0.19 \\
+    ESI & 12.07 & 6.71 & 13.0\% & 5.35*** (3.64) & 5.24*** (3.51) & 5.50*** (3.74) & 0.93 \\
+    \bottomrule
+  \end{tabular}\par
+  \vspace{0.18cm}
+
+  
+  \begin{tablenoteblock}
+    This table reports the performance of portfolios sorted on ESI and the comparison textual signals. On each trading day, candidate stocks are drawn from the upper and lower 30 percent of the signal distribution. For directional tone measures, long candidates have positive signals and short candidates have negative signals. Each leg contains at most 50 stocks with the most extreme values, subject to availability. Observations without an interaction are excluded from the sample. Stocks that reach a price limit on the execution day are also excluded. Panel A uses equal weights. Panel B uses market capitalization weights. Long and Short report next-day O2C excess returns in basis points. Excess L-S is the return on the long leg minus the return on the short leg. Ann. Ret and Sharpe are the annualized return and Sharpe ratio of this return difference, calculated using 242 trading days. CH4 $\alpha$ and q5 $\alpha$ are the intercepts from daily factor regressions, reported in basis points. HAC $t\text{-statistics}$ using five lags are reported in parentheses. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Conditional Return Sorts by Interaction Characteristics}
+  \label{tab:conditional_double_sorts}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{1.1}
+  \setlength{\tabcolsep}{2.5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c@{}}
+    \toprule
+    \textbf{Conditioning Group} & \shortstack{\textbf{Long}\\\textbf{(bps)}} & \shortstack{\textbf{Short}\\\textbf{(bps)}} & \shortstack{\textbf{L-S}\\\textbf{(bps)}} & \shortstack{\textbf{Ann. Ret}\\\textbf{(\%)}} & \textbf{q5 $\alpha$} \\
+    \midrule
+    \multicolumn{6}{@{}l}{\textbf{Panel A: Reply substantiveness and managerial tone}} \\
+    \midrule
+    Substantiveness Q1 & 10.34 & 13.16 & -2.81 & -6.8\% & -2.87 (-1.53) \\
+    Substantiveness Q2 & 10.26 & 10.93 & -0.76 & -1.8\% & -0.76 (-0.41) \\
+    Substantiveness Q3 & 10.78 & 9.49 & 0.97 & 2.4\% & 1.00 (0.55) \\
+    Substantiveness Q4 & 12.46 & 7.19 & 5.16 & 12.5\% & 5.12** (2.53) \\
+    Substantiveness Q5 & 12.66 & 9.22 & 3.26 & 7.9\% & 3.34* (1.85) \\
+    High$-$Low (Q5$-$Q1) & & & 6.45 & & 6.58** (2.47) \\
+    \midrule
+    \multicolumn{6}{@{}l}{\textbf{Panel B: Investor tone and managerial tone}} \\
+    \midrule
+    Investor Tone Q1 & 8.90 & 10.63 & -1.73 & -4.2\% & -1.82 (-1.11) \\
+    Investor Tone Q2 & 10.87 & 5.05 & 5.91 & 14.3\% & 5.87*** (3.29) \\
+    Investor Tone Q3 & 12.64 & 8.64 & 3.87 & 9.4\% & 3.99** (2.27) \\
+    Investor Tone Q4 & 10.75 & 8.38 & 2.36 & 5.7\% & 2.26 (1.21) \\
+    Investor Tone Q5 & 13.75 & 12.25 & 1.56 & 3.8\% & 1.62 (0.82) \\
+    \midrule
+    \multicolumn{6}{@{}l}{\textbf{Panel C: Question volume and investor tone}} \\
+    \midrule
+    Question Volume Q1 & 11.24 & 13.27 & -1.97 & -4.8\% & -1.92 (-1.06) \\
+    Question Volume Q2 & 13.49 & 9.50 & 3.91 & 9.5\% & 4.25** (2.24) \\
+    Question Volume Q3 & 11.90 & 10.27 & 1.44 & 3.5\% & 1.70 (0.96) \\
+    Question Volume Q4 & 13.60 & 8.57 & 4.88 & 11.8\% & 4.75** (2.57) \\
+    Question Volume Q5 & 14.09 & 7.88 & 6.04 & 14.6\% & 6.14*** (3.18) \\
+    High$-$Low (Q5$-$Q1) & & & 8.04 & & 8.10*** (3.18) \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports conditional portfolio sorts using next-day O2C excess returns. Each day, stocks are first assigned to quintiles of the conditioning variable. Within each quintile, the long leg contains stocks in the highest decile of the target tone and the short leg contains stocks in the lowest decile. Long candidates also have positive tone, while short candidates have negative tone. Returns use value weights based on lagged market capitalization. Stocks that reach a price limit on the execution day are excluded. Panel A conditions on reply substantiveness and sorts on managerial tone. Panel B conditions on investor tone and sorts on managerial tone. Panel C conditions on the natural logarithm of one plus question volume and sorts on investor tone. Long, Short, and L-S are reported in basis points. L-S is the return on the long leg minus the return on the short leg. Ann. Ret is the annualized return difference calculated using 242 trading days. q5 $\alpha$ is the intercept from a daily q5 regression, reported in basis points. Where reported, High$-$Low equals the Q5 value minus the Q1 value for the return spread and q5 $\alpha$. HAC $t\text{-statistics}$ using five lags are reported in parentheses. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Return Predictability Across Horizons}
+  \label{tab:panel_horse_race}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{1.02}
+  \setlength{\tabcolsep}{4.5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c c@{}}
+    \toprule
+    \textbf{Predictor} & \textbf{1 Day} & \textbf{5 Days} & \textbf{10 Days} & \textbf{20 Days} & \textbf{40 Days} & \textbf{60 Days} \\
+    \midrule
+    \multicolumn{7}{@{}l}{\textbf{Panel A: Panel OLS}} \\
+    \midrule
+    ESI & 1.77*** & 3.93*** & 6.07*** & 5.15*** & 5.54* & 3.97 \\
+     & (5.48) & (5.27) & (5.38) & (3.00) & (1.95) & (1.06) \\
+    Investor Tone & 1.44*** & 1.64** & 2.12** & 2.17 & 3.54 & 2.25 \\
+     & (4.59) & (2.30) & (2.03) & (1.38) & (1.49) & (0.71) \\
+    Manager Tone & 1.10*** & 3.28*** & 5.17*** & 4.41** & 4.00 & 1.04 \\
+     & (3.58) & (4.45) & (4.65) & (2.51) & (1.34) & (0.26) \\
+    Substantiveness & -0.43 & -0.04 & -1.18 & -2.76 & -5.50 & -10.52** \\
+     & (-1.41) & (-0.05) & (-0.94) & (-1.31) & (-1.50) & (-2.04) \\
+    Attention & 0.42* & -0.54 & -0.42 & -0.24 & 5.82* & 11.65*** \\
+     & (1.81) & (-0.89) & (-0.77) & (-0.14) & (1.84) & (2.73) \\
+    \midrule
+    Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Date FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Observations & 920,584 & 950,024 & 948,204 & 943,761 & 933,462 & 923,649 \\
+    Adjusted $R^2$ & 0.317 & 0.337 & 0.335 & 0.335 & 0.325 & 0.310 \\
+    \midrule
+    \multicolumn{7}{@{}l}{\textbf{Panel B: Fama-MacBeth regressions}} \\
+    \midrule
+    ESI & 2.00* & 5.88* & 11.69** & 12.89** & 13.48*** & 10.93** \\
+     & (1.86) & (1.89) & (2.37) & (2.09) & (3.03) & (2.21) \\
+    Investor Tone & 0.68* & 0.61 & 0.51 & 1.31 & 1.95 & 4.00 \\
+     & (1.84) & (0.72) & (0.37) & (0.61) & (0.50) & (0.82) \\
+    Manager Tone & 0.80 & 4.24** & 9.11** & 8.68** & 11.30** & 6.33 \\
+     & (1.06) & (2.20) & (2.57) & (2.33) & (2.44) & (1.42) \\
+    \midrule
+    Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Observations & 920,584 & 950,024 & 948,204 & 943,761 & 933,462 & 923,649 \\
+    Adjusted $R^2$ & 0.092 & 0.115 & 0.128 & 0.132 & 0.118 & 0.110 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports coefficients in basis points from regressions of cumulative q5-adjusted O2C excess returns for $h \in \{1,5,10,20,40,60\}$ trading days. ESI and the comparison textual predictors are standardized. Panel A reports panel OLS estimates with firm and date fixed effects. The $t\text{-statistics}$ in parentheses use standard errors clustered by firm and date. Panel B reports Fama and MacBeth estimates. The $t\text{-statistics}$ in parentheses use Newey and West standard errors with lags equal to the return horizon. Average adjusted $R^2$ is the mean across the estimable daily cross-sectional regressions. All regressions include the baseline controls defined in Section \ref{sec:baseline_return_predictability}. Observations and fit statistics refer to the ESI specification in each column. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+\begin{table}[H]
+  \centering
+  \caption{Text Signals and Subsequent Earnings Surprises}
+  \label{tab:fundamental_sue}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{8pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c@{}}
+    \toprule
+    & \multicolumn{3}{c}{\textbf{Standardized Unexpected Earnings}} \\
+    \cmidrule(lr){2-4}
+    \textbf{Signal} & \textbf{ESI} & \textbf{Investor Tone} & \textbf{Manager Tone} \\
+    \midrule
+    Aggregated Signal $[t-30,t-3]$ & 0.065** & 0.209*** & 0.027 \\
+     & (2.49) & (6.82) & (1.14) \\
+    \midrule
+    Lagged SUE & Yes & Yes & Yes \\
+    Preannouncement CAR & Yes & Yes & Yes \\
+    Firm Controls & Yes & Yes & Yes \\
+    Firm FE & Yes & Yes & Yes \\
+    Time FE & Yes & Yes & Yes \\
+    Adjusted $R^2$ & 0.185 & 0.188 & 0.184 \\
+    Observations & 15,467 & 15,467 & 15,467 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports panel regressions of standardized unexpected earnings on textual signals measured before the earnings announcement. Each standardized signal enters a separate regression and is averaged over 28 trading-day observations from $t-30$ through $t-3$. All regressions use the nonmissing ESI sample and include lagged SUE, the cumulative stock return over the same preannouncement window, Size, BM, ROA, Lev, Illiqd, Dturn, firm age, firm fixed effects, and time fixed effects. The $t\text{-statistics}$ in parentheses use standard errors clustered by firm and event date. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{ESI and Subsequent Investor Trading and Holdings}
+  \label{tab:microstructure_oib}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.92}
+  \setlength{\tabcolsep}{2.5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c c@{}}
+    \toprule
+    \multicolumn{7}{@{}l}{\textbf{Panel A: Daily order imbalance by trade size}} \\
+    \midrule
+     & \multicolumn{3}{c}{\textbf{Day $t+1$}} & \multicolumn{3}{c}{\textbf{Days $t+1$ to $t+5$}} \\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}
+    \textbf{Signal} & \textbf{Large} & \textbf{Small} & \textbf{Difference} & \textbf{Large} & \textbf{Small} & \textbf{Difference} \\
+    \midrule
+    ESI & 0.095*** & $-$0.005 & 0.100*** & 0.066*** & 0.000 & 0.066*** \\
+     & (8.67) & ($-$1.11) & (8.63) & (10.49) & (0.12) & (9.68) \\
+    Investor Tone & 0.112*** & $-$0.026*** & 0.138*** & 0.049*** & $-$0.004 & 0.053*** \\
+     & (9.77) & ($-$5.16) & (11.36) & (7.79) & ($-$1.33) & (7.64) \\
+    Manager Tone & 0.072*** & $-$0.001 & 0.072*** & 0.057*** & 0.003 & 0.054*** \\
+     & (6.50) & ($-$0.14) & (6.21) & (8.64) & (0.97) & (7.56) \\
+    \midrule
+    Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Time FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+    Adjusted $R^2$ & 0.128 & 0.101 & 0.087 & 0.155 & 0.129 & 0.131 \\
+    Observations & 943,695 & 943,695 & 943,695 & 944,344 & 944,344 & 944,344 \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.25cm}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c@{}}
+    \toprule
+    \multicolumn{2}{@{}l}{\textbf{Panel B: Quarterly mutual fund ownership change}} \\
+    \midrule
+    \textbf{Variable} & \textbf{Change in mutual fund ownership} \\
+    \midrule
+    Lagged Quarterly ESI & 0.076*** \\
+     & (3.99) \\
+    \midrule
+    Controls & Yes \\
+    Time FE & Yes \\
+    Firm FE & Yes \\
+    Observations & 67,235 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports panel regressions of subsequent order imbalance and mutual fund ownership. Panel A classifies large and extra-large trades as the large order proxy and small and medium trades as the small order proxy. Order imbalance is the difference between buy and sell volume divided by total volume and is scaled by 100. Each textual signal enters a separate regression with the same control variables, firm fixed effects, date fixed effects, and ESI estimation sample. The Difference columns use $OIB^{diff}$ as the dependent variable and report the coefficient equality tests defined in Section \ref{sec:microstructure_oib}. The observations and adjusted $R^2$ values in Panel A refer to the ESI specification in each column. Panel B examines the quarterly change in shares held by mutual funds relative to shares outstanding and includes firm characteristics as controls. The $t\text{-statistics}$ in parentheses use standard errors clustered by firm and date in Panel A and by firm in Panel B. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Diagnostic Tests of ESI}
+  \label{tab:diagnostic_tests}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.90}
+  \setlength{\tabcolsep}{5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c@{}}
+    \toprule
+    \multicolumn{4}{@{}l}{\textbf{Panel A: ESI predictability before reported insider sales}} \\
+    \midrule
+    \textbf{Variable} & \textbf{(1) Baseline} & \textbf{(2) Sale Indicator} & \textbf{(3) Interaction} \\
+    \midrule
+    ESI (Main Effect) & 1.78*** & 1.78*** & 1.86*** \\
+     & (5.60) & (5.60) & (5.67) \\
+    Insider Sale Indicator &  & 1.29 & 1.24 \\
+     &  & (1.01) & (0.97) \\
+    ESI $\times$ Insider Sale Indicator &  &  & $-$1.08 \\
+     &  &  & ($-$0.93) \\
+    Total ESI Effect in Sale Window &  &  & 0.78 \\
+     &  &  & (0.67) \\
+    Controls & Yes & Yes & Yes \\
+    Time FE & Yes & Yes & Yes \\
+    Firm FE & Yes & Yes & Yes \\
+    Adjusted $R^2$ & 0.319 & 0.319 & 0.319 \\
+    Observations & 953,594 & 953,594 & 953,594 \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.16cm}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c@{}}
+    \toprule
+    \multicolumn{3}{@{}l}{\textbf{Panel B: ESI and subsequent crash risk}} \\
+    \midrule
+    \textbf{Variable} & \textbf{NCSKEW $(q+1)$} & \textbf{DUVOL $(q+1)$} \\
+    \midrule
+    Lagged Quarterly ESI & $-$0.021*** & $-$0.022*** \\
+     & ($-$4.42) & ($-$4.48) \\
+    Size & 0.019*** & 0.020*** \\
+     & (3.12) & (3.24) \\
+    BM & $-$0.025** & $-$0.029*** \\
+     & ($-$2.11) & ($-$2.67) \\
+    ROA & $-$0.154*** & $-$0.165*** \\
+     & ($-$4.12) & ($-$4.34) \\
+    Lev & 0.085*** & 0.091*** \\
+     & (2.98) & (3.11) \\
+    Time FE & Yes & Yes \\
+    Firm FE & Yes & Yes \\
+    Observations & 67,235 & 67,235 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports two diagnostic tests of ESI. Panel A reports firm-day regressions of next-day O2C excess returns on ESI and an ex post insider sale indicator. Return coefficients are in basis points. The indicator equals one when CSMAR reports any negative insider share change during the next 21 trading days. The final row of coefficients reports the sum of the ESI coefficient and its interaction with the sale indicator. Standard errors are clustered by firm and date. Panel B reports firm-quarter regressions of next quarter crash risk on average ESI in the preceding quarter. NCSKEW is the negative coefficient of skewness, and DUVOL is the down-to-up volatility ratio. Standard errors are clustered by firm. Both panels include the controls and fixed effects shown in the table. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+
+\appendix
+\section{Supplementary Robustness Tables}\label{app:robustness_tables}
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+\renewcommand{\theHtable}{A\arabic{table}}
+
+\begin{table}[H]
+  \centering
+  \caption{Alternative Earnings Outcomes}
+  \label{tab:operating_income_sue}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c@{}}
+    \toprule
+    & \multicolumn{2}{c}{\textbf{Adjusted EPS}} & \multicolumn{2}{c}{\textbf{Unexpected Operating Income}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    \textbf{Variable} & \textbf{(1)} & \textbf{(2)} & \textbf{(3)} & \textbf{(4)} \\
+    \midrule
+    Aggregated ESI $[t-30,t-3]$ & 0.024** & 0.012 & 0.001 & 0.001 \\
+     & (2.03) & (1.28) & (0.58) & (0.34) \\
+    Lagged Adjusted EPS &  & 0.211*** &  &  \\
+     &  & (3.75) &  &  \\
+    CAR $[t-30,t-3]$ &  & 0.029 &  & 0.154* \\
+     &  & (0.58) &  & (1.71) \\
+    Size &  & 0.094** &  & $-$0.012 \\
+     &  & (2.25) &  & ($-$0.84) \\
+    BM &  & $-$0.500*** &  & $-$0.045 \\
+     &  & ($-$6.95) &  & ($-$1.01) \\
+    ROA &  & 5.860*** &  & 0.125 \\
+     &  & (3.88) &  & (1.12) \\
+    \midrule
+    Controls & No & Yes & No & Yes \\
+    Firm FE & Yes & Yes & Yes & Yes \\
+    Time FE & Yes & Yes & Yes & Yes \\
+    Observations & 17,953 & 15,467 & 17,953 & 15,467 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports panel regressions of alternative earnings outcomes on ESI averaged over 28 trading-day observations from $t-30$ through $t-3$, where $t$ is the earnings announcement date. Columns (1) and (2) use adjusted earnings per share. Columns (3) and (4) use the seasonal change in quarterly operating income from $q-4$ to $q$, scaled by lagged total assets. The controlled specifications include the preannouncement cumulative return, Size, BM, ROA, Lev, Illiqd, Dturn, firm age, and the lagged outcome when available. All regressions include firm and time fixed effects. The $t\text{-statistics}$ in parentheses use standard errors clustered by firm and event date. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Portfolio Concentration Check}
+  \label{tab:vw_capped_horse_race}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{5pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c@{}}
+    \toprule
+    \textbf{Signal} & \textbf{Annual Return (\%)} & \textbf{Excess L-S (bps)} & \textbf{q5 $\alpha$ (bps)} & \textbf{Sharpe} \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Panel A: Equal Weight Benchmark}} \\
+    \midrule
+    ESI & 12.9 & 5.32*** & 5.43*** & 1.54 \\
+     & & (5.97) & (6.08) & \\
+    Investor Tone & 10.6 & 4.40*** & 4.56*** & 1.10 \\
+     & & (4.19) & (4.31) & \\
+    Manager Tone & 6.0 & 2.48*** & 2.47*** & 0.71 \\
+     & & (2.83) & (2.80) & \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Panel B: Value Weights Capped at 10 Percent}} \\
+    \midrule
+    ESI & 14.6 & 6.02*** & 6.19*** & 1.32 \\
+     & & (5.06) & (5.18) & \\
+    Investor Tone & 10.1 & 4.19*** & 4.39*** & 0.82 \\
+     & & (3.15) & (3.29) & \\
+    Manager Tone & 6.5 & 2.70** & 2.68** & 0.59 \\
+     & & (2.30) & (2.27) & \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table reports the performance of portfolios containing up to 50 stocks in each leg. Panel A reports the equal weight benchmark. Panel B uses value weights and caps each stock at 10 percent of its portfolio leg. Any weight above the cap is reallocated across the remaining stocks in that leg. Returns are next-day O2C excess returns from 2010 through 2024. q5 $\alpha$ is the intercept from the q5 factor regression. HAC $t\text{-statistics}$ using five lags are reported in parentheses. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{ESI Specification Robustness: Parameter, Kernel, and Text Input Choices}
+  \label{tab:grid_search_summary}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.88}
+  \setlength{\tabcolsep}{5pt}
+  \scriptsize
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c@{}}
+    \toprule
+    \multicolumn{5}{c}{\textbf{Equal Weight Portfolio Results}} \\
+    \midrule
+    \textbf{Parameter Value} & \textbf{Excess L-S (bps)} & \textbf{CH4 $\alpha$ (bps)} & \textbf{q5 $\alpha$ (bps)} & \textbf{Sharpe} \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Panel A: Manager Impact Weight $\gamma$ (fixing $\lambda=0.5$, $b=0.8$, $q=0.30$)}} \\
+    \midrule
+    $\gamma = 1.0$ & 4.65*** (4.76) & 4.91*** (5.07) & 4.75*** (4.86) & 1.23 \\
+    $\gamma = 2.0$ & 5.14*** (5.66) & 5.15*** (5.64) & 5.23*** (5.73) & 1.43 \\
+    $\gamma = 3.0$ & 4.98*** (5.43) & 4.91*** (5.31) & 5.09*** (5.54) & 1.42 \\
+    $\gamma = 5.0$ & \textbf{5.32*** (5.97)} & \textbf{5.18*** (5.75)} & \textbf{5.43*** (6.08)} & \textbf{1.54} \\
+    $\gamma = 7.0$ & 5.04*** (5.59) & 4.89*** (5.38) & 5.14*** (5.70) & 1.44 \\
+    $\gamma = 10.0$ & 4.78*** (5.28) & 4.65*** (5.08) & 4.89*** (5.40) & 1.37 \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Panel B: Attention Multiplier $\lambda$ (fixing $\gamma=5.0$, $b=0.8$, $q=0.30$)}} \\
+    \midrule
+    $\lambda = 0.0$ (No Attn) & 5.15*** (5.81) & 5.02*** (5.59) & 5.26*** (5.92) & 1.50 \\
+    $\lambda = 0.2$ & 5.16*** (5.83) & 5.02*** (5.60) & 5.27*** (5.93) & 1.50 \\
+    $\lambda = 0.5$ & \textbf{5.32*** (5.97)} & \textbf{5.18*** (5.75)} & \textbf{5.43*** (6.08)} & \textbf{1.54} \\
+    $\lambda = 0.8$ & 5.37*** (6.02) & 5.23*** (5.81) & 5.47*** (6.13) & 1.55 \\
+    $\lambda = 1.0$ & 5.42*** (6.08) & 5.28*** (5.86) & 5.53*** (6.18) & 1.57 \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Panel C: Bandwidth Multiplier $b$ (fixing $\gamma=5.0$, $\lambda=0.5$, $q=0.30$)}} \\
+    \midrule
+    $b = 0.4$ & 4.81*** (5.48) & 4.83*** (5.46) & 4.95*** (5.65) & 1.37 \\
+    $b = 0.6$ & 5.38*** (6.12) & 5.26*** (5.94) & 5.50*** (6.24) & 1.56 \\
+    $b = 0.8$ & \textbf{5.32*** (5.97)} & \textbf{5.18*** (5.75)} & \textbf{5.43*** (6.08)} & \textbf{1.54} \\
+    $b = 1.0$ & 4.94*** (5.52) & 4.86*** (5.38) & 5.04*** (5.62) & 1.42 \\
+    $b = 1.2$ & 4.97*** (5.47) & 4.89*** (5.34) & 5.04*** (5.54) & 1.42 \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Panel D: Investor Tone Anchor Quantile $q$ (fixing $\gamma=5.0$, $\lambda=0.5$, $b=0.8$)}} \\
+    \midrule
+    $q = 0.10$ & 2.27** (2.55) & 2.44*** (2.77) & 2.29** (2.54) & 0.68 \\
+    $q = 0.20$ & 3.92*** (4.29) & 3.96*** (4.32) & 4.05*** (4.42) & 1.12 \\
+    $q = 0.30$ & \textbf{5.32*** (5.97)} & \textbf{5.18*** (5.75)} & \textbf{5.43*** (6.08)} & \textbf{1.54} \\
+    $q = 0.40$ & 5.64*** (6.11) & 5.56*** (5.95) & 5.76*** (6.22) & 1.60 \\
+    $q = 0.50$ & 5.64*** (6.15) & 5.54*** (5.97) & 5.77*** (6.28) & 1.60 \\
+    \midrule
+    \multicolumn{5}{r}{\textit{To be continued}} \\
+    \bottomrule
+  \end{tabular*}\par
+\end{table}
+
+
+\begin{table}[H]
+  \ContinuedFloat
+  \centering
+  \caption[]{ESI Specification Robustness (Continued)}
+  \label{tab:kernel_robustness}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.88}
+  \setlength{\tabcolsep}{5pt}
+  \scriptsize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c@{}}
+    \toprule
+    \multicolumn{4}{c}{\textbf{Value Weight Portfolio Results}} \\
+    \midrule
+    \textbf{Parameter Value} & \textbf{Excess L-S (bps)} & \textbf{CH4 $\alpha$ (bps)} & \textbf{q5 $\alpha$ (bps)} \\
+    \midrule
+    \multicolumn{4}{@{}l}{\textit{Panel A: Manager Impact Weight $\gamma$ (fixing $\lambda=0.5$, $b=0.8$, $q=0.30$)}} \\
+    \midrule
+    $\gamma = 1.0$ & 2.31 (1.52) & 2.54* (1.65) & 2.42 (1.58) \\
+    $\gamma = 2.0$ & 4.56*** (3.05) & 4.72*** (3.13) & 4.63*** (3.08) \\
+    $\gamma = 3.0$ & 4.78*** (3.24) & 4.77*** (3.17) & 4.87*** (3.29) \\
+    $\gamma = 5.0$ & \textbf{5.35*** (3.64)} & \textbf{5.24*** (3.51)} & \textbf{5.50*** (3.74)} \\
+    $\gamma = 7.0$ & 5.02*** (3.44) & 4.96*** (3.35) & 5.15*** (3.52) \\
+    $\gamma = 10.0$ & 4.31*** (2.91) & 4.28*** (2.84) & 4.41*** (2.97) \\
+    \midrule
+    \multicolumn{4}{@{}l}{\textit{Panel B: Attention Multiplier $\lambda$ (fixing $\gamma=5.0$, $b=0.8$, $q=0.30$)}} \\
+    \midrule
+    $\lambda = 0.0$ (No Attn) & 5.12*** (3.46) & 5.06*** (3.38) & 5.27*** (3.56) \\
+    $\lambda = 0.2$ & 5.04*** (3.40) & 4.99*** (3.32) & 5.19*** (3.50) \\
+    $\lambda = 0.5$ & \textbf{5.35*** (3.64)} & \textbf{5.24*** (3.51)} & \textbf{5.50*** (3.74)} \\
+    $\lambda = 0.8$ & 5.36*** (3.67) & 5.28*** (3.55) & 5.49*** (3.75) \\
+    $\lambda = 1.0$ & 5.45*** (3.72) & 5.36*** (3.60) & 5.58*** (3.80) \\
+    \midrule
+    \multicolumn{4}{@{}l}{\textit{Panel C: Bandwidth Multiplier $b$ (fixing $\gamma=5.0$, $\lambda=0.5$, $q=0.30$)}} \\
+    \midrule
+    $b = 0.4$ & 4.35*** (3.00) & 4.66*** (3.18) & 4.56*** (3.15) \\
+    $b = 0.6$ & 5.55*** (3.75) & 5.49*** (3.64) & 5.69*** (3.85) \\
+    $b = 0.8$ & \textbf{5.35*** (3.64)} & \textbf{5.24*** (3.51)} & \textbf{5.50*** (3.74)} \\
+    $b = 1.0$ & 4.76*** (3.25) & 4.76*** (3.21) & 4.88*** (3.31) \\
+    $b = 1.2$ & 4.81*** (3.25) & 4.87*** (3.27) & 4.89*** (3.29) \\
+    \midrule
+    \multicolumn{4}{@{}l}{\textit{Panel D: Investor Tone Anchor Quantile $q$ (fixing $\gamma=5.0$, $\lambda=0.5$, $b=0.8$)}} \\
+    \midrule
+    $q = 0.10$ & $-$0.44 ($-$0.30) & $-$0.23 ($-$0.15) & $-$0.48 ($-$0.32) \\
+    $q = 0.20$ & 4.89*** (3.41) & 5.03*** (3.50) & 5.01*** (3.48) \\
+    $q = 0.30$ & \textbf{5.35*** (3.64)} & \textbf{5.24*** (3.51)} & \textbf{5.50*** (3.74)} \\
+    $q = 0.40$ & 4.59*** (2.99) & 4.62*** (3.00) & 4.67*** (3.03) \\
+    $q = 0.50$ & 4.63*** (3.02) & 4.64*** (3.02) & 4.73*** (3.07) \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.16cm}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c c@{}}
+    \toprule
+    & \multicolumn{2}{c}{\textbf{Panel OLS}} & \multicolumn{2}{c}{\textbf{EW Sort}} & \multicolumn{2}{c}{\textbf{VW Sort}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+    \textbf{Specification} & \textbf{Coef.\ (bps)} & \textbf{$t$-stat} & \textbf{L-S (bps)} & \textbf{$t$-stat} & \textbf{L-S (bps)} & \textbf{$t$-stat} \\
+    \midrule
+    \multicolumn{7}{@{}l}{\textit{Panel E: Alternative Kernel Functions and Word Count Formulation}} \\
+    \midrule
+    Gaussian  & \textbf{1.33} & \textbf{(6.57)} & \textbf{5.32***} & \textbf{(5.97)} & \textbf{5.35***} & \textbf{(3.64)} \\
+    Epanechnikov        & 1.43          & (7.18)          & 5.26***          & (5.91)          & 5.57***          & (3.87) \\
+    Step (Uniform)      & 1.29          & (6.38)          & 4.90***          & (5.34)          & 5.15***          & (3.57) \\
+    \midrule
+    \multicolumn{7}{@{}l}{\textit{Alternative Text Input: Word Count Formulation ($\mathrm{ESI}_{\text{words}}$)}} \\
+    \midrule
+    $\mathrm{ESI}_{\text{words}}$  & 1.10 & (5.93) & 4.18*** & (4.16) & 4.16*** & (3.25) \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.2cm}
+  \begin{tablenoteblock}
+    This table varies one ESI parameter at a time for Top/Bottom-50 portfolios. Panels A through D vary $\gamma$, $\lambda$, $b$, and $q$, respectively, while the remaining parameters remain at their baseline values. The first page reports equal weight portfolios, and the continued page reports value weight portfolios.
+    Panel E replaces the baseline Gaussian kernel in ESI construction with the
+    Epanechnikov kernel $K_E(u) = \tfrac{3}{4}(1-u^2)\mathbf{1}_{|u|\leq 1}$ and the
+    Step (Uniform) kernel $K_U(u) = \tfrac{1}{2}\mathbf{1}_{|u|\leq 1}$.
+    The Gaussian baseline row reproduces the ESI portfolio result from Table~\ref{tab:horse_race}
+    ($\gamma=5.0$, $\lambda=0.5$, $b=0.8$, $q=0.30$).
+    The final row replaces FinBERT-classified tone and substantiveness scores with raw
+    word-count proxies (question length and reply length).
+    All portfolio returns are daily O2C excess returns from 2010 through 2024.
+    Panel OLS coefficients are estimated on standardized predictors with firm and date
+    fixed effects. The EW and VW Sort columns report daily long minus short returns from the
+    Top/Bottom-50 portfolio. $t\text{-statistics}$ are double-clustered by firm and date.
+    ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Alternative Timing, Portfolio Design, and Implementation Checks}
+  \label{tab:horizon_robustness}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.88}
+  \setlength{\tabcolsep}{4pt}
+  \scriptsize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c@{}}
+    \toprule
+    \multicolumn{5}{@{}l}{\textbf{Panel A: Alternative Return Windows, Equal Weight Portfolios}} \\
+    \midrule
+    \textbf{Signal} & \textbf{Ann. Ret (\%)} & \textbf{Sharpe} & \textbf{L-S (bps)} & \textbf{q5 $\alpha$ (bps)} \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Open-to-Close (O2C) Intraday Drift}} \\
+    \midrule
+    ESI & 12.9 & 1.54 & 5.32*** (5.97) & 5.43*** (6.08) \\
+    Investor Tone & 10.6 & 1.10 & 4.38*** (4.18) & 4.55*** (4.29) \\
+    Manager Tone & 6.0 & 0.71 & 2.48*** (2.83) & 2.47*** (2.80) \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Open-to-Open (O2O) 24-Hour Return}} \\
+    \midrule
+    ESI & 26.2 & 2.80 & 10.84*** (11.14) & 10.92*** (11.12) \\
+    Investor Tone & 3.0 & 0.28 & 1.25 (1.04) & 1.41 (1.17) \\
+    Manager Tone & 20.1 & 2.15 & 8.31*** (8.72) & 8.25*** (8.60) \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Close-to-Close (C2C) Full-Day Return}} \\
+    \midrule
+    ESI & 29.7 & 3.35 & 12.25*** (13.17) & 12.33*** (13.27) \\
+    Investor Tone & 20.1 & 1.91 & 8.31*** (6.79) & 8.45*** (6.81) \\
+    Manager Tone & 22.9 & 2.53 & 9.48*** (9.51) & 9.47*** (9.48) \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.16cm}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c@{}}
+    \toprule
+    \multicolumn{5}{@{}l}{\textbf{Panel B: Alternative Return Windows, Value Weight Portfolios}} \\
+    \midrule
+    \textbf{Signal} & \textbf{Ann. Ret (\%)} & \textbf{Sharpe} & \textbf{L-S (bps)} & \textbf{q5 $\alpha$ (bps)} \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Open-to-Close (O2C) Intraday Drift}} \\
+    \midrule
+    ESI & 13.0 & 0.93 & 5.35*** (3.64) & 5.50*** (3.74) \\
+    Investor Tone & 10.2 & 0.66 & 4.22*** (2.60) & 4.35*** (2.69) \\
+    Manager Tone & 6.7 & 0.46 & 2.77* (1.80) & 2.71* (1.76) \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Open-to-Open (O2O) 24-Hour Return}} \\
+    \midrule
+    ESI & 21.7 & 1.41 & 8.97*** (5.61) & 9.08*** (5.64) \\
+    Investor Tone & 8.7 & 0.51 & 3.58** (2.00) & 3.70** (2.07) \\
+    Manager Tone & 14.6 & 0.90 & 6.03*** (3.60) & 5.91*** (3.51) \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textit{Close-to-Close (C2C) Full-Day Return}} \\
+    \midrule
+    ESI & 24.9 & 1.67 & 10.31*** (6.68) & 10.49*** (6.79) \\
+    Investor Tone & 24.9 & 1.50 & 10.30*** (5.57) & 10.34*** (5.59) \\
+    Manager Tone & 19.7 & 1.24 & 8.13*** (4.75) & 8.16*** (4.78) \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textbf{Panel C: Portfolio Size Sensitivity for ESI}} \\
+    \midrule
+    \textbf{Stocks per leg ($N$)} & \multicolumn{2}{c}{\textbf{EW L-S (bps)}} & \multicolumn{2}{c}{\textbf{VW L-S (bps)}} \\
+    \midrule
+    30 & \multicolumn{2}{c}{5.33 (4.86)} & \multicolumn{2}{c}{5.84 (4.29)} \\
+    50 & \multicolumn{2}{c}{5.63 (6.22)} & \multicolumn{2}{c}{6.37 (5.38)} \\
+    70 & \multicolumn{2}{c}{5.70 (6.98)} & \multicolumn{2}{c}{6.70 (6.14)} \\
+    100 & \multicolumn{2}{c}{5.48 (7.28)} & \multicolumn{2}{c}{7.08 (6.89)} \\
+    \midrule
+    \multicolumn{5}{r}{\textit{To be continued}} \\
+    \bottomrule
+  \end{tabular*}\par
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+
+
+\begin{table}[H]
+  \ContinuedFloat
+  \centering
+  \caption[]{Alternative Timing and Implementation Checks (Continued)}
+  \label{tab:ols_robustness_matrix}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.88}
+  \setlength{\tabcolsep}{3pt}
+  \scriptsize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c c c@{}}
+    \toprule
+    \multicolumn{8}{@{}l}{\textbf{Panel D: Cumulative ESI Predictive Coefficient $\hat{\beta}_h$ (bps) across Horizons}} \\
+    \midrule
+    \textbf{Factor Model} & $h=1$ & $h=2$ & $h=3$ & $h=5$ & $h=10$ & $h=15$ & $h=20$ \\
+    \midrule
+    Raw & 1.33*** & 2.04*** & 2.71*** & 3.82*** & 5.81*** & 5.52*** & 4.46** \\
+    CH4 & 1.32*** & 2.01*** & 2.67*** & 3.76*** & 5.69*** & 5.31*** & 4.15** \\
+    q5 & 1.31*** & 1.98*** & 2.62*** & 3.68*** & 5.55*** & 5.12*** & 3.87** \\
+    FF3 & 1.29*** & 1.94*** & 2.57*** & 3.61*** & 5.44*** & 5.01*** & 3.74*  \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.18cm}
+
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c c c@{}}
+    \toprule
+    \multicolumn{7}{@{}l}{\textbf{Panel E: Sub-period Stability}} \\
+    \midrule
+    & \multicolumn{3}{c}{\textbf{Pre-Covid (2010--2019)}} & \multicolumn{3}{c}{\textbf{Post-Covid (2020--2024)}} \\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}
+    & \textbf{Coef.} & \textbf{$t$-stat} & \textbf{Obs.} & \textbf{Coef.} & \textbf{$t$-stat} & \textbf{Obs.} \\
+    ESI (Standardized)    & 1.358 & (4.33)  & 930,291 & 1.371 & (5.14) & 387,508 \\
+    \midrule
+    \multicolumn{7}{@{}l}{\textbf{Panel F: Transaction Costs (EW, O2C)}} \\
+    \midrule
+    & \multicolumn{2}{c}{\textbf{1-Day Hold}} & \multicolumn{2}{c}{\textbf{3-Day Hold}} & \multicolumn{2}{c}{\textbf{5-Day Hold}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+    & \textbf{Net (bps)} & \textbf{$t$-stat} & \textbf{Net (bps)} & \textbf{$t$-stat} & \textbf{Net (bps)} & \textbf{$t$-stat} \\
+    After 2 bps/turn costs & 2.42** & (2.65) & $-$2.52*** & ($-$2.79) & $-$3.61*** & ($-$4.55) \\
+    Daily Turnover         & \multicolumn{2}{c}{169.7\%} & \multicolumn{2}{c}{169.3\%} & \multicolumn{2}{c}{169.2\%} \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.2cm}
+  \begin{tablenoteblock}
+    Panels A and B report Top/Bottom-50 long minus short performance under three return conventions. O2C is the intraday return from open to close on $T{+}1$. O2O is the return from the open on $T{+}1$ to the open on $T{+}2$. C2C is the return from the close on $T{+}1$ to the close on $T{+}2$. Panel C varies the portfolio size threshold $N$ from 30 to 100 stocks per leg for ESI. All returns are measured relative to the risk-free rate. The $t\text{-statistics}$ are in parentheses and use standard errors clustered by firm and date.
+    Panel D reports the cumulative ESI coefficient $\hat{\beta}_h$ from predictive Panel OLS regressions
+    $R_{i,t \to t+h} = \alpha + \hat{\beta}_h ESI_{i,t} + \boldsymbol{\delta}'\mathbf{X}_{i,t} + \mu_i + \tau_t + \varepsilon_{i,t+h}$ across four
+    factor models and seven holding horizons ($h = 1$ to $20$ trading days). As the dependent
+    variables are cumulative, differences across horizons are not incremental daily effects.
+    CH4 follows \citet{liu2019}, q5 follows \citet{hou2020replicating}, and FF3 follows
+    \citet{fama1993common}.
+    Panel E re-estimates the regression for two non-overlapping subsamples and reports the
+    resulting point estimates.
+    Panel F deducts a mechanical lower-bound cost of 2 bps per daily turnover increment from the gross
+    EW long minus short return. Only the 1-day holding period yields a positive return after costs.
+    All standard errors are double-clustered by firm and date.
+    ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+\begin{table}[H]
+  \centering
+  \caption{Stock Message Board Controls and Changes around Management Replies}
+  \label{tab:guba_robustness}
+  \vspace{0.2cm}
+  \renewcommand{\arraystretch}{0.95}
+  \setlength{\tabcolsep}{7pt}
+  \footnotesize
+  \begin{threeparttable}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c@{}}
+    \toprule
+    \multicolumn{3}{@{}l}{\textbf{Panel A: Incremental return regressions}} \\
+    \midrule
+    \textbf{Variable} & \textbf{Baseline} & \textbf{GUBA controls} \\
+    \midrule
+    ESI & 1.67*** & 1.40*** \\
+     & (5.28) & (4.46) \\
+    GUBA net tone &  & 0.74* \\
+     &  & (1.96) \\
+    GUBA log posts &  & $-$10.78*** \\
+     &  & ($-$11.30) \\
+    \midrule
+    Controls & Yes & Yes \\
+    Firm FE & Yes & Yes \\
+    Date FE & Yes & Yes \\
+    Observations & 952,605 & 952,605 \\
+    \bottomrule
+  \end{tabular*}\par
+  \vspace{0.25cm}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c@{}}
+    \toprule
+    \multicolumn{3}{@{}l}{\textbf{Panel B: Changes around management reply dates}} \\
+    \midrule
+    & \textbf{GUBA net tone} & \textbf{GUBA log posts} \\
+    \midrule
+    Post minus pre & $-$0.005*** & $-$0.033*** \\
+     & ($-$15.65) & ($-$13.23) \\
+    Observations & 1,464,132 & 1,539,311 \\
+    \bottomrule
+  \end{tabular*}\par
+  \begin{tablenoteblock}
+    This table examines whether ESI captures information beyond retail discussion on GUBA. Panel A reports panel regressions of next-day O2C excess returns on standardized ESI and GUBA controls. Return coefficients are in basis points. Both columns include the full baseline control set and firm and date fixed effects. The GUBA controls column also includes an indicator for any GUBA post, which is not reported. Panel B reports the average change in market-adjusted GUBA net tone and log posting activity. The post period covers days $+1$ through $+3$ relative to a management reply. The pre period covers days $-3$ through $-1$. The event comparisons are descriptive since reply timing is endogenous and event windows can overlap. The GUBA sentiment classifications are supplied by the data vendor and are not independently validated. The $t\text{-statistics}$ in parentheses use standard errors clustered by firm and date. ***, **, and * denote statistical significance at the 1\%, 5\%, and 10\% levels, respectively.
+  \end{tablenoteblock}
+  \end{threeparttable}
+\end{table}
+\clearpage
+
+
+
+\section{Textual analysis methodology} \label{app:nlp_methodology}
+
+To support replication, this appendix describes the natural language processing procedures used to construct investor tone, managerial tone, and reply substantiveness. These variables provide the text inputs to ESI. Dialogues on IIPs differ from annual reports and news articles as they are short, tied to a specific request, and often contain informal Chinese expressions, financial abbreviations, and firm specific references. General sentiment dictionaries are not well suited to this setting since financial words can have domain specific meanings and dictionary methods do not reliably account for context, negation, or the relation between a question and its reply \citep{loughran2011}. We therefore use supervised models trained on financial text rather than a general dictionary measure.
+
+To train the text classifiers, we use 2,000 manually labeled Q\&A interactions. Investor inquiries and managerial replies are labeled as negative, neutral, or positive. Replies are also labeled according to whether they are evasive. One observation has a missing evasiveness label, leaving 2,000 interactions for the substantiveness classifier. We train separate BERT classifiers for investor and managerial sentiment \citep{liu2020finbert}. For each firm and day, we aggregate investor tone and managerial tone separately. We train a Random Forest classifier for evasiveness and define reply substantiveness as one minus the estimated probability of an evasive reply.
+
+The Random Forest inputs include the lengths of the question and reply, the reply to question length ratio, character level TF-IDF cosine similarity, indicators for boilerplate phrases, and indicators for numbers, dates, and percentages. For model assessment, we use an 80\% training sample and a 20\% test sample with a random seed of 42. The classifier contains 150 trees with a maximum depth of 10. The production model is fitted to the available labeled observations. Its output is converted into a continuous substantiveness score by subtracting the estimated probability of an evasive reply from one. The continuous score allows ESI to reduce the contribution of managerial tone gradually rather than applying a binary cutoff.
+
+\clearpage
+\setcounter{table}{0}
+\renewcommand{\thetable}{C\arabic{table}}
+\renewcommand{\theHtable}{C\arabic{table}}
+\section{Variable definitions} \label{app:variable_definitions}
+
+This table defines the variables used in the empirical analyses and reports their data sources. The reference column identifies the prior study followed in the construction of a variable.
+
+\vspace{0.3cm}
+\begingroup
+\footnotesize % 统一表格字号
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{xltabular}{\textwidth}{@{} >{\RaggedRight\arraybackslash}p{3.1cm} >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{2.6cm} >{\RaggedRight\arraybackslash}p{2.8cm} @{}}
+  \caption{Variable Definitions, Data Sources, and Key References} \\
+  \toprule
+  \textbf{Variable} & \textbf{Variable Definition} & \textbf{Source} & \textbf{Reference} \\
+  \midrule
+  \endfirsthead
+
+  \multicolumn{4}{@{}l}{\textit{(Table continued from previous page)}} \\
+  \toprule
+  \textbf{Variable} & \textbf{Variable Definition} & \textbf{Source} & \textbf{Reference} \\
+  \midrule
+  \endhead
+
+  \bottomrule
+  \endfoot
+
+  \addlinespace[2pt]
+  
+  \bottomrule
+  \endlastfoot
+
+  % ================= Panel A =================
+  \multicolumn{4}{@{}l}{\textbf{Panel A: Platform Interaction and Sentiment Variables}} \\
+  \midrule
+
+  $ESI$ & Effective Sentiment Index, defined in Equation \ref{eq:esi}. It combines investor tone scaled by question attention with standardized managerial tone weighted by reply substantiveness and the investor sentiment state. & Constructed & - \\
+  \addlinespace
+  \textit{Investor\_Tone} & The net sentiment score of retail investor inquiries posted on the IIPs on day $t$. Extracted using a fine-tuned FinBERT model ($[-1, 1]$). & Constructed from CNRDS & \cite{liu2020finbert} \\
+  \addlinespace
+  \textit{Manager\_Tone} & The net sentiment score of managerial replies on day $t$, computed identically to $Investor\_Tone$ using the fine-tuned FinBERT model ($[-1, 1]$). & Constructed from CNRDS & \cite{liu2020finbert} \\
+  \addlinespace
+  \textit{Aggregate Tone} & The simple average of investor tone and managerial tone for a firm on day $t$. & Constructed & - \\
+  \addlinespace
+  \textit{Substantiveness} & One minus the estimated probability that a managerial reply is evasive, obtained from the Random Forest classifier described in Appendix \ref{app:nlp_methodology}. The empirical analyses use this continuous score. & Constructed & - \\
+  \addlinespace
+  \textit{Num\_Questions} & The number of investor questions posted for a firm on day $t$. The normalized attention input to ESI is $A_{i,t}=\log(1+Num\_Questions_{i,t})$ divided by the sample maximum of this quantity. & CNRDS & - \\
+  \addlinespace
+  \textit{Attention} & The standardized number of investor questions for a firm on day $t$ when question volume enters a regression as a separate textual predictor. & Constructed from CNRDS & - \\
+  \addlinespace
+  $ESI_{words}$ & An alternative ESI specification that uses mean question length in the attention component and mean reply length in place of the substantiveness input. It retains investor tone, standardized managerial tone, and the investor state weight. & Constructed from CNRDS & - \\
+  \addlinespace
+  \textit{Reply\_Rate} & The number of managerial replies divided by the number of investor questions for the firm on day $t$. & CNRDS & -\\
+  \addlinespace
+  \textit{Mean Reply Length} & The average length of managerial replies posted for a firm on day $t$. & CNRDS & - \\
+  \addlinespace
+  \textit{Mean Response Lag} & The average elapsed time, in days, between the posting of an investor question and the associated managerial reply for a firm on day $t$. & CNRDS & - \\
+  \midrule
+
+  % ================= Panel B =================
+  \multicolumn{4}{@{}l}{\textbf{Panel B: Market and Trading Variables}} \\
+  \midrule
+
+  $Ret^{O2C}$ & Open to close stock return, defined as the closing price divided by the opening price on day $t$, minus one. The return tests subtract the daily risk-free rate. & CSMAR & \cite{lopez2023chatgpt} \\
+  \addlinespace
+  $Ret^{O2O}$ & Open to open return measured from the market open on day $t+1$ to the market open on day $t+2$. The robustness test subtracts the risk-free rate on day $t+1$. & CSMAR & - \\
+  \addlinespace
+  $Ret^{C2C}$ & Close to close stock return on day $t+1$. The robustness test subtracts the risk-free rate on day $t+1$. & CSMAR & - \\
+  \addlinespace
+  \textit{Stock Return} & Daily stock return with cash dividends reinvested. It is denoted by $Dretwd$ in the source data and is used to construct lagged return controls and the correlation matrix. & CSMAR & - \\
+  \addlinespace
+  \textit{Market Capitalization} & Total market value reported by CSMAR. It is used to form the value weights in the portfolio tests. & CSMAR & - \\
+  \addlinespace
+  $R^{q5}_{[t+1,t+h]}$ & The sum of daily q5-adjusted O2C excess returns from day $t+1$ through trading day $t+h$, where $h\in\{1,5,10,20,40,60\}$. & Constructed from CSMAR returns and factor series & \cite{hou2021} \\
+  \addlinespace
+  $Ret_{t-1}$ & The daily stock return on the trading day preceding day $t$. & CSMAR & - \\
+  \addlinespace
+  $Vol_{[t-30,t-1]}$ & The standard deviation of daily stock returns over the preceding 30 trading days, with at least 10 available observations. & CSMAR & - \\
+  \addlinespace
+  $Ret_{[t-30,t-2]}$ & The sum of daily stock returns from day $t-30$ through day $t-2$, with at least 10 available observations. & CSMAR & - \\
+  \addlinespace
+  $Illiqd$ & The monthly Amihud illiquidity measure, calculated from the daily ratio of the absolute stock return to trading value. & CSMAR & \cite{amihud2002illiquidity} \\
+  \addlinespace
+  $Dturn$ & The stock turnover rate reported in the CSMAR monthly stock return file and assigned to firm day observations within the month. & CSMAR & - \\
+  \addlinespace
+  $OIB^{inst}$ & Large order imbalance used as a proxy for institutional trading, defined as the difference between buy and sell volume for large and extra-large trades, scaled by total daily trading volume. & CSMAR & \cite{lee1992,lee1991inferring,tong2013} \\
+  \addlinespace
+  $OIB^{ind}$ & Small order imbalance used as a proxy for retail trading, defined as the difference between buy and sell volume for small and medium trades, scaled by total daily trading volume. & CSMAR & \cite{lee1992,lee1991inferring,tong2013} \\
+  \addlinespace
+  $OIB^{diff}$ & The paired difference between the large order and small order imbalance proxies, defined as $OIB^{inst}-OIB^{ind}$. It is used as the dependent variable in the coefficient equality test. & CSMAR & \cite{lou2019,zellner1962} \\
+  \addlinespace
+  $Newstone_{t-30,t-3}$ & The average textual sentiment score of firm-specific media news coverage over the rolling window from day $t-30$ to $t-3$. & Constructed from CNRDS & \cite{ke2021predicting} \\
+  \addlinespace
+  $Newsdummy_{t-30,t-3}$ & An indicator variable equal to 1 if the firm has any media news coverage during the rolling window from day $t-30$ to $t-3$, and 0 otherwise. & Constructed from CNRDS & - \\
+  \addlinespace
+  \midrule
+
+  % ================= Panel C =================
+  \multicolumn{4}{@{}l}{\textbf{Panel C: Firm Fundamentals and Diagnostic Outcomes}} \\
+  \midrule
+  $Sell^{Next30d}$ & An indicator equal to 1 if CSMAR records any negative insider share change during the 21 trading days following the Q\&A interaction, and 0 otherwise. It corresponds to $Insider\_Sell\_Next30d$ in the data. & CSMAR & \cite{cheng2006insider} \\
+  \addlinespace
+  $SUE$ & Standardized Unexpected Earnings, calculated as the current semi-annual EPS minus the EPS from the corresponding period a year ago, scaled by the historical standard deviation of this difference over the preceding five periods. & CSMAR & \cite{bernard1989post} \\
+  \addlinespace
+  \textit{Adjusted EPS} & Earnings per share adjusted for changes in total share capital, including stock splits and rights issues. & CSMAR & - \\
+  \addlinespace
+  \textit{Unexpected Operating Income} & The seasonal change in quarterly operating income from quarter $q-4$ to quarter $q$, scaled by lagged total assets. & CSMAR & - \\
+  \addlinespace
+  $\Delta Fund\ Ownership$ & The quarterly change in the proportion of shares held by mutual funds. & CSMAR & - \\
+  \addlinespace
+  $NCSKEW$ & The negative coefficient of skewness of firm-specific weekly stock returns within a quarter. & Constructed from CSMAR & \cite{chen2001,hutton2009} \\
+  \addlinespace
+  $DUVOL$ & The natural logarithm of the ratio of the standard deviation of firm-specific weekly returns in down weeks to that in up weeks within a quarter. & Constructed from CSMAR & \cite{chen2001,hutton2009} \\
+  \addlinespace
+  $CAR_{[t-30,t-3]}$ & The sum of daily stock returns from day $t-30$ through day $t-3$ before an earnings announcement. & CSMAR & - \\
+  \addlinespace
+  $Size$ & Firm size, defined as the natural logarithm of total assets from the most recent financial report available before day $t$. & CSMAR & \cite{fama1993common} \\
+  \addlinespace
+  $BM$ & Book to market ratio from the most recent financial report available before day $t$. & CSMAR & \cite{fama1993common} \\
+  \addlinespace
+  $Lev$  & Total liabilities divided by total assets in the most recent financial report available before day $t$. & CSMAR & - \\
+  \addlinespace
+  $ROA$ & Net income divided by total assets in the most recent financial report available before day $t$. & CSMAR & - \\
+  \addlinespace
+  $\ln(\textit{FirmAge})$ & The natural logarithm of the number of years since the firm's initial public offering. & CSMAR & - \\
+  \midrule
+
+  % ================= Panel D =================
+  \multicolumn{4}{@{}l}{\textbf{Panel D: Additional Retail Discussion Controls}} \\
+  \midrule
+  \textit{GUBA Net Tone} & The number of positive GUBA posts minus the number of negative GUBA posts, divided by the total number of classified posts for a firm on day $t$. It is set to zero when no classified post is observed. The event comparison subtracts the daily mean across boards with classified posts. & CNRDS & - \\
+  \addlinespace
+  \textit{GUBA Log Posts} & The natural logarithm of one plus the total number of GUBA posts for a firm on day $t$. The event comparison subtracts its daily cross-sectional mean. & CNRDS & - \\
+  \addlinespace
+  \textit{GUBA Active} & An indicator equal to 1 when the firm has at least one GUBA post on day $t$, and 0 otherwise. & CNRDS & - \\
+\end{xltabular}
+\endgroup
+
+\clearpage
+
+
+\section{Examples of platform dialogue across different scenarios} \label{app:cases}
+
+This appendix presents representative Q\&A examples categorized by the interaction patterns identified in our text analysis. 
+
+\subsection{Scenario A: High manager sentiment and low investor sentiment}
+\textit{Characteristics: High investor anxiety (Investor Tone $< -0.9$) countered by optimistic managerial reassurance (Manager Tone $> +0.9$).}
+\vspace{0.3cm}
+
+\noindent \textbf{Example 1} \\
+\textbf{格林美} [Stock Code: 002340]. \textit{Scores: Inv Tone: -0.94, Mgr Tone: +0.96}. \\
+\textbf{Question:} Hello Secretary! I heard that your company battery project has been losing money and the stock price is overvalued. What is your opinion? (董秘您好！听说贵公司的电池项目一直亏损，股价严重高估，您怎么看？) \\
+\textbf{Reply:} Thank you for your attention! The company is engaged in the production of precursor products for new energy vehicle power batteries and power battery recycling... It is an industry leader in the field of power battery recycling. The company subsidiaries... have been included as pilot enterprises in the MIIT ``white list'' (ranking first in the industry with 3 included sites)... Market share has reached historical peaks... which will become a new growth pole for the company. (感谢您的关注！公司从事新能源汽车动力电池用前驱体产品生产和动力电池回收...将成为推动公司业绩增长的新增长极。)
+\vspace{0.4cm}
+
+\noindent \textbf{Example 2} \\
+\textbf{皇台酒业} [Stock Code: 000995]. \textit{Scores: Inv Tone: -0.93, Mgr Tone: +0.96}. \\
+\textbf{Question:} Hello Secretary, the stock has been close to the lower trading limit recently. Is it because the liquor business is suffering large losses? If the management is poor, what measures do you have? (你好董秘，这几天股票连续接近跌停，是因为公司的白酒业务亏损严重吗？...公司有什么措施？) \\
+\textbf{Reply:} Dear investor! Secondary market price fluctuations are affected by many factors. The company will strictly follow the 2021 business plan... focusing on the strategic awakening of the brand ``Moutai in the South, Huangtai in the North''... establishing two strategic core product lines... to achieve the revival of the famous liquor brand. (投资者您好！二级市场股价变动受多种因素的影响...打造经典皇台系列、窖底原浆系列两条战略核心产品线...实现企业整体竞争力的提升。)
+\vspace{0.6cm}
+
+\subsection{Scenario B: Positive investor tone and positive managerial tone}
+\textit{Characteristics: Low retail concern with managerial optimism.}
+
+\vspace{0.3cm}
+\noindent \textbf{Example 3} \\
+\textbf{China CSSC} [Stock Code: 600150, 2024]. \textit{Scores: Inv Tone: +0.75, Mgr Tone: +0.70. Reply substantiveness is high.} \\
+\textbf{Question:} Congratulations on the favorable performance of the company in the first half of the year. Which business segments or projects drove this growth? Can these sources of growth continue? (恭喜公司在上半年取得良好业绩。请问这些显著增长的背后，主要有哪些具体的业务板块或项目驱动？未来这些增长动能是否可持续？) \\
+\textbf{Reply:} First half revenue was RMB 36.017 billion, an increase of 17.99\%. The company attributes this growth mainly to an increase in completed vessel deliveries. Revenue from shipbuilding, repair, and marine engineering was RMB 34.446 billion, an increase of 22.39\%. Management also cites a shift toward vessels with higher value added and stable orders during the recovery of the shipping and shipbuilding industries. (感谢您的关注...取得了较好的接单成果，打开了长期可持续发展的空间。)
+\vspace{0.6cm}
+
+\subsection{Scenario C: Low manager sentiment}
+\textit{Characteristics: Managerial replies transmitting adverse fundamental information and confirming negative outcomes (Manager Tone $< -0.5$).}
+
+\vspace{0.3cm}
+\noindent \textbf{Example 4} \\
+\textbf{ST工智} [Stock Code: 000584, 2023]. \textit{Scores: Inv Tone: -0.80, Mgr Tone: -0.85.} \\
+\textbf{Question:} What caused the company's losses over the past two years? Does management expect another loss this year? Is the company at risk of delisting? (请问贵公司近两年亏损的原因是什么？今年还会继续亏损吗？会退市吗？) \\
+\textbf{Reply:} The company reports that its largest business, automotive manufacturing, has faced semiconductor shortages, high raw material prices, cash flow pressure, weak downstream demand, delayed or cancelled production line projects, and intense competition. These conditions reduced new projects and project margins. Financial distress among several automaker customers also increased receivable impairments. Based on its 2022 earnings forecast, the company expects net profit for 2022 to be negative. (尊敬的投资者，您好！近年来公司业务占比最大的汽车制造业面临了芯片短缺、原材料价格持续高位、现金流等不利因素影响。自2018年四季度下游汽车行业低迷，行业出现汽车整车厂新生产线投资项目暂缓或停止的情况，新增产线项目大幅减少，行业竞争激烈，导致公司签订的项目毛利率大幅下降公司业绩受到影响，尤其是2021年下半年包括南京知行汽车、宝沃汽车、华晨汽车、宝能汽车等在内的部分国内汽车整车制造厂商或进入被申请破产流程或申请破产或出现重大经营风险，导致公司报告期内的应收款项减值大幅增加。根据《江苏哈工智能机器人股份有限公司2022年度业绩预告》，预计公司2022年度净利润为负值。感谢您对公司的支持!)
+\vspace{0.6cm}
+
+\subsection{Scenario D: Low substantiveness (the ``boilerplate'')}
+\textit{Characteristics: Low Substantiveness Score ($< 0.02$). Responses feature evasive, repetitive, or automated language.}
+\vspace{0.3cm}
+
+\noindent \textbf{Example 5} \\
+\textbf{尔康制药} [Stock Code: 300267]. \textit{Score: Substantiveness: 0.014}. \\
+\textbf{Question:} Excuse me, the trigger condition for the second batch of equity incentives is a 70\% annual increase in 2021 performance compared to 2019. Is there any hope? (请问，第二批股权激励的触发条件是 2021 年的业绩比 2019 年同比增 70\%，有希望吗？) \\
+\textbf{Reply:} Hello, thank you for your attention. Please pay attention to the company announcements! (您好，感谢您的关注。敬请关注公司公告！)
+\vspace{0.4cm}
+
+\noindent \textbf{Example 6} \\
+\textbf{林州重机} [Stock Code: 002535]. \textit{Score: Substantiveness: 0.015}. \\
+\textbf{Question:} Hello Secretary, has the lithium battery project been powered on? Is it expected to start production this year? How is the performance? (董秘你好，锂电项目是否已经通电？预计年内能投产吗？预计达产后，今年业绩如何？) \\
+\textbf{Reply:} Hello, please pay attention to the company announcement information! (您好，敬请关注公司公告信息！)
+\vspace{0.4cm}
+
+\noindent \textbf{Example 7} \\
+\textbf{新元科技} [Stock Code: 300472]. \textit{Score: Substantiveness: 0.016}. \\
+\textbf{Question:} Will the stock price falling below the private placement price lead to the failure of the issuance? Why is there no preliminary earnings report for 2020? (请问股价跌破定增价是否会导致定增失败？...为何没有预告 2020 年业绩和 2019 年基本持平吗？) \\
+\textbf{Reply:} Hello! The company will strictly follow relevant laws and regulations to fulfill information disclosure obligations. Please follow the company announcements. Thank you! (您好！公司会严格按照相关法律、法规的要求，及时履行信息披露义务，请关注公司公告，谢谢！)
+\vspace{0.6cm}
+
+\subsection{Scenario E: High substantiveness (hard information)}
+\textit{Characteristics: High Substantiveness Score ($> 0.98$). Responses contain specific data, logical explanations, and verifiable details.}
+\vspace{0.3cm}
+
+\noindent \textbf{Example 8} \\
+\textbf{莱茵生物} [Stock Code: 002166]. \textit{Score: Substantiveness: 0.987}. \\
+\textbf{Question:} Hello Secretary, how many grams of CBD can be extracted from one ton of industrial hemp raw material? (您好，董秘，请问一吨工业大麻的原材料可以提取多少克的 CBD？) \\
+\textbf{Reply:} Hello... The extraction volume depends on specific orders. For example, assuming a CBD content of 6\% and a yield of 70\%, then 1 ton of raw material should theoretically yield 42 kilograms of 100\% pure CBD. Different processes will result in varying losses. Thank you! (回复：您好...公司采取以销定产的生产方式...如果以提取纯度 100\%CBD 计的话，可以举例说明如下...当然不同工艺之间会有不同的损耗等等因素影响。谢谢！)
+\vspace{0.4cm}
+
+\noindent \textbf{Example 9} \\
+\textbf{中煤能源} [Stock Code: 601898]. \textit{Score: Substantiveness: 0.988}. \\
+\textbf{Question:} With such favorable cash flow and the large valuation gap between A and H shares, why does the company not repurchase H shares? (公司这么好的现金流，AH 股价相差如此之大，港股被严重低估，公司为何不对港股进行增持或回购？) \\
+\textbf{Reply:} In the first half of the year, net cash flow grew rapidly, ensuring our ability to repay maturing debts... Stock price is affected by many factors. However, our H share price has increased by 123\% since the beginning of the year. Currently, the company has no plan for H share repurchases. (...今年上半年，公司现金流净额较快增长...股价表现受资本市场的多方面因素影响，截至当前，公司 H 股股价较年初上涨了 123\%。下一步，公司将...目前，公司没有港股增持或回购计划。)
+
+\clearpage
+\newpage
+\bibliographystyle{elsarticle-harv}
+\bibliography{references} 
+
+
+\end{document}

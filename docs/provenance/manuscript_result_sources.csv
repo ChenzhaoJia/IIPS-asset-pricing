@@ -1,0 +1,22 @@
+table_label,current_table_number,source,treatment
+tab:summary_stats,1,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:textual_coverage,2,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:correlation_matrix,3,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:horse_race,4,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:conditional_double_sorts,5,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:panel_horse_race,6,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:fundamental_sue,7,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:microstructure_oib,8,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:diagnostic_tests,9,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:operating_income_sue,A1,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:vw_capped_horse_race,A2,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:grid_search_summary,A3,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:kernel_robustness,A3,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:horizon_robustness,A4,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:ols_robustness_matrix,A4,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:guba_robustness,A5,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+,C1,Annual_Review_Chenzhao Jia.pdf / drafts/annual_review_pdf_baseline/main.tex,Original printed table retained verbatim; no re-estimation in this revision
+tab:full_topic_heterogeneity,A6,data/results/topic_c2c/topic_slope_heterogeneity.csv,Existing supplement; explicit own sample and definition
+tab:full_topic_coverage,A7,drafts/manuscript/tables/full_topic_coverage.tex,Existing supplement; explicit own sample and definition
+tab:parameters,A8,data/results/annual_review_o2c/frozen_scales.json,Existing supplement; explicit own sample and definition
+tab:substantiveness_benchmark,B1,data/results/classifier_benchmark/substantiveness_common_benchmark_summary_2026-09-28.csv,Existing supplement; explicit own sample and definition

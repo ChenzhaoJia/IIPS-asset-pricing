@@ -22,9 +22,8 @@ def run():
     keys=set(re.findall(r'@\w+\s*\{\s*([^,]+)',bib))
     cited=set(k.strip() for group in re.findall(r'\\cite\w*(?:\[[^\]]*\])*\{([^}]+)\}',s) for k in group.split(','))
     assert not cited-keys,cited-keys
-    assert '5.35' not in s and '13.4\\%' not in s,'Old printed headline remains'
-    assert 'full original 2010--2024 text pools' in s and 'asymmetric' in s
-    assert '0.58' in s and '0.75' in s and 'Annodt' in s
+    from check_manuscript_preservation import check
+    check()
     # All active notebooks execute their light, aggregate-only entry cells.
     notebook_count=0
     for p in sorted((R/'notebooks').rglob('*.ipynb')):

@@ -2,9 +2,9 @@
 
 ## Layer 1: public results and manuscript
 
-Install requirements.txt; notebooks 01–08 inspect aggregate files. `python scripts/build_tables.py` regenerates seven manuscript tables from CSV/JSON. C2C and full-topic source tables are retained with their matching aggregate CSVs. No classifier is rerun.
+Latest manuscript direction: retain the full Annual Review and its printed results, then add feedback explanations and completed topic material. Notebooks 01–07 inspect research aggregates; notebook 08 checks original-content preservation. `python scripts/check_manuscript_preservation.py` checks all 17 original table environments, the original conclusion/examples, and references. `python scripts/build_tables.py` writes recomputation comparison tables to build/recomputation_tables only. It never overwrites the active paper.
 
-For PDF compilation install a full TeX Live/TinyTeX with latexmk, pdflatex and BibTeX. Required packages include geometry, setspace, graphicx, amsmath, amssymb, booktabs, threeparttable, float, tabularx, longtable, ragged2e, natbib, fontenc, inputenc, lmodern, microtype, caption and hyperref. Set IIP_TEX_BIN if executables are not on PATH. `python scripts/compile_manuscript.py` writes the review PDF in drafts/manuscript and build logs in build/latex. It does not install anything globally.
+For PDF compilation use TeX Live/TinyTeX with latexmk, XeLaTeX and BibTeX. Required packages include ctex, xeCJK, zhnumber, fontspec, geometry, setspace, graphicx, adjustbox, multirow, xltabular, ltablex, footmisc, amsmath, booktabs, threeparttable, float, ragged2e, natbib, caption, hyperref and elsarticle-harv. ctex uses system fonts on Windows or Fandol where appropriate. Set IIP_TEX_BIN if needed. `python scripts/compile_manuscript.py --baseline` compiles the faithful reconstruction; without the flag it compiles the additive revision. Logs remain in build. No global installation is required.
 
 ## Layer 2: frozen prepared inputs
 

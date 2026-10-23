@@ -1,0 +1,24 @@
+\begin{table}[H]
+\centering
+\caption{Full Archive Classification Coverage}
+\label{tab:full_topic_coverage}
+\footnotesize
+\renewcommand{\arraystretch}{1.03}
+\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c @{}}
+\toprule
+Classification State & Question N & Question Share & Reply N & Reply Share \\
+\midrule
+Assigned Content & 3,182,822 & 54.54\% & 3,763,518 & 64.49\% \\
+Low Score & 2,653,333 & 45.46\% & 880,119 & 15.08\% \\
+Generic Template & 0 & 0.00\% & 624,562 & 10.70\% \\
+Requires Context & 0 & 0.00\% & 152,734 & 2.62\% \\
+Empty Text & 3 & 0.00\% & 415,225 & 7.11\% \\
+\bottomrule
+\end{tabular*}\par
+\begin{tablenoteblock}
+The denominator is 5,836,158 original questions or replies. Assigned content requires an eligible text and a largest classifier score of at least 0.50. Scores are not calibrated accuracy probabilities. Low scores retain a candidate but are not forced into any of the 19 themes. Reply status distinguishes content, generic templates, context dependent replies, and empty texts. Training and development labels are assistant judgments, not independent human gold labels. Classification does not change the sentiment or substantiveness measures in ESI.
+\end{tablenoteblock}
+\end{threeparttable}
+\end{table}

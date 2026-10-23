@@ -1,0 +1,148 @@
+{
+  "scope": "Document preservation and references only; not empirical revalidation.",
+  "original_table_environments": 17,
+  "all_original_table_blocks_retained_verbatim": true,
+  "original_conclusion_retained_verbatim": true,
+  "original_dialogue_examples_retained_verbatim": true,
+  "original_figures_retained": 3,
+  "active_resolved_labels": 44,
+  "resolved_citation_keys": 70,
+  "tables": [
+    {
+      "index": 1,
+      "environment": "table",
+      "label": "tab:summary_stats",
+      "caption": "Descriptive Statistics of Main Variables",
+      "sha256": "c57eea192f413ae67e9efab55efac5f7eb6b6fbe88df64917ff54495b5ba0805",
+      "retained_verbatim": true
+    },
+    {
+      "index": 2,
+      "environment": "table",
+      "label": "tab:textual_coverage",
+      "caption": "Sample Coverage and Categorical Tone Distributions",
+      "sha256": "8ef3165719bc00e5d18bdbf07fecff76da7b029e100f4dfb22dabcd99328639b",
+      "retained_verbatim": true
+    },
+    {
+      "index": 3,
+      "environment": "sidewaystable",
+      "label": "tab:correlation_matrix",
+      "caption": "Correlation Matrix of Key Variables",
+      "sha256": "3643c5d6d8c4c008cdd565948994abaf9d19f9ea939a803c814399ae21e426de",
+      "retained_verbatim": true
+    },
+    {
+      "index": 4,
+      "environment": "table",
+      "label": "tab:horse_race",
+      "caption": "Portfolio Performance Sorted by Textual Signals",
+      "sha256": "84dbee6cfdb3a31ec7ec8767defe0b45477e2c5207910be5797ce35fd185b3f2",
+      "retained_verbatim": true
+    },
+    {
+      "index": 5,
+      "environment": "table",
+      "label": "tab:conditional_double_sorts",
+      "caption": "Conditional Return Sorts by Interaction Characteristics",
+      "sha256": "26668e60237f32cc2cb79af62fb113f50f94a0dc7e4d06786b6056646addc385",
+      "retained_verbatim": true
+    },
+    {
+      "index": 6,
+      "environment": "table",
+      "label": "tab:panel_horse_race",
+      "caption": "Return Predictability Across Horizons",
+      "sha256": "4543fc170ba8c6400abba589590faca0511d68c27fb26c8eb1cc25cd723fc67c",
+      "retained_verbatim": true
+    },
+    {
+      "index": 7,
+      "environment": "table",
+      "label": "tab:fundamental_sue",
+      "caption": "Text Signals and Subsequent Earnings Surprises",
+      "sha256": "2d58420fc2d52246460ebafd6f952025373c1b52a1c7d50a7aeac7090f1eb4a6",
+      "retained_verbatim": true
+    },
+    {
+      "index": 8,
+      "environment": "table",
+      "label": "tab:microstructure_oib",
+      "caption": "ESI and Subsequent Investor Trading and Holdings",
+      "sha256": "bea0210e7de32881aabbd736a9814744d0006bbe123d8440240cbe3cbc934532",
+      "retained_verbatim": true
+    },
+    {
+      "index": 9,
+      "environment": "table",
+      "label": "tab:diagnostic_tests",
+      "caption": "Diagnostic Tests of ESI",
+      "sha256": "7000048789bef1c7c08782d7e0b62f680838972afb91189591620db5ed00e813",
+      "retained_verbatim": true
+    },
+    {
+      "index": 10,
+      "environment": "table",
+      "label": "tab:operating_income_sue",
+      "caption": "Alternative Earnings Outcomes",
+      "sha256": "e4060796e310a8cd356e24fe8d4a71e7b2d6cea4529b84c1b3ca5fd4e3e0c6d1",
+      "retained_verbatim": true
+    },
+    {
+      "index": 11,
+      "environment": "table",
+      "label": "tab:vw_capped_horse_race",
+      "caption": "Portfolio Concentration Check",
+      "sha256": "6306129122663e797ca9ca19c86f7274b9c19a31323cb79cc5a250839f170a27",
+      "retained_verbatim": true
+    },
+    {
+      "index": 12,
+      "environment": "table",
+      "label": "tab:grid_search_summary",
+      "caption": "ESI Specification Robustness: Parameter, Kernel, and Text Input Choices",
+      "sha256": "ff5ef9bf55f6fd47a2e7af1a40d5b4f9dead07f1961debbcbb34aa61272fe67b",
+      "retained_verbatim": true
+    },
+    {
+      "index": 13,
+      "environment": "table",
+      "label": "tab:kernel_robustness",
+      "caption": "ESI Specification Robustness (Continued)",
+      "sha256": "ea78daf01d05ba1d79199b6b780fa4f35322ec447e95ed080080d19b9216ce36",
+      "retained_verbatim": true
+    },
+    {
+      "index": 14,
+      "environment": "table",
+      "label": "tab:horizon_robustness",
+      "caption": "Alternative Timing, Portfolio Design, and Implementation Checks",
+      "sha256": "ee4e60a4349fba56184acf418d955124edd5b75129efae73e84f7de72fc52eb9",
+      "retained_verbatim": true
+    },
+    {
+      "index": 15,
+      "environment": "table",
+      "label": "tab:ols_robustness_matrix",
+      "caption": "Alternative Timing and Implementation Checks (Continued)",
+      "sha256": "2ecea0ebf3672a09fa590c98ec14340f1aa08834b31c4ebe3706d8470f8e4f93",
+      "retained_verbatim": true
+    },
+    {
+      "index": 16,
+      "environment": "table",
+      "label": "tab:guba_robustness",
+      "caption": "Stock Message Board Controls and Changes around Management Replies",
+      "sha256": "b113292974a7b923f7bc7c196198aef93028b694cbe8a04f2e62e7344bb95f68",
+      "retained_verbatim": true
+    },
+    {
+      "index": 17,
+      "environment": "xltabular",
+      "label": "",
+      "caption": "Variable Definitions, Data Sources, and Key References",
+      "sha256": "75617f6aa1ed07b1a745ec6769c556a2693e04c606e2d9f28449b612f6e5043c",
+      "retained_verbatim": true
+    }
+  ]
+}
