@@ -1,0 +1,96 @@
+{
+  "authorized": "2026-10-14 user requests five-group ESI interactions and portfolio sorts based on the cited Annual Review draft, O2C only",
+  "construction": "Original company-question-date aggregates; no move to reply availability date",
+  "groups": [
+    "same_day",
+    "one_day",
+    "two_days",
+    "three_to_five",
+    "over_five"
+  ],
+  "lag_clock": "Maximum calendar-date lag among recorded replies within each original company-question-date cohort",
+  "single_reply_date_restriction": false,
+  "same_day_definition": "All valid recorded replies in the original cohort share the question calendar date",
+  "unclassifiable_lag": "Retain in all-sample reproduction; exclude from grouped estimates with explicit flow counts",
+  "invalid_timestamp": "Exclude whole cohort from grouped analysis; do not alter its stored scores",
+  "ESI": "lambda .5, gamma 5, q .30, bandwidth .8, original asymmetric protection; preserve separate notebook portfolio and regression full-pool scales",
+  "group_parameter_reestimation": false,
+  "period": "2010-2024",
+  "horizon": 1,
+  "regression": {
+    "outcomes": [
+      "raw_next_O2C",
+      "q5_next_O2C_residual",
+      "CH4_next_O2C_residual"
+    ],
+    "primary": "q5 as cited Table 6",
+    "models": [
+      "baseline_controls",
+      "plus_both_tones"
+    ],
+    "fe": "common firm and question-date effects",
+    "clusters": "firm and question-date",
+    "controls": [
+      "Size",
+      "BM",
+      "ROA",
+      "Lev",
+      "Illiqd",
+      "Dturn",
+      "Ret_t_1",
+      "Vol_t",
+      "Ret_t_30_t_2",
+      "Newstone_t_30_t_3",
+      "Newsdummy_t_30_t_3"
+    ],
+    "design": "ESI plus four group dummies and four ESI interactions; common controls and FE",
+    "standardization": "Original full regression-pool ESI SD, fixed before grouping; raw baseline controls",
+    "primary_family": "Two q5 joint tests of equality across all five slopes; Holm",
+    "other_Wald": "4 supplemental raw/CH4 tests, BH",
+    "pairwise": "All ten group pairs across six specifications; exploratory BH"
+  },
+  "portfolios": {
+    "signals": [
+      "ESI",
+      "Investor_Tone",
+      "Manager_Tone"
+    ],
+    "weights": [
+      "EW",
+      "VW"
+    ],
+    "top_n": 50,
+    "quantiles": [
+      0.3,
+      0.7
+    ],
+    "signs": "positive long and negative short",
+    "legacy_sample": "No IPO filter in original 03 portfolio notebook; original next-record return availability and next closing-limit status filter preserved",
+    "scales": "Original 03 cleaned pool, frozen before grouping",
+    "factor_dates": "Original signal-date CH4/q5 mapping preserved for historical replication",
+    "hac": "Original statsmodels HAC(5), observed sequence, no small-sample correction",
+    "factors": [
+      "CH4",
+      "q5"
+    ],
+    "annualization": 242,
+    "both_legs_required": true,
+    "report": "All-sample baseline, five lag groups, and unclassified-lag coverage; own and common signal dates",
+    "group_differences": "All ten ESI group pairs, two weights, two factor benchmarks; Holm over 40 paired comparisons",
+    "tone_differences": "ESI minus each tone within five groups, two weights and two benchmarks; BH over 40 comparisons",
+    "gross": true
+  },
+  "limitations": [
+    "Retrospective reply information on question dates",
+    "Full-period text calibration and outcome residual loadings",
+    "Legacy factor dates and next-record windows",
+    "Future closing-limit selection in original portfolio rules"
+  ],
+  "protected": "Raw inputs, labels, Qwen3, old GPU/R005, manuscript and slides not modified",
+  "independent_tolerances": {
+    "coef_bps": 0.0001,
+    "t": 0.0001,
+    "p": 1e-05
+  },
+  "new_manuscript_or_slide_edits": false
+}

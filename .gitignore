@@ -1,1 +1,36 @@
+# Licensed and record-level inputs stay local.
+/data/raw/**
+!/data/raw/README.md
+!/data/raw/*/
+!/data/raw/*/README.md
+/data/processed/*
+!/data/processed/README.md
+/data/temp/*
+!/data/temp/README.md
+/local_private/
+/build/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.parquet
+*.pkl
+*.npz
+*.pt
+*.safetensors
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 
+/archive/annual_review/*
+!/archive/annual_review/README.md
+/drafts/manuscript/appendix_cases.tex

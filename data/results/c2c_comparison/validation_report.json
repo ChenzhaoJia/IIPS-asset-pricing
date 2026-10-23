@@ -1,0 +1,25 @@
+{
+  "state": "passed",
+  "FE_independent_algorithm_passed": true,
+  "portfolio_calendar_HAC_passed": true,
+  "FE_max_absolute_differences": {
+    "coefficient_bps": 1.3461454173580023e-14,
+    "t": 3.489120103949972e-11,
+    "p": 2.58792987040124e-12,
+    "adjusted_r2": 7.771561172376096e-16
+  },
+  "scope": "Two complete horse-race columns and all twelve LS alphas. Not independent semantic validation or bytewise full workflow replication.",
+  "statistical_interpretation": {
+    "positive_alpha_not_risk_factor": true,
+    "null_not_proof_of_zero": true,
+    "nominal_multiple_horizons_not_independent_discoveries": true,
+    "predictive_association_not_causality": true,
+    "viewed_later_sample_not_untouched_holdout": true,
+    "same_pool_and_dates_required": true,
+    "theoretical_shorting_not_implementability": true,
+    "assistant_labels_not_human_accuracy": true,
+    "SUE_update_date_not_Annodt": true,
+    "O2C_factor_window_mismatch_disclosed": true,
+    "no_return_selected_calibration": true
+  }
+}

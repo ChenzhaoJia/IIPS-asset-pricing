@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper,margin=1in,footskip=.5in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx,amsmath,amssymb,booktabs,threeparttable,float,tabularx,longtable,ragged2e}
+\usepackage[round,sort]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,textcomp,caption}
+\captionsetup{font=small,labelfont=bf,justification=justified,singlelinecheck=false}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newenvironment{tablenoteblock}{\begin{tablenotes}[flushleft]\footnotesize\item[]\justifying\textnormal{Note:}\ }{\end{tablenotes}}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{2em}
+\title{Communication matters: investor-manager interactions and asset pricing}
+\author{Chenzhao Jia\\[.3em]\small Supervision team: Tianlun Fei, Ying Jiang, Xiaoquan Liu}
+\date{October 23, 2026\\\small Integrated working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine whether public investor inquiries and managerial replies contain information about stock returns in China. The Effective Sentiment Index (ESI) combines investor tone scaled by attention with managerial tone weighted by reply substantiveness and the preceding investor sentiment state. Recomputing the historical question-date specification, equal- and value-weighted long-minus-short portfolios earn gross daily open-to-close excess returns of 5.31 and 5.26 basis points, respectively, exceeding the corresponding point estimates for either tone alone. The one-day ESI coefficient remains positive after controls and firm and date effects. These results are retrospective: subsequent replies are assigned to question dates, and the original implementation uses full-period scales and future trading-status information. In separate public-availability tests, ESI remains positively associated with returns on its own, but the complete text horse race and value-weighted risk-adjusted performance are not significant. Actual announcement-date earnings tests do not establish a fundamental-information channel. Full-corpus content classification provides descriptive and exploratory evidence, with no significant joint differences in ESI slopes across topics. The findings support a positive historical association while limiting claims about independent information, mechanisms, and implementable trading gains.
+\end{abstract}
+\noindent\textbf{Keywords:} investor sentiment; managerial tone; investor relations; textual analysis; asset pricing.
+\clearpage
+\input{sections/introduction}
+\input{sections/literature}
+\input{sections/data_methods}
+\input{sections/results}
+\input{sections/supplements}
+\section{Conclusion}\label{sec:conclusion}
+Investor inquiries and managerial replies reveal two sides of public corporate communication. ESI combines their textual direction with attention, reply substantiveness and the investor sentiment state. The reproduced Annual Review specification shows positive one-day O2C associations and larger gross portfolio-return point estimates than either tone alone. Both equal- and value-weighted ESI returns are positive and statistically significant in this historical specification.
+
+The evidence is conditional on the construction and information clock. Assigning later replies to question dates makes the baseline retrospective. When replies must already be public, the complete text horse race and the value-weighted ESI alpha do not establish an incremental advantage. Actual announcement-date tests also do not establish the proposed earnings mechanism. Topic classification describes the content of dialogues, but its joint return tests do not show systematic slope differences and its labels still require independent human validation. These findings motivate further work on information availability and measurement; they do not identify a causal effect of replies, a new priced risk factor, or a reliably implementable strategy.
+\clearpage
+\bibliographystyle{apalike}
+\bibliography{references}
+\clearpage
+\appendix
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{table}{0}
+\renewcommand{\theHtable}{A\arabic{table}}
+\input{sections/appendix}
+\end{document}

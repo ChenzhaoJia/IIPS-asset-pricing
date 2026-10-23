@@ -1,0 +1,2 @@
+# Historical sources
+These files preserve research lineage. They are not the active manuscript or a certification of old conclusions. Original notebooks use machine-specific paths and include obsolete claims about timing and factor provenance. The active workflow is in notebooks/ and scripts/. Original teacher annotations and record-level outputs are local_private/ only. Old printed results not yet reconciled are excluded from the current manuscript by user decision on 2026-10-23.

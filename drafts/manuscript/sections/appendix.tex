@@ -1,0 +1,44 @@
+\section{Public-availability return evidence}
+These tables preserve the existing C2C extension and its separate calibration described in Section~\ref{sec:supplements}. They do not use the full-pool historical O2C calibration and do not isolate a single change to the information clock.
+\input{tables/public_c2c_comparison_regressions_2026-10-13}
+\clearpage
+\input{tables/public_c2c_comparison_portfolios_2026-10-13}
+
+\section{Text model assessment}\label{app:nlp_methodology}
+The common-holdout exercise compares reply substantiveness predictions against the same labels. Normalized reply templates remain in one partition; model ranking uses no stock-return criterion. Chinese BERT achieves the highest macro F1, but agreement with existing labels is not independent semantic accuracy. The benchmark BERT is not the undocumented production model underlying all sentiment scores. Replacing production substantiveness would change ESI and requires a separately specified study; no partial replacement is made here.
+\input{tables/classifier_benchmark}
+
+\section{Variable definitions}\label{app:variable_definitions}
+\begin{table}[H]\centering\footnotesize
+\caption{Variables Grouped by Empirical Use}\label{tab:variables}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}p{.25\textwidth}X@{}}
+\toprule Variable & Definition and use\\\midrule
+\multicolumn{2}{l}{\textbf{Text signals}}\\
+Investor and manager tone & Mean positive-minus-negative sentiment probability for each side of the matched cohort.\\
+Reply substantiveness & One minus the production Random Forest evasiveness probability.\\
+Question volume & Number of questions; normalized logarithm scales the historical investor component.\\
+ESI & Equation~\eqref{eq:esi}; standardized using original regression-pool moments in the baseline regressions.\\
+Lengths and similarity & Question and reply lengths and Q\&A similarity, added in the availability horse race.\\\midrule
+\multicolumn{2}{l}{\textbf{Baseline outcomes and controls}}\\
+O2C excess return & Next-record close/open minus one, less that record's risk-free return.\\
+CH4 or q5 residual & Original full-period firm OLS residual using signal-date factors.\\
+Size, BM, ROA, Lev & Log capitalization, book-to-market, profitability and leverage in the inherited master panel.\\
+Illiquidity, turnover & Inherited Amihud measure and turnover variable, retaining original units.\\
+Return controls & Lag-one return; sum from records $t-30$ to $t-2$ (29 records, at least 10); preceding 30-record volatility (at least 10).\\
+News tone and indicator & Prior media tone and coverage over the inherited $t-30$ to $t-3$ window.\\\midrule
+\multicolumn{2}{l}{\textbf{Supplement-specific quantities}}\\
+Maximum reply lag & Largest reply-date minus question-date natural-day interval within the original cohort.\\
+Availability date & First exchange trading day strictly after the last recorded reply.\\
+C2C excess return & Total close-to-close stock return less risk-free return over the same holding interval.\\
+SUE, Annodt & Original CSMAR standardized unexpected earnings and actual report publication date, not an update-date proxy.\\
+Dominant topic & Largest question-category count at the company-availability date, including unclassified records.\\
+\bottomrule\end{tabularx}
+\end{table}
+
+\section{Replication scope and unresolved evidence}
+This draft replaces printed baseline figures with verified recomputations. The principal positive finding is the one-day historical association. The repository includes aggregate outputs, code, table generators, notebook entry points and a claim-to-source map. Licensed raw and company-level data, original teacher annotations, model weights and record-level text remain local. Replication from frozen prepared data is distinguished from rebuilding licensed raw ingestion.
+
+The original multi-horizon O2C tables, conditional sorts, parameter-grid results, message-board analyses and trade-size mechanisms remain archived pending reconciliation. This is an evidence-status decision, not selection based on significance. Their exclusion from the active evidence set is not a new rejection or confirmation of the associated hypotheses. Parameters, variables and samples were not changed to recover old significance.
+
+Archived trade-size variables distinguish large and small trades, not verified institutional and retail accounts. Future re-estimation should define their difference before coefficient comparisons and distinguish one-day from five-day windows. Claims that order flow identifies institutional information processing, insider-sale results rule out opportunism, or crash outcomes establish credibility are not carried forward without verified support. A matched-specification historical O2C full-text horse race and complete multi-horizon reconciliation remain research tasks. Independent semantic validation, accounting vintages and implementability analysis are also needed before stronger conclusions can be drawn.

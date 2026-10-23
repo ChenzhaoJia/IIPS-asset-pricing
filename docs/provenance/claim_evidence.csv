@@ -1,0 +1,12 @@
+claim,source,scope,limitation
+Historical EW/VW ESI mean 5.3087/5.2570 bps,data/results/annual_review_o2c/portfolio_baselines.csv,original full-pool O2C,retrospective information; signal-specific pools
+Historical ESI q5 slope 1.7753 bps t5.4761,data/results/annual_review_o2c/regression_baselines.csv,one-day original regression,full-period residualization and unmatched factor interval
+Separate full-sample ESI scales,data/results/annual_review_o2c/frozen_scales.json,regression vs portfolio pools,not point-in-time training
+Lag equality not rejected,data/results/annual_review_o2c/regression_joint_tests.csv,865309 common firm days,group slope significance is not difference significance
+No significant paired lag alpha differences,data/results/annual_review_o2c/portfolio_paired_differences.csv,40 lag comparisons,minimum raw p 0.2015
+C2C complete-text ESI 0.58 t0.75,data/results/c2c_comparison/horse_race.csv,377721 common observations,different calibration and later sample
+C2C EW/VW CH4 alpha4.68/3.78,data/results/c2c_comparison/portfolios.csv,1786 common dates/pool,VW not significant; gross theoretical shorts
+Actual Annodt null evidence,data/results/actual_announcements/fundamentals_and_confirmation.csv,3582 SUE and 3523 CAR,no independent mechanism identification
+Topic products/business 2.02 baseline; 1.12 with tones,data/results/topic_c2c/topic_slope_heterogeneity.csv,377726 availability observations,exploratory labels; no joint heterogeneity
+Joint topic p .8647/.8726,data/results/topic_c2c/topic_joint_wald.csv,20 categories,not proof all true slopes equal
+Model comparison on402 labels,data/results/classifier_benchmark/substantiveness_common_benchmark_summary_2026-09-28.csv,common holdout,label metadata and human gold missing

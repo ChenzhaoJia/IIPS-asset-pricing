@@ -1,0 +1,108 @@
+{
+  "status": "original_sorter_verified_publication_differences_retained",
+  "quoted_display_preflight": [
+    {
+      "weight": "EW",
+      "checks": {
+        "mean_bps": {
+          "quoted": 5.32,
+          "computed": 5.308694062545087,
+          "display_matches": false
+        },
+        "raw_t": {
+          "quoted": 5.97,
+          "computed": 5.948354809377524,
+          "display_matches": false
+        },
+        "q5_alpha_bps": {
+          "quoted": 5.43,
+          "computed": 5.419727758524485,
+          "display_matches": false
+        },
+        "q5_t": {
+          "quoted": 6.08,
+          "computed": 6.055819081728102,
+          "display_matches": false
+        }
+      }
+    },
+    {
+      "weight": "VW",
+      "checks": {
+        "mean_bps": {
+          "quoted": 5.35,
+          "computed": 5.256964984452538,
+          "display_matches": false
+        },
+        "raw_t": {
+          "quoted": 3.64,
+          "computed": 3.5745851935329958,
+          "display_matches": false
+        },
+        "q5_alpha_bps": {
+          "quoted": 5.5,
+          "computed": 5.404657670348356,
+          "display_matches": false
+        },
+        "q5_t": {
+          "quoted": 3.74,
+          "computed": 3.6725277964195464,
+          "display_matches": false
+        }
+      }
+    }
+  ],
+  "original_sorter": [
+    {
+      "signal": "ESI_Gamma_5.0",
+      "weight": "EW",
+      "n": 3642,
+      "mean_bps": 5.308694062545087,
+      "q5_alpha_bps": 5.419727758524485,
+      "q5_t": 6.055819081728102
+    },
+    {
+      "signal": "ESI_Gamma_5.0",
+      "weight": "VW",
+      "n": 3642,
+      "mean_bps": 5.256965160369873,
+      "q5_alpha_bps": 5.4046576187414725,
+      "q5_t": 3.6725277512536976
+    },
+    {
+      "signal": "Investor_Tone",
+      "weight": "EW",
+      "n": 3642,
+      "mean_bps": 4.431877240915999,
+      "q5_alpha_bps": 4.596623982654326,
+      "q5_t": 4.337274018609853
+    },
+    {
+      "signal": "Investor_Tone",
+      "weight": "VW",
+      "n": 3642,
+      "mean_bps": 4.37558650970459,
+      "q5_alpha_bps": 4.506991387556234,
+      "q5_t": 2.7923336854374234
+    },
+    {
+      "signal": "Manager_Tone",
+      "weight": "EW",
+      "n": 3642,
+      "mean_bps": 2.4804037158094716,
+      "q5_alpha_bps": 2.46488211896883,
+      "q5_t": 2.7986590667175033
+    },
+    {
+      "signal": "Manager_Tone",
+      "weight": "VW",
+      "n": 3642,
+      "mean_bps": 2.75304913520813,
+      "q5_alpha_bps": 2.694635803195548,
+      "q5_t": 1.745796656675171
+    }
+  ],
+  "scientific_rules_changed": false,
+  "ESI_scales_changed": false,
+  "grouped_results_previously_estimated": false
+}

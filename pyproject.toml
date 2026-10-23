@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iips-asset-pricing"
+version = "0.2.0"
+description = "Reproducible IIP sentiment and asset-pricing research"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "pyarrow", "scipy", "statsmodels", "linearmodels", "pyhdfe"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,11 @@
+{
+  "input": "D:\\draft\\data\\working\\response_lag_2026-10-10\\portfolio_daily_all.parquet",
+  "input_sha256": "23cdbaed8e88491674d0d6f1853f655cc16865cb60b3758a2ac64b7d96544b2e",
+  "selection_or_weights_changed": false,
+  "variant": "common_pool",
+  "period": 1,
+  "execution": "theoretical_close",
+  "factor_date": "same date as ending C2C return",
+  "gross": true,
+  "caveat": "Short legs are theoretical. Costs, availability and execution diagnostics remain separate."
+}

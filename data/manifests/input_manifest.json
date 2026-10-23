@@ -1,0 +1,359 @@
+[
+  {
+    "path": "data/processed/01_Base_Daily_Panel_Advanced.parquet",
+    "bytes": 567997720,
+    "sha256": "a6b0f143dda2c811e2b5f073343c68a87202e9f232d0667c533ba01a66b5cb0d",
+    "public": false,
+    "availability": "local only; licensed input"
+  },
+  {
+    "path": "data/processed/cohort_lags_verified.parquet",
+    "bytes": 208392165,
+    "sha256": "8cdbd0f916d04700a6e090e700b03c917fb499e966823ad82ac4028d71647969",
+    "public": false,
+    "availability": "local only; licensed input"
+  },
+  {
+    "path": "data/processed/annual_review/daily_portfolios.parquet",
+    "bytes": 4195530,
+    "sha256": "8ce1d44dcced81f5d39e6f21debfb4dcb501931ef31d2bc1296e80b46913730f",
+    "public": false,
+    "availability": "local only; licensed input"
+  },
+  {
+    "path": "data/processed/annual_review/factors.parquet",
+    "bytes": 154863,
+    "sha256": "67dd9fc435b5e7d32fd8a2b765909d1d9f8b9fd4894955931c50beaea33985e5",
+    "public": false,
+    "availability": "local only; licensed input"
+  },
+  {
+    "path": "data/processed/annual_review/prepared_port.parquet",
+    "bytes": 77976391,
+    "sha256": "9b845175bf1f6b1568bdddfcf54002969ebda514aea351cf6beb30fcc8ca01ad",
+    "public": false,
+    "availability": "local only; licensed input"
+  },
+  {
+    "path": "data/processed/annual_review/prepared_reg.parquet",
+    "bytes": 73068530,
+    "sha256": "251f2a2988d1686bee4e017c73952b350d218d7e0110b16b345c063522d1a31d",
+    "public": false,
+    "availability": "local only; licensed input"
+  },
+  {
+    "path": "data/results/actual_announcements/fundamentals_and_confirmation.csv",
+    "bytes": 2227,
+    "sha256": "9dbce231fb565a7f4ae9b4701adfdcb447905ab2eda51b79b5bc0c322599a20b",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/actual_announcements/validation_numeric_differences.csv",
+    "bytes": 5360,
+    "sha256": "8352ce4851928a439e23e079131418ec0babc39518d80a0d607085c63b02b421",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/frozen_scales.json",
+    "bytes": 1314,
+    "sha256": "21bdb63e3539f87d86bf267fa383e48dca2b9739dfe773d87d74e4c7298d6320",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/independent_portfolio_HAC_checks.csv",
+    "bytes": 20256,
+    "sha256": "3766a676f6aa435d3d47b581d033bbd13619cc72d95ebc92266b551a41713c43",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/independent_regression_checks.csv",
+    "bytes": 1864,
+    "sha256": "c0072ce4f249623947fc7d8e6ae20797cd60d686122a88af3e8322b1613e8076",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/independent_sort_checks.csv",
+    "bytes": 76338,
+    "sha256": "0c3123b7cecd7e0f9480e0a2f84e98fd6cdf4da956cbf019d0d8223dbee47e67",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/lag_distribution.csv",
+    "bytes": 1531,
+    "sha256": "d0dad8295b604b7122fde6abc5a4ca4b0537eaf1c9b72d4e0a0bfc75d9d72e64",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/original_PanelOLS_preflight.json",
+    "bytes": 426,
+    "sha256": "539b9c6a7402a766a82514d1fe078120ac92f828e5fae4655cb371f0d43c4a23",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/original_sorter_preflight_v002.json",
+    "bytes": 1385,
+    "sha256": "82e6d4345545739c82fab9872327e5bce302de3b51fabfb49688b34713ff3629",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/portfolio_baselines.csv",
+    "bytes": 3307,
+    "sha256": "220b24581ddcd202f2271c43b56eab7aa6bf400bf6ce243f4140117e9b3f0390",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/portfolio_paired_differences.csv",
+    "bytes": 16250,
+    "sha256": "d608b3ef63bb950261e5b876293f7847ba7ad03d9b73712d83c900f75799d2e3",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/portfolio_performance.csv",
+    "bytes": 33172,
+    "sha256": "4f755fda95e2cd6bf895c676b1f0c4f51b37938a30d92036325b07ffef9ff135",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/portfolio_preflight_resolution.json",
+    "bytes": 2727,
+    "sha256": "fd3dbbc0c0126c1b6d630dd3d04dc3fc7b928058c4fea372b7fb98f307639d51",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/protocol.json",
+    "bytes": 3787,
+    "sha256": "f7b1396c792e3f6eb4f677045362bf601a14864d31f0fe734b4069dff2620fde",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/regression_baselines.csv",
+    "bytes": 254,
+    "sha256": "df4758f9c65aa5de44618731c7b9cdf2f7ada4b1ca31c186925dcd269c77320f",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/regression_common_sample_distribution.csv",
+    "bytes": 267,
+    "sha256": "99b781696b9b4b8fc95d2349b5191b1f6dbf17177fdda7855ab9564c97081782",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/regression_joint_tests.csv",
+    "bytes": 975,
+    "sha256": "38021d41b5eb1d400fcb6ba21bfb4b2c9790e52f67bad463f2a50489aab62e23",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/regression_pairwise_differences.csv",
+    "bytes": 14705,
+    "sha256": "f8a9c46678f1258497a150f5280d49fc6a3ce5b434889b09cece81c35ef70edb",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/regression_slopes.csv",
+    "bytes": 7515,
+    "sha256": "7c1928532175ab3a853b46d4d04f8391e9467c9bb037c1e41cb96b8dad021999",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/annual_review_o2c/sample_flow.csv",
+    "bytes": 284,
+    "sha256": "6f7436ee48c3dfa52354f62bbeb7ee3dcb284c6abfa41c9c54f73596e8aecbdc",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/fama_macbeth.csv",
+    "bytes": 3006,
+    "sha256": "0f997fb857b18ec79eb02e0149de8765df9fd7598f9aea32da46ac699f2c0c6e",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/horizons.csv",
+    "bytes": 4631,
+    "sha256": "51acf4460ac552f98e2508e2ceadd4dfebb25aace559650159c1449104902132",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/horse_race.csv",
+    "bytes": 3523,
+    "sha256": "e92b759e44b4f64f5f6c49b7b4f1b9eec1800493693381434d5d61f5f0efd406",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/independent_fe_differences.csv",
+    "bytes": 943,
+    "sha256": "8052b391de6a86ec2837180f19814b349cb6132aa1bc8dbcc9c866a0cf189b3a",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/independent_portfolio_differences.csv",
+    "bytes": 1131,
+    "sha256": "3bc9c1f5c9b7a655957f2a7f5772512e68b36319595bb4dbef154a7bc4521cae",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/parameters.json",
+    "bytes": 434,
+    "sha256": "6e9163557b7768d7ca74cab3a253b5abb1c02f90ae828c4e1ef7f44c595ccb38",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/portfolios.csv",
+    "bytes": 7437,
+    "sha256": "d909a6ae690343be996bfaa1d71bcc4bb13749307a52675b6a1a76ac651d6d76",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/portfolio_scope.json",
+    "bytes": 485,
+    "sha256": "936dcb9000a25310d9deb703965290aba8a92071e0958e3cedd1ac328136732d",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/regression_scope.json",
+    "bytes": 1210,
+    "sha256": "d6f69959683e9bb90b37b7499f7d96b68b342f559112849f1d78d4729bfa970c",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/c2c_comparison/validation_report.json",
+    "bytes": 1039,
+    "sha256": "d2c812e43cf23cfd8b0229fbc61d81f3a1f939d32f1862bdea3470ebf6ad302d",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/classifier_benchmark/substantiveness_common_benchmark_calibration_2026-09-28.csv",
+    "bytes": 1572,
+    "sha256": "4480add9718ddc9e183a6f9da003147cdcc9e35b4180de3f6c6f04cff6f6b172",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/classifier_benchmark/substantiveness_common_benchmark_class_metrics_2026-09-28.csv",
+    "bytes": 603,
+    "sha256": "5c310c54c6c7679c6bf83cb570978edc897a62dc18ba97f0309a3b94300e523a",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/classifier_benchmark/substantiveness_common_benchmark_confusion_2026-09-28.csv",
+    "bytes": 365,
+    "sha256": "de9f72222ad9183c6e29530bfe46a1273bf4f8257bbf38dedbfcb06540392597",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/classifier_benchmark/substantiveness_common_benchmark_summary_2026-09-28.csv",
+    "bytes": 644,
+    "sha256": "10adec2ed45319245fc1b7243c518417eebbb3762699de13d7998ab1ff16a4a6",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/descriptive/investor_tone_histogram.csv",
+    "bytes": 3633,
+    "sha256": "846164e9f5796d2679072c6afca2b71d7bb4d4e93ae8bd8c4c665a9908f115e1",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/descriptive/regression_pool_summary.csv",
+    "bytes": 599,
+    "sha256": "036082c7f41991efe103e7bd9f0b844252642e7c47b4c1de86b046381f8456f1",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/analysis_dominant_topic_counts.csv",
+    "bytes": 664,
+    "sha256": "e505149eb146bf9b50968a73b800d72c502b2640f0c30211bad1299c57a644f6",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/classification_coverage_verified.csv",
+    "bytes": 235,
+    "sha256": "a4d6711caa73cd8f90ba38356ccc608541b089d4e87f9d775d02898383a53d94",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/generic_reply_interaction.csv",
+    "bytes": 930,
+    "sha256": "acb5f208216f9788ff6ea84186388eec9f688a91ccdd2bdafeedf17b7af0e5a8",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/raw_identity_reconciliation.json",
+    "bytes": 440,
+    "sha256": "dacdf97b0136cc46eb5807e1125e85148158d264450156ad06746028fb312f42",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/receipt_audit.json",
+    "bytes": 653,
+    "sha256": "00e1ff599a10f07ae17344e3e126a74e57628db87c71b77d927a6ecfae0d4e51",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/record_key_duplicate_audit.json",
+    "bytes": 307,
+    "sha256": "73b8534e460a79c8d262e9d9e753c5cd96819761db976bdd302af879f2797d8e",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/source_to_analysis_coverage.csv",
+    "bytes": 341,
+    "sha256": "d68ab119e81e8bcce0113971688c4e3fede52948d6fad20727954de977baa1e5",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/topic_joint_wald.csv",
+    "bytes": 311,
+    "sha256": "288d9400305d35108c55c5348d3e14d65d25345c38aa4a46d2cfe3bd15c47fdb",
+    "public": true,
+    "availability": "aggregate results included"
+  },
+  {
+    "path": "data/results/topic_c2c/topic_slope_heterogeneity.csv",
+    "bytes": 7239,
+    "sha256": "6a8538850391f24f84b739facf780f39eaebcc2d2f18c1f18089f2b760ad4531",
+    "public": true,
+    "availability": "aggregate results included"
+  }
+]

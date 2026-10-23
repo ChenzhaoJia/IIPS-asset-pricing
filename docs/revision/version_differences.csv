@@ -1,0 +1,5 @@
+weight,metric,printed_pdf,verified_recomputation,resolution
+EW,daily gross mean bps,5.32,5.308694062545087,use recomputation
+VW,daily gross mean bps,5.35,5.256964984452538,use recomputation
+EW,q5 alpha bps,5.43,5.419727758524485,use recomputation
+VW,q5 alpha bps,5.5,5.404657670348356,use recomputation

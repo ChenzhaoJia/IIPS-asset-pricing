@@ -1,0 +1,2510 @@
+[
+  {
+    "relative_source_path": "Fundamentals/BF_Stock_SUE.parquet",
+    "bytes": 6075373,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/BF_Stock_SUE.xlsx",
+    "bytes": 21477467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/Cleaned_Investor_Imbalance_Tan2024.parquet",
+    "bytes": 207311085,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/CH4_factors_daily.parquet",
+    "bytes": 50636,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/CH4_factors_daily.xlsx",
+    "bytes": 152794,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/q5_factors_daily.csv",
+    "bytes": 201236,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/q5_factors_daily.parquet",
+    "bytes": 147860,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "公司互动情况统计/公司互动情况统计.xlsx",
+    "bytes": 1392447,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "公司互动情况统计/公司互动情况统计_字段说明.txt",
+    "bytes": 310,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "公司互动情况统计/版权声明与数据来源说明.pdf",
+    "bytes": 674713,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/版权声明与数据来源说明.pdf",
+    "bytes": 674713,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/用户与公司问答_字段说明.txt",
+    "bytes": 846,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/利润表/FS_Comins.xlsx",
+    "bytes": 11385901,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/利润表/FS_Comins[DES][xlsx].txt",
+    "bytes": 825,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/利润表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/周个股回报率文件/TRD_Week.xlsx",
+    "bytes": 22181470,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/周个股回报率文件/TRD_Week1.xlsx",
+    "bytes": 22272587,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/周个股回报率文件/TRD_Week2.xlsx",
+    "bytes": 14134728,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/周个股回报率文件/TRD_Week[DES][xlsx].txt",
+    "bytes": 583,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/周个股回报率文件/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/周个股回报率文件/股票市场交易 数据库说明书.pdf",
+    "bytes": 2003246,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/年、中、季报基本情况文件/IAR_Rept.xlsx",
+    "bytes": 5098862,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/年、中、季报基本情况文件/IAR_Rept[DES][xlsx].txt",
+    "bytes": 494,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/年、中、季报基本情况文件/年、中、季报公布日期 数据库说明书.pdf",
+    "bytes": 470030,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/年、中、季报基本情况文件/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/日个股回报率文件08-10/TRD_Dalyr.xlsx",
+    "bytes": 37316627,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/日个股回报率文件08-10/TRD_Dalyr1.xlsx",
+    "bytes": 13973,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/日个股回报率文件08-10/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 933,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/日个股回报率文件08-10/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/机构持股分类统计表/INI_HolderSystematics.xlsx",
+    "bytes": 6624193,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/机构持股分类统计表/INI_HolderSystematics[DES][xlsx].txt",
+    "bytes": 504,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/机构持股分类统计表/产业资本 数据库说明书.pdf",
+    "bytes": 727089,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/机构持股分类统计表/机构投资者 数据库说明书.pdf",
+    "bytes": 586879,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/机构持股分类统计表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/资产负债表/FS_Combas.xlsx",
+    "bytes": 8230145,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/资产负债表/FS_Combas[DES][xlsx].txt",
+    "bytes": 495,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/资产负债表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/资产负债表/财务报表 数据库说明书.pdf",
+    "bytes": 3216550,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2010/用户与公司问答-2010.xlsx",
+    "bytes": 5626652,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2010/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2011/用户与公司问答-2011.xlsx",
+    "bytes": 20258698,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2011/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2012/用户与公司问答-2012.xlsx",
+    "bytes": 48174305,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2012/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2013/用户与公司问答-2013.xlsx",
+    "bytes": 95623489,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2013/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2014/用户与公司问答-2014_1.xlsx",
+    "bytes": 129210752,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2014/用户与公司问答-2014_2.xlsx",
+    "bytes": 3936844,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2014/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2015/用户与公司问答-2015_1.xlsx",
+    "bytes": 119030252,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2015/用户与公司问答-2015_2.xlsx",
+    "bytes": 17693576,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2015/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2016/用户与公司问答-2016.xlsx",
+    "bytes": 108585892,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2016/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2017/用户与公司问答-2017.xlsx",
+    "bytes": 109774710,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2017/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2018/用户与公司问答-2018.xlsx",
+    "bytes": 89180675,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2018/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2019/用户与公司问答-2019.xlsx",
+    "bytes": 82769644,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2019/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2020/用户与公司问答-2020_1.xlsx",
+    "bytes": 123790001,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2020/用户与公司问答-2020_2.xlsx",
+    "bytes": 4736947,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2020/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2021/用户与公司问答-2021_1.xlsx",
+    "bytes": 129373120,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2021/用户与公司问答-2021_2.xlsx",
+    "bytes": 32523533,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2021/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2022/用户与公司问答-2022_1.xlsx",
+    "bytes": 119409357,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2022/用户与公司问答-2022_2.xlsx",
+    "bytes": 9139303,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2022/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2023/用户与公司问答-2023.xlsx",
+    "bytes": 103559443,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2023/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2024/用户与公司问答-2024.xlsx",
+    "bytes": 107089055,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2024/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2025/用户与公司问答-2025.xlsx",
+    "bytes": 83676642,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Data Supplementation/IRMD_用户与公司问答_ALL/2025/用户与公司问答_字段说明.txt",
+    "bytes": 831,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/中国上市公司股权性质文件/EN_EquityNatureAll.parquet",
+    "bytes": 293920,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/中国上市公司股权性质文件/EN_EquityNatureAll.xlsx",
+    "bytes": 1377110,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/中国上市公司股权性质文件/EN_EquityNatureAll[DES][xlsx].txt",
+    "bytes": 257,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/公司上市日期/IPO_Cobasic.parquet",
+    "bytes": 78778,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/公司上市日期/IPO_Cobasic.xlsx",
+    "bytes": 120804,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/公司上市日期/IPO_Cobasic[DES][xlsx].txt",
+    "bytes": 336,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/分析师关注度/AF_CFEATUREPROFILE.parquet",
+    "bytes": 253070,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/分析师关注度/AF_CFEATUREPROFILE.xlsx",
+    "bytes": 1327044,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/分析师关注度/AF_CFEATUREPROFILE[DES][xlsx].txt",
+    "bytes": 484,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/分析师关注度/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/利润表/FS_Comins.parquet",
+    "bytes": 7469920,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/利润表/FS_Comins.xlsx",
+    "bytes": 18833006,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/利润表/FS_Comins[DES][xlsx].txt",
+    "bytes": 750,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/利润表/FS_Comins_annual.parquet",
+    "bytes": 1604871,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/利润表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/国有上市公司混改程度表/GA_StateOwnedMixedDegree.parquet",
+    "bytes": 258640,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/国有上市公司混改程度表/GA_StateOwnedMixedDegree.xlsx",
+    "bytes": 679190,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/国有上市公司混改程度表/GA_StateOwnedMixedDegree[DES][xlsx].txt",
+    "bytes": 441,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/国有上市公司混改程度表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/应计盈余管理指标表-修正Jones模型(年/AIQ_AccEarManIndexMJonesY.parquet",
+    "bytes": 925918,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/应计盈余管理指标表-修正Jones模型(年/AIQ_AccEarManIndexMJonesY.xlsx",
+    "bytes": 9175348,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/应计盈余管理指标表-修正Jones模型(年/AIQ_AccEarManIndexMJonesY[DES][xlsx].txt",
+    "bytes": 401,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/应计盈余管理指标表-修正Jones模型(年/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/机构持股分类统计表/INI_HolderSystematics.parquet",
+    "bytes": 2940518,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/机构持股分类统计表/INI_HolderSystematics.xlsx",
+    "bytes": 5218616,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/机构持股分类统计表/INI_HolderSystematics[DES][xlsx].txt",
+    "bytes": 527,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/机构持股分类统计表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/相对价值指标/FI_T10.parquet",
+    "bytes": 11560325,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/相对价值指标/FI_T10.xlsx",
+    "bytes": 12077817,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/相对价值指标/FI_T10[DES][xlsx].txt",
+    "bytes": 1205,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/相对价值指标/FI_T10_annual.parquet",
+    "bytes": 3617696,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/管理层治理能力/BDT_ManaGovAbil.parquet",
+    "bytes": 226519,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/管理层治理能力/BDT_ManaGovAbil.xlsx",
+    "bytes": 1414915,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/管理层治理能力/BDT_ManaGovAbil[DES][xlsx].txt",
+    "bytes": 474,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/管理层治理能力/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/版权声明与数据来源说明.pdf",
+    "bytes": 674713,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股份回购实际实施明细表/SR_IMPLEMENT.parquet",
+    "bytes": 493040,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股份回购实际实施明细表/SR_IMPLEMENT.xlsx",
+    "bytes": 1192019,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股份回购实际实施明细表/SR_IMPLEMENT[DES][xlsx].txt",
+    "bytes": 321,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股份回购实际实施明细表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股票标准化未预期盈余表/BF_Stock_SUE.parquet",
+    "bytes": 6075373,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股票标准化未预期盈余表/BF_Stock_SUE.xlsx",
+    "bytes": 21477604,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/股票标准化未预期盈余表/BF_Stock_SUE[DES][xlsx].txt",
+    "bytes": 577,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/董监高及相关人员持股变动情况文件/IST_ManageSharesChange.parquet",
+    "bytes": 2993005,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/董监高及相关人员持股变动情况文件/IST_ManageSharesChange.xlsx",
+    "bytes": 6662043,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/董监高及相关人员持股变动情况文件/IST_ManageSharesChange[DES][xlsx].txt",
+    "bytes": 659,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/董监高及相关人员持股变动情况文件/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/融资融券交易明细表(日)/CHN_Stkmt_ddetails.parquet",
+    "bytes": 3887872,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/融资融券交易明细表(日)/CHN_Stkmt_ddetails.xlsx",
+    "bytes": 10181649,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/融资融券交易明细表(日)/CHN_Stkmt_ddetails[DES][xlsx].txt",
+    "bytes": 632,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/融资融券交易明细表(日)/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/资产负债表/FS_Combas.parquet",
+    "bytes": 133398535,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/资产负债表/FS_Combas.xlsx",
+    "bytes": 350873283,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/资产负债表/FS_Combas[DES][xlsx].txt",
+    "bytes": 27580,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/资产负债表/FS_Combas_annual.parquet",
+    "bytes": 23237017,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance.parquet",
+    "bytes": 135809287,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance.xlsx",
+    "bytes": 261355270,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance1.parquet",
+    "bytes": 118929340,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance1.xlsx",
+    "bytes": 239994564,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance2.parquet",
+    "bytes": 22122453,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance2.xlsx",
+    "bytes": 37738456,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/HF_BSImbalance[DES][xlsx].txt",
+    "bytes": 2840,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)10-13/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance.parquet",
+    "bytes": 150671907,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance.xlsx",
+    "bytes": 281468225,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance1.parquet",
+    "bytes": 135274102,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance1.xlsx",
+    "bytes": 261218842,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance2.parquet",
+    "bytes": 72743486,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance2.xlsx",
+    "bytes": 143755944,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/HF_BSImbalance[DES][xlsx].txt",
+    "bytes": 2840,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)14-17/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance.parquet",
+    "bytes": 144243882,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance.xlsx",
+    "bytes": 271804502,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance1.parquet",
+    "bytes": 137590136,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance1.xlsx",
+    "bytes": 262986417,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance2.parquet",
+    "bytes": 122816503,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance2.xlsx",
+    "bytes": 244963846,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance3.parquet",
+    "bytes": 86780279,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance3.xlsx",
+    "bytes": 180058378,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/HF_BSImbalance[DES][xlsx].txt",
+    "bytes": 2840,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)18-21/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance.parquet",
+    "bytes": 147550626,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance.xlsx",
+    "bytes": 275437015,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance1.parquet",
+    "bytes": 139383043,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance1.xlsx",
+    "bytes": 264824923,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance2.parquet",
+    "bytes": 141027244,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance2.xlsx",
+    "bytes": 266407197,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance3.parquet",
+    "bytes": 96516215,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance3.xlsx",
+    "bytes": 188155946,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/HF_BSImbalance[DES][xlsx].txt",
+    "bytes": 2840,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/个股买卖不平衡/个股买卖不平衡指标表(日)22-24/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2010/网络财经新闻基本信息-2010.parquet",
+    "bytes": 16021732,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2010/网络财经新闻基本信息-2010.xlsx",
+    "bytes": 44457973,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2010/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2011/网络财经新闻基本信息-2011_1.parquet",
+    "bytes": 20290236,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2011/网络财经新闻基本信息-2011_1.xlsx",
+    "bytes": 56729713,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2011/网络财经新闻基本信息-2011_2.parquet",
+    "bytes": 6758246,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2011/网络财经新闻基本信息-2011_2.xlsx",
+    "bytes": 19521878,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2011/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2012/网络财经新闻基本信息-2012_1.parquet",
+    "bytes": 20531058,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2012/网络财经新闻基本信息-2012_1.xlsx",
+    "bytes": 56742460,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2012/网络财经新闻基本信息-2012_2.parquet",
+    "bytes": 10844135,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2012/网络财经新闻基本信息-2012_2.xlsx",
+    "bytes": 32298061,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2012/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2013/网络财经新闻基本信息-2013_1.parquet",
+    "bytes": 21318923,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2013/网络财经新闻基本信息-2013_1.xlsx",
+    "bytes": 57634504,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2013/网络财经新闻基本信息-2013_2.parquet",
+    "bytes": 14271156,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2013/网络财经新闻基本信息-2013_2.xlsx",
+    "bytes": 39458786,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2013/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息-2014_1.parquet",
+    "bytes": 21571554,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息-2014_1.xlsx",
+    "bytes": 58284696,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息-2014_2.parquet",
+    "bytes": 21742482,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息-2014_2.xlsx",
+    "bytes": 60149282,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息-2014_3.parquet",
+    "bytes": 2707690,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息-2014_3.xlsx",
+    "bytes": 7203130,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2014/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息-2015_1.parquet",
+    "bytes": 21649532,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息-2015_1.xlsx",
+    "bytes": 58506913,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息-2015_2.parquet",
+    "bytes": 21757778,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息-2015_2.xlsx",
+    "bytes": 60719814,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息-2015_3.parquet",
+    "bytes": 14265595,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息-2015_3.xlsx",
+    "bytes": 39765157,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2015/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息-2016_1.parquet",
+    "bytes": 21938380,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息-2016_1.xlsx",
+    "bytes": 58954263,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息-2016_2.parquet",
+    "bytes": 22166247,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息-2016_2.xlsx",
+    "bytes": 60737449,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息-2016_3.parquet",
+    "bytes": 10597568,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息-2016_3.xlsx",
+    "bytes": 28978991,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2016/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息-2017_1.parquet",
+    "bytes": 21389042,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息-2017_1.xlsx",
+    "bytes": 58355627,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息-2017_2.parquet",
+    "bytes": 20951472,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息-2017_2.xlsx",
+    "bytes": 59340318,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息-2017_3.parquet",
+    "bytes": 6434818,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息-2017_3.xlsx",
+    "bytes": 17582192,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2017/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2018/网络财经新闻基本信息-2018_1.parquet",
+    "bytes": 22030003,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2018/网络财经新闻基本信息-2018_1.xlsx",
+    "bytes": 59339459,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2018/网络财经新闻基本信息-2018_2.parquet",
+    "bytes": 17807067,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2018/网络财经新闻基本信息-2018_2.xlsx",
+    "bytes": 50801533,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2018/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息-2019_1.parquet",
+    "bytes": 22534923,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息-2019_1.xlsx",
+    "bytes": 60646590,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息-2019_2.parquet",
+    "bytes": 22601492,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息-2019_2.xlsx",
+    "bytes": 60727062,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息-2019_3.parquet",
+    "bytes": 218878,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息-2019_3.xlsx",
+    "bytes": 560166,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2019/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息-2020_1.parquet",
+    "bytes": 22484666,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息-2020_1.xlsx",
+    "bytes": 61619745,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息-2020_2.parquet",
+    "bytes": 22562278,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息-2020_2.xlsx",
+    "bytes": 61567028,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息-2020_3.parquet",
+    "bytes": 8660139,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息-2020_3.xlsx",
+    "bytes": 22693463,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2020/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2021/网络财经新闻基本信息-2021_1.parquet",
+    "bytes": 21375742,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2021/网络财经新闻基本信息-2021_1.xlsx",
+    "bytes": 61047393,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2021/网络财经新闻基本信息-2021_2.parquet",
+    "bytes": 15693477,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2021/网络财经新闻基本信息-2021_2.xlsx",
+    "bytes": 44829818,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2021/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息-2022_1.parquet",
+    "bytes": 23262141,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息-2022_1.xlsx",
+    "bytes": 63143706,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息-2022_2.parquet",
+    "bytes": 23076234,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息-2022_2.xlsx",
+    "bytes": 62847702,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息-2022_3.parquet",
+    "bytes": 2881655,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息-2022_3.xlsx",
+    "bytes": 8008521,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2022/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2023/网络财经新闻基本信息-2023_1.parquet",
+    "bytes": 22093099,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2023/网络财经新闻基本信息-2023_1.xlsx",
+    "bytes": 63342178,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2023/网络财经新闻基本信息-2023_2.parquet",
+    "bytes": 22072153,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2023/网络财经新闻基本信息-2023_2.xlsx",
+    "bytes": 61731668,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2023/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息-2024_1.parquet",
+    "bytes": 21013430,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息-2024_1.xlsx",
+    "bytes": 64868604,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息-2024_2.parquet",
+    "bytes": 21572628,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息-2024_2.xlsx",
+    "bytes": 64151372,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息-2024_3.parquet",
+    "bytes": 550120,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息-2024_3.xlsx",
+    "bytes": 3393070,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Fundamentals/网络财经新闻基本信息/2024/网络财经新闻基本信息_字段说明.txt",
+    "bytes": 1467,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/无风险利率文件/TRD_Nrrate.parquet",
+    "bytes": 34569,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/无风险利率文件/TRD_Nrrate.xlsx",
+    "bytes": 133553,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/无风险利率文件/TRD_Nrrate[DES][xlsx].txt",
+    "bytes": 673,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/无风险利率文件/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/月个股回报率文件/SRFR_Amnthlyr.parquet",
+    "bytes": 24939403,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/月个股回报率文件/SRFR_Amnthlyr.xlsx",
+    "bytes": 41499186,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/月个股回报率文件/SRFR_Amnthlyr[DES][xlsx].txt",
+    "bytes": 923,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/月个股回报率文件/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/综合日市场回报率文件/TRD_Cndalym.parquet",
+    "bytes": 324959,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/综合日市场回报率文件/TRD_Cndalym.xlsx",
+    "bytes": 1171879,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/综合日市场回报率文件/TRD_Cndalym[DES][xlsx].txt",
+    "bytes": 878,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/综合日市场回报率文件/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation.parquet",
+    "bytes": 8067150,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation.xlsx",
+    "bytes": 26917335,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation1.parquet",
+    "bytes": 8210209,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation1.xlsx",
+    "bytes": 27447605,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation2.parquet",
+    "bytes": 7519434,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation2.xlsx",
+    "bytes": 26877029,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation3.parquet",
+    "bytes": 7068418,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation3.xlsx",
+    "bytes": 27296796,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation4.parquet",
+    "bytes": 590541,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation4.xlsx",
+    "bytes": 2283108,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/TRD_BwardQuotation[DES][xlsx].txt",
+    "bytes": 465,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表(后复权)22-24/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr.parquet",
+    "bytes": 12082921,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr.xlsx",
+    "bytes": 30129013,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr1.parquet",
+    "bytes": 11973827,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr1.xlsx",
+    "bytes": 29624952,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr2.parquet",
+    "bytes": 9309048,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr2.xlsx",
+    "bytes": 22940099,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件1/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 905,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr.parquet",
+    "bytes": 12565466,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr.xlsx",
+    "bytes": 30600737,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr1.parquet",
+    "bytes": 13796966,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr1.xlsx",
+    "bytes": 30434732,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr2.parquet",
+    "bytes": 12727425,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr2.xlsx",
+    "bytes": 30403254,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr3.parquet",
+    "bytes": 10006110,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr3.xlsx",
+    "bytes": 23114000,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件2/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 905,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr.parquet",
+    "bytes": 11894827,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr.xlsx",
+    "bytes": 30209285,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr1.parquet",
+    "bytes": 12332040,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr1.xlsx",
+    "bytes": 30295253,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr2.parquet",
+    "bytes": 16490137,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr2.xlsx",
+    "bytes": 30903158,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr3.parquet",
+    "bytes": 12055514,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr3.xlsx",
+    "bytes": 30025135,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr4.parquet",
+    "bytes": 12352984,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr4.xlsx",
+    "bytes": 30376873,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr5.parquet",
+    "bytes": 14128834,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr5.xlsx",
+    "bytes": 25992272,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/日个股回报率/日个股回报率文件3/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 905,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停10-14/TRD_Dalyr1.parquet",
+    "bytes": 886634,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停10-14/TRD_Dalyr1.xlsx",
+    "bytes": 14373829,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停10-14/TRD_Dalyr2.parquet",
+    "bytes": 533723,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停10-14/TRD_Dalyr2.xlsx",
+    "bytes": 10957229,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停10-14/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 228,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停10-14/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr1.parquet",
+    "bytes": 911610,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr1.xlsx",
+    "bytes": 14385814,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr2.parquet",
+    "bytes": 776138,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr2.xlsx",
+    "bytes": 14378942,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr3.parquet",
+    "bytes": 720420,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr3.xlsx",
+    "bytes": 11082890,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 228,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停15-19/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr.parquet",
+    "bytes": 810905,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr.xlsx",
+    "bytes": 14337794,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr1.parquet",
+    "bytes": 833819,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr1.xlsx",
+    "bytes": 14327278,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr2.parquet",
+    "bytes": 634256,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr2.xlsx",
+    "bytes": 14292360,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr3.parquet",
+    "bytes": 726482,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr3.xlsx",
+    "bytes": 14358874,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr4.parquet",
+    "bytes": 751509,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr4.xlsx",
+    "bytes": 14326229,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr5.parquet",
+    "bytes": 738776,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr5.xlsx",
+    "bytes": 12262603,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/TRD_Dalyr[DES][xlsx].txt",
+    "bytes": 228,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/涨跌停/涨跌停20-24/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation.parquet",
+    "bytes": 8158098,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation.xlsx",
+    "bytes": 26807052,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation1.parquet",
+    "bytes": 6587512,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation1.xlsx",
+    "bytes": 26914987,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation2.parquet",
+    "bytes": 3351910,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation2.xlsx",
+    "bytes": 11802577,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/TRD_BwardQuotation[DES][xlsx].txt",
+    "bytes": 465,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)10-13/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation.parquet",
+    "bytes": 8934410,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation.xlsx",
+    "bytes": 26962045,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation1.parquet",
+    "bytes": 8280864,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation1.xlsx",
+    "bytes": 27169311,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation2.parquet",
+    "bytes": 8846226,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation2.xlsx",
+    "bytes": 26982531,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation3.parquet",
+    "bytes": 621004,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation3.xlsx",
+    "bytes": 2112520,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/TRD_BwardQuotation[DES][xlsx].txt",
+    "bytes": 465,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)14-17/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation.parquet",
+    "bytes": 8158587,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation.xlsx",
+    "bytes": 26884228,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation1.parquet",
+    "bytes": 7761057,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation1.xlsx",
+    "bytes": 27181470,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation2.parquet",
+    "bytes": 7980357,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation2.xlsx",
+    "bytes": 27189119,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation3.parquet",
+    "bytes": 7597765,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation3.xlsx",
+    "bytes": 26909853,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation4.parquet",
+    "bytes": 1294107,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation4.xlsx",
+    "bytes": 4196361,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/TRD_BwardQuotation[DES][xlsx].txt",
+    "bytes": 465,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Market Trading Data/股票历史日行情信息表/股票历史日行情信息表(后复权)18-21/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/三因子模型指标(日)/STK_MKT_THRFACDAY.parquet",
+    "bytes": 1746675,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/三因子模型指标(日)/STK_MKT_THRFACDAY.xlsx",
+    "bytes": 3293006,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/三因子模型指标(日)/STK_MKT_THRFACDAY[DES][xlsx].txt",
+    "bytes": 2191,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/三因子模型指标(日)/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/China_BW_Sentiment_Index_2010_2024.csv",
+    "bytes": 21701,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/China_BW_Sentiment_Index_2010_2024.parquet",
+    "bytes": 13104,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/Sentiment index.parquet",
+    "bytes": 6833,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/Sentiment index.xlsx",
+    "bytes": 15376,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/Firm_IPO_Cleaned.parquet",
+    "bytes": 267257,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/Market_IPO_Final_Index.csv",
+    "bytes": 5854,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/Market_IPO_Final_Index.parquet",
+    "bytes": 5098,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/QX_IPO.parquet",
+    "bytes": 255293,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/QX_IPO.xlsx",
+    "bytes": 387317,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/QX_IPO[DES][xlsx].txt",
+    "bytes": 739,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/IPO股票信息表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/Fund_Monthly_Panel_Cleaned.csv",
+    "bytes": 2911733,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/Fund_Monthly_Panel_Cleaned.parquet",
+    "bytes": 687443,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/Market_CEFD_Final_Index.csv",
+    "bytes": 5503,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/Market_CEFD_Final_Index.parquet",
+    "bytes": 4381,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM.parquet",
+    "bytes": 14099620,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM.xlsx",
+    "bytes": 55550043,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM1.parquet",
+    "bytes": 12702990,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM1.xlsx",
+    "bytes": 55755031,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM2.parquet",
+    "bytes": 2682146,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM2.xlsx",
+    "bytes": 9737431,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/QX_FUNDDISCOUNTPREMIUM[DES][xlsx].txt",
+    "bytes": 769,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/Raw_Merged_Panel_2010_2024.csv",
+    "bytes": 156414675,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/Raw_Merged_Panel_2010_2024.parquet",
+    "bytes": 30201602,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/基金折溢价率表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/Market_LogTURN_Final_Index.csv",
+    "bytes": 8901,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/Market_LogTURN_Final_Index.parquet",
+    "bytes": 6560,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/Market_TURN_Daily_Panel.csv",
+    "bytes": 163206,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/Market_TURN_Daily_Panel.parquet",
+    "bytes": 69081,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/QX_TRM.parquet",
+    "bytes": 5126697,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/QX_TRM.xlsx",
+    "bytes": 18886035,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/QX_TRM[DES][xlsx].txt",
+    "bytes": 1066,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/市场换手率表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/Market_DIV_Annual.csv",
+    "bytes": 754,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/Market_DIV_Annual.parquet",
+    "bytes": 3808,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/Market_PDND_Final_Index.csv",
+    "bytes": 7248,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/Market_PDND_Final_Index.parquet",
+    "bytes": 4180,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/QX_DIVIDENDPREMIUM.parquet",
+    "bytes": 5091,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/QX_DIVIDENDPREMIUM.xlsx",
+    "bytes": 4308,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/QX_DIVIDENDPREMIUM[DES][xlsx].txt",
+    "bytes": 609,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股利溢价指标表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股票融资占股票债券融资比例表/Market_SRate_Final_Index.csv",
+    "bytes": 4048,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股票融资占股票债券融资比例表/Market_SRate_Final_Index.parquet",
+    "bytes": 2871,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股票融资占股票债券融资比例表/QX_STOCKRATE.parquet",
+    "bytes": 6429,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股票融资占股票债券融资比例表/QX_STOCKRATE.xlsx",
+    "bytes": 4671,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股票融资占股票债券融资比例表/QX_STOCKRATE[DES][xlsx].txt",
+    "bytes": 550,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  },
+  {
+    "relative_source_path": "Pricing Factors/投资者情绪指数/股票融资占股票债券融资比例表/版权声明.pdf",
+    "bytes": 227624,
+    "copied": false,
+    "reason": "licensed source retained read-only in reference project"
+  }
+]

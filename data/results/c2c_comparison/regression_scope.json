@@ -1,0 +1,49 @@
+{
+  "input_rows": 516522,
+  "horse_race_common_rows": 377721,
+  "horizons": [
+    1,
+    5,
+    10,
+    20,
+    40,
+    60
+  ],
+  "ESI_parameters": {
+    "manager_mean": 0.12749060988426208,
+    "manager_std": 0.2186998724937439,
+    "investor_p30": -0.03150000050663948,
+    "investor_std": 0.4364928603172302,
+    "attention_log_max": 4.430816650390625,
+    "lambda_attention": 0.48114939637826964,
+    "gamma_manager": 3.049525290180521,
+    "bandwidth_multiplier": 0.7425008942482428,
+    "attention_clip_upper": true,
+    "asymmetric_truncation": false,
+    "sigma": 0.3240963391185168
+  },
+  "primary_outcome": "C2C excess total return from close(a) to close(a+h)",
+  "controls": [
+    "Size",
+    "BM",
+    "ROA",
+    "Lev",
+    "Illiqd",
+    "Dturn",
+    "Ret_t_1",
+    "Vol_t",
+    "Ret_t_30_t_2",
+    "Newstone_t_30_t_3",
+    "Newsdummy_t_30_t_3"
+  ],
+  "competing_features": [
+    "Investor_Tone",
+    "Manager_Tone",
+    "Log_Num_Questions",
+    "Substantiveness_ML",
+    "Log_Question_Length",
+    "Log_Reply_Length",
+    "QA_Similarity"
+  ],
+  "CH4_adjustment": "Portfolio alphas and historical risk exposure tests, not ex post residual outcomes"
+}

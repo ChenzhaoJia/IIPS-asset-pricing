@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering\footnotesize
+\caption{Reply Substantiveness: Common-Holdout Model Comparison}\label{tab:substantiveness_benchmark}
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+Model & Macro F1 & Balanced acc. & AUC & Brier & ECE \\
+\midrule
+Random Forest & 0.707 & 0.706 & 0.800 & 0.174 & 0.057 \\
+Chinese BERT benchmark & 0.827 & 0.830 & 0.913 & 0.117 & 0.071 \\
+Local instruction LLM & 0.440 & 0.455 & 0.433 & 0.283 & 0.204 \\
+\bottomrule
+\end{tabular*}
+\begin{tablenoteblock}
+The same 402 existing-label test pairs are used for every model. The 1,999 usable labels are split into 1,280 training, 317 validation and 402 test pairs with no normalized reply template shared across partitions. Higher F1, balanced accuracy and AUC, and lower Brier and ECE, indicate better agreement with these labels. Annotator identifiers, a complete labeling protocol, and inter-rater agreement are unavailable; this is not independent semantic ground truth. The original Random Forest score is retained in the return tests, with no selective replacement by BERT predictions.
+\end{tablenoteblock}
+\end{threeparttable}
+\end{table}

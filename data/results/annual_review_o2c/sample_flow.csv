@@ -1,0 +1,7 @@
+population,stage,n
+portfolio,legacy_ESI_complete,2553356
+portfolio,clean_lag_classifiable,2386487
+portfolio,excluded_only_from_grouped_tests,166869
+regression,legacy_ESI_complete,920584
+regression,clean_lag_classifiable,865309
+regression,excluded_only_from_grouped_tests,55275

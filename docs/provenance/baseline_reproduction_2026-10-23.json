@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "regressions": 3,
+  "portfolio_factor_models": 12,
+  "full_daily_sort_rebuilt": true,
+  "scope": "Frozen prepared inputs; does not independently rebuild licensed raw ingestion."
+}

@@ -1,0 +1,16 @@
+{
+  "records": 5836158,
+  "key_columns": [
+    "From",
+    "Scode",
+    "Qtm",
+    "Qsubj",
+    "Recvtm",
+    "Reply"
+  ],
+  "hash_candidates": 464,
+  "exact_duplicate_records": 234,
+  "unique_record_keys": 5835924,
+  "prediction_identifiers_remain_unique": true,
+  "records_deleted": false
+}

@@ -1,0 +1,8 @@
+{
+  "original_PanelOLS_n": 920584,
+  "original_PanelOLS_ESI_bps": 1.7752989478949535,
+  "original_PanelOLS_t": 5.476057260121059,
+  "max_all_beta_difference_bps": 2.6295765565009788e-05,
+  "max_covariance_difference": 0.0005672731786035001,
+  "note": "The original PanelOLS reproduces the accelerated baseline; quoted 1.77 differs from recalculated rounding. No group estimates or scale changes used to resolve this."
+}

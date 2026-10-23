@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering\footnotesize
+\caption{Frozen Full-Sample Text Scales}\label{tab:parameters}
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+Quantity & Regression pool & Portfolio pool \\
+\midrule
+Complete text observations & 1,317,473 & 2,553,356 \\
+$\bar M$ & 0.1868 & 0.1690 \\
+$\sigma_M$ & 0.2796 & 0.2693 \\
+$Q_I(0.30)$ & -0.1417 & -0.2169 \\
+$\sigma_I$ & 0.3659 & 0.3761 \\
+$0.8\sigma_I$ & 0.2928 & 0.3009 \\
+$\max\log(1+N)$ & 4.8040 & 5.5134 \\
+$\overline{ESI}$ & 0.4857 & 0.3609 \\
+$\sigma_{ESI}$ & 2.8106 & 2.5182 \\
+\bottomrule
+\end{tabular*}
+\begin{tablenoteblock}
+The original 2010--2024 analysis pools are retained separately. Regression construction excludes the first six months after listing; portfolio preparation uses its original return and market-capitalization availability rules. These are full-sample distributional scales, not an early training window or externally estimated economic parameters. $\lambda=0.5$, $\gamma=5$, $q=0.30$, and $b=0.8$ remain fixed. No per-lag recalibration is performed. The full-period construction overlaps the evaluation period.
+\end{tablenoteblock}
+\end{threeparttable}
+\end{table}

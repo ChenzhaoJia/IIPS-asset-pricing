@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering\footnotesize
+\caption{Reply Lag Distribution and Historical O2C Slopes}\label{tab:lag_regressions}
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Maximum lag & Firm days & Share (\%) & Baseline & Also both tones \\
+\midrule
+Same day & 100,022 & 11.56 & 3.05 (3.75) & 3.44 (3.60) \\
+1 day & 190,770 & 22.05 & 2.80 (4.47) & 3.18 (4.08) \\
+2 days & 92,125 & 10.65 & 1.92 (2.15) & 2.30 (2.24) \\
+3--5 days & 187,013 & 21.61 & 0.88 (1.32) & 1.26 (1.54) \\
+More than 5 days & 295,379 & 34.14 & 1.43 (2.88) & 1.83 (2.69) \\
+\bottomrule
+\end{tabular*}
+\begin{tablenoteblock}
+The maximum calendar-day interval among recorded replies in each original company-question-date cohort defines the group. All matched replies must have valid nonnegative lags; no single-reply-date restriction is imposed. The common grouped sample is 865,309 firm days, not the 328,695 observations of the separate public-availability diagnostic. Slopes are total ESI slopes in bps per frozen full-regression-pool standard deviation, with $t$ statistics in parentheses. The pooled regression includes group indicators, ESI-by-group terms, eleven controls and firm/date effects; errors are clustered by firm/date. Joint slope-equality $p$ values are 0.1213 and 0.1247 (Holm-adjusted 0.2425 for both).
+\end{tablenoteblock}
+\end{threeparttable}
+\end{table}

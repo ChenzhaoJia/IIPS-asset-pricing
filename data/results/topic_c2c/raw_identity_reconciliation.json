@@ -1,0 +1,11 @@
+{
+  "raw_pairs": 5836158,
+  "text_hashes_checked": 11672316,
+  "paired_firm_dates": 1325276,
+  "matched_raw_pairs": 4698832,
+  "date_reconstruction": "Qtm_dt with Qtm_datetime and Qtm fallback, floored to natural date",
+  "analysis_cohort_mapping": "existing frozen complete-score firm-question-date to first trading day after last reply",
+  "thresholds_changed": false,
+  "ESI_changed": false,
+  "independent_validation": false
+}

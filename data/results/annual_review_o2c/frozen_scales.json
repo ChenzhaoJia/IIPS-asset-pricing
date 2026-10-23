@@ -1,0 +1,37 @@
+{
+  "portfolio": {
+    "complete_text_n": 2553356,
+    "manager_mean": 0.16901317238807678,
+    "manager_std": 0.2693076431751251,
+    "investor_p30": -0.21693333983421326,
+    "investor_std": 0.3761393427848816,
+    "sigma": 0.30091148614883423,
+    "attention_log_max": 5.513428688049316,
+    "lambda_attention": 0.5,
+    "gamma_manager": 5.0,
+    "bandwidth_multiplier": 0.8,
+    "asymmetric_truncation": true,
+    "score_mean": 0.3608975410461426,
+    "score_std": 2.5181756019592285,
+    "scope": "Full original notebook pre-group pool, 2010-2024; frozen once before lag classification"
+  },
+  "regression": {
+    "complete_text_n": 1317473,
+    "manager_mean": 0.1868405044078827,
+    "manager_std": 0.2795586884021759,
+    "investor_p30": -0.14169999957084656,
+    "investor_std": 0.36594876646995544,
+    "sigma": 0.2927590310573578,
+    "attention_log_max": 4.804020881652832,
+    "lambda_attention": 0.5,
+    "gamma_manager": 5.0,
+    "bandwidth_multiplier": 0.8,
+    "asymmetric_truncation": true,
+    "score_mean": 0.48569026589393616,
+    "score_std": 2.8106324672698975,
+    "scope": "Full original notebook pre-group pool, 2010-2024; frozen once before lag classification"
+  },
+  "python": "3.12.10",
+  "n_original": 12386319,
+  "n_regression_IPO_pool": 5812275
+}

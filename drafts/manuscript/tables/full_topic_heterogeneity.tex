@@ -1,0 +1,43 @@
+\begin{table}[H]
+\centering
+\caption{Exploratory Return Slopes Across Interaction Topics}
+\label{tab:full_topic_heterogeneity}
+\footnotesize
+\renewcommand{\arraystretch}{1.03}
+\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c c c c @{}}
+\toprule
+Dominant Question Content & ESI and Controls & Also Both Tones & BH $p$ & Firm Days \\
+\midrule
+Unclassified or Low Score & 1.84 (3.44) & 0.97 (1.08) & 0.829 & 180,057 \\
+Financial report & 1.04 (0.56) & 0.13 (0.06) & 0.950 & 18,339 \\
+Regulation & 5.03 (0.89) & 4.10 (0.72) & 0.829 & 1,125 \\
+External governance & -0.15 (-0.01) & -1.16 (-0.07) & 0.950 & 634 \\
+Asset restructuring & 3.32 (0.83) & 2.42 (0.60) & 0.829 & 5,507 \\
+Infringement, disputes, lawsuit & -8.28 (-0.70) & -9.32 (-0.79) & 0.829 & 738 \\
+Violation & -9.77 (-0.62) & -10.83 (-0.69) & 0.829 & 548 \\
+Stock trading & 1.22 (1.50) & 0.40 (0.38) & 0.878 & 52,503 \\
+Insider trading & -80.80 (-1.10) & -82.10 (-1.11) & 0.829 & 154 \\
+Dividend & 1.48 (0.29) & 0.69 (0.13) & 0.950 & 4,169 \\
+Financing & -2.47 (-0.59) & -3.44 (-0.80) & 0.829 & 4,590 \\
+Investment & 1.84 (0.89) & 0.94 (0.44) & 0.878 & 5,548 \\
+Operation operating assets & 2.55 (1.00) & 1.69 (0.64) & 0.829 & 4,681 \\
+Operation products or business & 2.02 (3.40) & 1.12 (1.25) & 0.829 & 86,395 \\
+Operation industry related & -1.76 (-0.43) & -2.54 (-0.61) & 0.829 & 907 \\
+Operation macroeconomic environment & -5.74 (-1.54) & -6.59 (-1.75) & 0.829 & 1,855 \\
+Operation others & 3.58 (0.71) & 2.82 (0.55) & 0.829 & 588 \\
+Corporate governance & 1.88 (0.45) & 1.05 (0.25) & 0.948 & 5,117 \\
+Stock repurchase & 4.07 (0.76) & 3.24 (0.60) & 0.829 & 3,214 \\
+Others & -13.17 (-1.36) & -13.81 (-1.42) & 0.829 & 1,057 \\
+\midrule
+Joint Slope Equality $p$ & 0.865 & 0.873 & -- & -- \\
+Adjusted $R^2$ & 0.293 & 0.293 & -- & -- \\
+Total Observations & 377,726 & 377,726 & -- & -- \\
+\bottomrule
+\end{tabular*}\par
+\begin{tablenoteblock}
+Questions are assigned to 19 fixed content themes and an explicit unclassified category. The dominant category at a firm and availability date is the largest count, including unclassified records. Coefficients are total ESI slopes in basis points per historical standard deviation, not differences from the unclassified reference. Models include category indicators, ESI interactions, baseline controls, and firm and date effects. Errors are clustered by firm and date. The last regression also includes both textual tones. BH probabilities adjust across all topic slopes in that regression. The joint Wald test compares topic slopes rather than counting individually significant estimates. Labels come from assistant supervision and the analysis is exploratory.
+\end{tablenoteblock}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,9 @@
+side,topic_state,n
+question,assigned,3182822
+question,empty,3
+question,low_confidence,2653333
+reply,assigned,3763518
+reply,empty,415225
+reply,generic_template_only,624562
+reply,low_confidence,880119
+reply,needs_context,152734

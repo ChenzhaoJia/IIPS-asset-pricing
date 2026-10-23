@@ -1,0 +1,14 @@
+{
+  "state": "TECHNICAL_RECEIPT_VERIFIED_SEMANTIC_VALIDATION_PENDING",
+  "archive_sha256": "9bd8b68a142f20bf386a7df2e8d27481396186c9d4545794888834381d9c396b",
+  "files_verified": 2601,
+  "prediction_shards": 1168,
+  "pairs": 5836158,
+  "two_side_rows": 11672316,
+  "quality_status": "USER_ACCEPTED_BELOW_ORIGINAL_GATES_NOT_HUMAN_VALIDATED",
+  "independent_human_validation": false,
+  "final_semantic_test_opened": false,
+  "accepted_directory": "D:\\draft\\data\\working\\full_topic_2026-10-11\\accepted_R005_V002",
+  "checked_at": "2026-10-11T13:08:04",
+  "code_sha256": "6bd020b0ac1a07ad9d13621a17ab922f093e885c03aa369054c9bc5431e8b620"
+}

@@ -1,0 +1,16 @@
+population,group,n,denominator,share_pct,firms,dates,multi_reply_date_n
+portfolio_ESI_complete_before_legacy_tradability,same_day,267767,2386487,11.220132353538904,5277,3635,0
+portfolio_ESI_complete_before_legacy_tradability,one_day,513904,2386487,21.533911561219483,5313,3608,54453
+portfolio_ESI_complete_before_legacy_tradability,two_days,246654,2386487,10.33544284967821,5292,3499,30774
+portfolio_ESI_complete_before_legacy_tradability,three_to_five,512931,2386487,21.493140335564366,5348,3596,65656
+portfolio_ESI_complete_before_legacy_tradability,over_five,845231,2386487,35.41737289999904,5305,3642,115150
+regression_q5_baseline_complete,same_day,100022,865309,11.559107786929294,3411,2507,0
+regression_q5_baseline_complete,one_day,190770,865309,22.046459703990134,3472,2523,17990
+regression_q5_baseline_complete,two_days,92125,865309,10.64648582182781,3414,2397,10481
+regression_q5_baseline_complete,three_to_five,187013,865309,21.612279544070383,3529,2507,22160
+regression_q5_baseline_complete,over_five,295379,865309,34.135667143182374,3453,2634,39205
+regression_q5_full_tone_complete,same_day,100022,865309,11.559107786929294,3411,2507,0
+regression_q5_full_tone_complete,one_day,190770,865309,22.046459703990134,3472,2523,17990
+regression_q5_full_tone_complete,two_days,92125,865309,10.64648582182781,3414,2397,10481
+regression_q5_full_tone_complete,three_to_five,187013,865309,21.612279544070383,3529,2507,22160
+regression_q5_full_tone_complete,over_five,295379,865309,34.135667143182374,3453,2634,39205

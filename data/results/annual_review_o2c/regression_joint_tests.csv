@@ -1,0 +1,7 @@
+model,outcome,specification,wald,df,p,n,family,p_adjusted
+lag_q5_next_O2C_residual_baseline_controls,q5_next_O2C_residual,baseline_controls,7.291714092526034,4,0.1212523725909652,865309,primary,0.2425047451819304
+lag_q5_next_O2C_residual_plus_both_tones,q5_next_O2C_residual,plus_both_tones,7.219867690744411,4,0.12471547468192405,865309,primary,0.2425047451819304
+lag_CH4_next_O2C_residual_baseline_controls,CH4_next_O2C_residual,baseline_controls,7.739984289676068,4,0.10158089318616019,865309,supplement,0.10432978820466048
+lag_CH4_next_O2C_residual_plus_both_tones,CH4_next_O2C_residual,plus_both_tones,7.672721836095453,4,0.10432978820466048,865309,supplement,0.10432978820466048
+lag_raw_next_O2C_baseline_controls,raw_next_O2C,baseline_controls,7.955079830194917,4,0.09323760616334775,865309,supplement,0.10432978820466048
+lag_raw_next_O2C_plus_both_tones,raw_next_O2C,plus_both_tones,7.87901000401666,4,0.09611211754722666,865309,supplement,0.10432978820466048
