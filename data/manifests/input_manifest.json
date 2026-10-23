@@ -355,5 +355,47 @@
     "sha256": "6a8538850391f24f84b739facf780f39eaebcc2d2f18c1f18089f2b760ad4531",
     "public": true,
     "availability": "aggregate results included"
+  },
+  {
+    "path": "data/processed/c2c_comparison/primary_panel_with_outcomes.parquet",
+    "bytes": 155212702,
+    "sha256": "bb2b0c912739fab87c0ee116aacf3bf183b48a22636e45cfe02f70caceb2979f",
+    "public": false,
+    "availability": "local only; existing supplementary prepared inputs"
+  },
+  {
+    "path": "data/processed/c2c_comparison/daily_domestic_factors.parquet",
+    "bytes": 160482,
+    "sha256": "774c2ed3025539dd2b64fbe264a1346d1e4bc5a244efca7a1a8f3fd5ba61e473",
+    "public": false,
+    "availability": "local only; existing supplementary prepared inputs"
+  },
+  {
+    "path": "data/processed/topic_c2c/production_availability_topic_features.parquet",
+    "bytes": 31636590,
+    "sha256": "729eb04ba8d5893f4f5f1e65a823de04cb3953080d5403ba26829a98474c56d3",
+    "public": false,
+    "availability": "local only; existing supplementary prepared inputs"
+  },
+  {
+    "path": "data/processed/actual_announcements/actual_announcement_signal_events.parquet",
+    "bytes": 863922,
+    "sha256": "36c44151883e652a7e94cdfae71bbb3ede760cd75b6ba074a1f85eff632ec5f3",
+    "public": false,
+    "availability": "local only; existing supplementary prepared inputs"
+  },
+  {
+    "path": "data/processed/actual_announcements/announcement_candidates.parquet",
+    "bytes": 742664,
+    "sha256": "720d50ac3e332abdcaaf30e5c015a524126a4a750b85eb0ea584e4d58aecaa6e",
+    "public": false,
+    "availability": "local only; existing supplementary prepared inputs"
+  },
+  {
+    "path": "data/processed/actual_announcements/unique_reports.parquet",
+    "bytes": 6092539,
+    "sha256": "7c2c76d0d75c3481f3a904c96303ece6a59a96e35641d2e271598658cfabe33f",
+    "public": false,
+    "availability": "local only; existing supplementary prepared inputs"
   }
 ]
